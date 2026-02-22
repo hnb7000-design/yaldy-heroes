@@ -1,0 +1,496 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>King David | YALDY Heroes Universe</title>
+<meta name="description" content="Meet King David — the Warrior King of Israel. From shepherd to conqueror, from psalmist to legend. Discover his full RPG hero profile.">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://yaldyheroes.com/pages/david-king.html">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="King David | YALDY Heroes">
+    <meta property="og:description" content="From shepherd to king. Explore the rise of David — warrior, leader, legend.">
+    <meta property="og:image" content="https://static.wixstatic.com/media/e5d12f_b8f55a34471449699f0a0ec6f5c6c573~mv2.png">
+    <meta property="og:url" content="https://yaldyheroes.com/pages/david-king.html">
+    <meta property="og:site_name" content="YALDY Heroes Universe">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="King David | YALDY Heroes">
+    <meta name="twitter:description" content="From shepherd to king. Explore the rise of David — warrior, leader, legend.">
+    <meta name="twitter:image" content="https://static.wixstatic.com/media/e5d12f_b8f55a34471449699f0a0ec6f5c6c573~mv2.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Oswald:wght@300;400;500;600;700;900&family=Open+Sans:wght@300;400;500;600;700&family=Heebo:wght@300;400;500;600;700;900&family=Frank+Ruhl+Libre:wght@400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../css/universe.css">
+
+<style>
+/* ===== HERO ENTRANCE (page-specific) ===== */
+.hero-entrance {
+  min-height: 100vh; display: flex; align-items: center;
+  position: relative; overflow: hidden; padding-top: 70px;
+}
+.hero-entrance-bg {
+  position: absolute; inset: 0;
+  background: url('https://static.wixstatic.com/media/e5d12f_9cd9cc15f8794cc1b5de600b4abe3ccc~mv2.png') center/cover;
+  opacity: 0.25; animation: slowZoom 22s ease-in-out infinite alternate;
+}
+.hero-entrance-overlay {
+  position: absolute; inset: 0;
+  background: linear-gradient(100deg, rgba(10,14,26,0.96) 0%, rgba(10,14,26,0.8) 40%, rgba(10,14,26,0.3) 100%);
+}
+[dir="rtl"] .hero-entrance-overlay {
+  background: linear-gradient(260deg, rgba(10,14,26,0.96) 0%, rgba(10,14,26,0.8) 40%, rgba(10,14,26,0.3) 100%);
+}
+.hero-entrance .container {
+  position: relative; z-index: 2;
+  display: grid; grid-template-columns: 1.2fr 1fr; gap: 40px; align-items: center;
+}
+.hero-entrance-content { max-width: 600px; }
+[dir="rtl"] .hero-entrance-content { text-align: right; }
+.hero-entrance-eyebrow {
+  font-family: var(--font-heading); font-size: 0.72rem; font-weight: 600;
+  color: var(--gold); letter-spacing: 4px; text-transform: uppercase; margin-bottom: 10px; opacity: 0.8;
+}
+.hero-entrance-label {
+  font-family: var(--font-heading); font-size: 0.65rem; font-weight: 500;
+  color: var(--text-muted); letter-spacing: 4px; text-transform: uppercase; margin-bottom: 8px;
+}
+.hero-entrance h1 {
+  font-family: var(--font-heading); font-size: clamp(2.5rem, 5.5vw, 4.2rem);
+  font-weight: 900; letter-spacing: 2px; line-height: 1.05; margin-bottom: 6px; text-transform: uppercase;
+}
+[dir="rtl"] .hero-entrance h1 { font-family: var(--font-hebrew); letter-spacing: 0; }
+.hero-entrance h1 .gold { color: var(--gold); }
+.hero-entrance-title-sub {
+  font-family: var(--font-heading); font-size: 1.3rem; font-weight: 300;
+  color: var(--gold); letter-spacing: 3px; text-transform: uppercase; margin-bottom: 24px;
+}
+[dir="rtl"] .hero-entrance-title-sub { font-family: var(--font-hebrew); letter-spacing: 1px; }
+.hero-entrance-desc {
+  font-size: 1.05rem; color: var(--text-light); margin-bottom: 30px;
+  line-height: 1.85; font-weight: 300; max-width: 480px;
+}
+.hero-entrance-img { display: flex; justify-content: center; align-items: flex-end; }
+.hero-entrance-img img { max-height: 80vh; filter: drop-shadow(0 20px 60px rgba(0,0,0,0.7)); }
+
+/* ===== RPG STATS (page-specific) ===== */
+.rpg-section { padding: 100px 0; position: relative; z-index: 1; background: var(--navy-mid); }
+.rpg-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: start; }
+.rpg-profile-card {
+  background: rgba(17,24,39,0.7); border: 1px solid rgba(212,175,55,0.12);
+  padding: 40px 35px; position: relative; overflow: hidden;
+  clip-path: polygon(0 0, calc(100% - 18px) 0, 100% 18px, 100% 100%, 18px 100%, 0 calc(100% - 18px));
+}
+.rpg-profile-card::before {
+  content: ''; position: absolute; top: 0; left: 0; right: 0; height: 3px;
+  background: linear-gradient(90deg, transparent, var(--crimson), transparent);
+}
+.rpg-card-label {
+  font-family: var(--font-heading); font-size: 0.6rem; font-weight: 600;
+  letter-spacing: 4px; color: var(--gold); text-transform: uppercase; margin-bottom: 18px; opacity: 0.7;
+}
+.rpg-profile-img { width: 100%; aspect-ratio: 3/4; overflow: hidden; margin-bottom: 28px; border: 1px solid rgba(212,175,55,0.15); }
+.rpg-profile-img img { width: 100%; height: 100%; object-fit: cover; object-position: top; }
+
+.rpg-section .stat-row { display: flex; justify-content: space-between; align-items: center; padding: 10px 0; border-bottom: 1px solid rgba(255,255,255,0.04); }
+.rpg-section .stat-label { font-family: var(--font-heading); font-size: 0.7rem; font-weight: 600; letter-spacing: 2px; text-transform: uppercase; color: var(--text-muted); width: auto; }
+[dir="rtl"] .rpg-section .stat-label { font-family: var(--font-hebrew); letter-spacing: 0; }
+.rpg-section .stat-value { font-family: var(--font-heading); font-size: 0.95rem; font-weight: 500; color: var(--white); letter-spacing: 0.5px; min-width: auto; text-align: right; }
+[dir="rtl"] .rpg-section .stat-value { font-family: var(--font-hebrew); letter-spacing: 0; }
+
+.traits-section { margin-top: 24px; }
+.traits-title { font-family: var(--font-heading); font-size: 0.65rem; font-weight: 600; letter-spacing: 3px; color: var(--gold); text-transform: uppercase; margin-bottom: 14px; }
+.trait-tag {
+  display: inline-block; padding: 6px 14px; margin: 4px 6px 4px 0;
+  background: rgba(212,175,55,0.08); border: 1px solid rgba(212,175,55,0.15);
+  font-family: var(--font-heading); font-size: 0.72rem; font-weight: 500;
+  color: var(--gold-light); letter-spacing: 1px; text-transform: uppercase;
+}
+[dir="rtl"] .trait-tag { font-family: var(--font-hebrew); letter-spacing: 0; margin: 4px 0 4px 6px; }
+
+/* ===== STAT BARS (page-specific) ===== */
+.stat-panel { padding-top: 10px; }
+.stat-bars-title { font-family: var(--font-heading); font-size: clamp(1.4rem, 3vw, 2rem); letter-spacing: 2px; text-transform: uppercase; margin-bottom: 8px; }
+[dir="rtl"] .stat-bars-title { font-family: var(--font-hebrew); letter-spacing: 0; }
+.stat-bars-sub { font-size: 0.95rem; color: var(--text-muted); margin-bottom: 35px; line-height: 1.7; font-weight: 300; }
+.stat-bar-group { margin-bottom: 18px; }
+.stat-bar-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 6px; }
+.stat-bar-name { font-family: var(--font-heading); font-size: 0.78rem; font-weight: 600; letter-spacing: 1.5px; text-transform: uppercase; color: var(--text-light); }
+[dir="rtl"] .stat-bar-name { font-family: var(--font-hebrew); letter-spacing: 0; }
+.stat-bar-val { font-family: var(--font-heading); font-size: 0.75rem; font-weight: 500; color: var(--gold); letter-spacing: 1px; }
+.stat-bar-track { width: 100%; height: 8px; background: rgba(255,255,255,0.06); overflow: hidden; position: relative; }
+.stat-bar-fill { height: 100%; background: linear-gradient(90deg, var(--gold), var(--gold-light)); width: 0; transition: width 1.2s cubic-bezier(0.25, 0.46, 0.45, 0.94); position: relative; }
+.stat-bar-fill::after { content: ''; position: absolute; right: 0; top: 0; bottom: 0; width: 20px; background: linear-gradient(90deg, transparent, rgba(255,255,255,0.3)); }
+.stat-bar-fill.crimson { background: linear-gradient(90deg, var(--crimson), #c0392b); }
+.stat-bar-fill.crimson::after { background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2)); }
+
+/* ===== LEGENDARY MOMENTS (page-specific) ===== */
+.moments-section { padding: 100px 0; position: relative; z-index: 1; background: var(--navy); }
+.moments-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 35px; max-width: 1050px; margin: 0 auto; }
+.moments-section .moment-card {
+  background: rgba(17,24,39,0.5); border: 1px solid rgba(212,175,55,0.08);
+  overflow: hidden; transition: var(--ease); padding: 0;
+  clip-path: polygon(0 0, calc(100% - 14px) 0, 100% 14px, 100% 100%, 14px 100%, 0 calc(100% - 14px));
+}
+.moments-section .moment-card:hover { border-color: rgba(212,175,55,0.25); transform: translateY(-5px); }
+.moment-img { width: 100%; height: 260px; overflow: hidden; }
+.moment-img img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.5s ease; }
+.moments-section .moment-card:hover .moment-img img { transform: scale(1.05); }
+.moment-body { padding: 28px 24px; }
+.moment-label { font-family: var(--font-heading); font-size: 0.6rem; font-weight: 600; letter-spacing: 3px; color: var(--gold); text-transform: uppercase; margin-bottom: 8px; opacity: 0.7; }
+.moment-body h3 { font-family: var(--font-heading); font-size: 1.2rem; letter-spacing: 1px; text-transform: uppercase; margin-bottom: 12px; color: var(--white); line-height: 1.3; }
+[dir="rtl"] .moment-body h3 { font-family: var(--font-hebrew); letter-spacing: 0; }
+.moment-body p { font-size: 0.95rem; color: var(--text-light); line-height: 1.75; font-weight: 300; }
+
+/* ===== CITY QUOTE (page-specific) ===== */
+.song-section { padding: 80px 0; text-align: center; background: linear-gradient(180deg, var(--navy-mid), var(--navy)); position: relative; z-index: 1; }
+.song-quote { font-family: var(--font-heading); font-size: clamp(1.1rem, 2.5vw, 1.6rem); color: var(--text-light); max-width: 750px; margin: 0 auto 14px; line-height: 1.8; font-weight: 300; letter-spacing: 1px; font-style: italic; }
+[dir="rtl"] .song-quote { font-family: var(--font-hebrew); letter-spacing: 0; }
+.song-quote em { color: var(--gold); font-style: normal; }
+.song-attr { font-family: var(--font-heading); font-size: 0.7rem; font-weight: 500; color: var(--text-muted); letter-spacing: 2px; text-transform: uppercase; }
+
+/* ===== RELATED ARTIFACTS (page-specific) ===== */
+.related-section { padding: 100px 0; background: var(--navy-mid); position: relative; z-index: 1; }
+.related-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 28px; max-width: 700px; margin: 0 auto; }
+.related-card {
+  background: rgba(17,24,39,0.7); overflow: hidden; transition: var(--ease);
+  border: 1px solid rgba(212,175,55,0.08);
+  clip-path: polygon(0 0, calc(100% - 10px) 0, 100% 10px, 100% 100%, 10px 100%, 0 calc(100% - 10px));
+}
+.related-card:hover { transform: translateY(-6px); border-color: rgba(212,175,55,0.3); box-shadow: 0 15px 40px rgba(0,0,0,0.4); }
+.related-card-img { width: 100%; height: 200px; overflow: hidden; }
+.related-card-img img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.5s ease; }
+.related-card:hover .related-card-img img { transform: scale(1.07); }
+.related-card-info { padding: 22px 18px; }
+.related-card-info h3 { font-family: var(--font-heading); font-size: 0.95rem; margin-bottom: 10px; letter-spacing: 0.5px; line-height: 1.35; color: var(--white); }
+[dir="rtl"] .related-card-info h3 { font-family: var(--font-hebrew); letter-spacing: 0; text-align: right; }
+.related-price { display: flex; align-items: center; gap: 10px; margin-bottom: 14px; }
+.related-price .price-old { font-size: 0.9rem; color: var(--text-muted); text-decoration: line-through; }
+.related-price .price-new { font-size: 1.3rem; color: var(--gold); font-weight: 700; }
+
+/* ===== ORIGIN TEASER (page-specific) ===== */
+.transform-section {
+  padding: 100px 0; position: relative; z-index: 1; overflow: hidden;
+  background: linear-gradient(135deg, #0d1b2a, #1b1040);
+}
+.transform-section::before {
+  content: ''; position: absolute; inset: 0;
+  background: url('https://static.wixstatic.com/media/e5d12f_e916af3ef85e41ee9d63650acff93b05~mv2.png') center/cover;
+  opacity: 0.1;
+}
+.transform-content { position: relative; z-index: 2; display: grid; grid-template-columns: 1fr 1fr; gap: 55px; align-items: center; }
+.transform-text h2 { font-family: var(--font-heading); font-size: clamp(1.8rem, 4vw, 2.8rem); margin-bottom: 18px; text-transform: uppercase; letter-spacing: 2px; line-height: 1.15; }
+[dir="rtl"] .transform-text h2 { font-family: var(--font-hebrew); letter-spacing: 0; }
+.transform-text h2 span { color: var(--gold); }
+.transform-text p { font-size: 1.05rem; color: var(--text-light); line-height: 1.85; margin-bottom: 28px; font-weight: 300; }
+.transform-images { display: flex; gap: 20px; align-items: center; justify-content: center; }
+.transform-images img { width: 45%; max-width: 220px; border-radius: 4px; box-shadow: 0 12px 40px rgba(0,0,0,0.5); border: 1px solid rgba(212,175,55,0.1); }
+.transform-arrow { font-size: 2rem; color: var(--gold); opacity: 0.6; animation: pulseArrow 2s ease-in-out infinite; }
+
+/* ===== KEYFRAMES (page-specific) ===== */
+@keyframes pulseArrow { 0%, 100% { opacity: 0.4; transform: scale(1); } 50% { opacity: 0.8; transform: scale(1.15); } }
+
+/* ===== RESPONSIVE (page-specific) ===== */
+@media (max-width: 1024px) {
+  .hero-entrance .container { grid-template-columns: 1fr; text-align: center; }
+  .hero-entrance-content { max-width: 100%; }
+  [dir="rtl"] .hero-entrance-content { text-align: center; }
+  .hero-entrance-img { margin-top: 30px; }
+  .hero-entrance-img img { max-height: 55vh; }
+  .rpg-grid { grid-template-columns: 1fr; }
+  .rpg-profile-card { max-width: 480px; margin: 0 auto; }
+  .transform-content { grid-template-columns: 1fr; text-align: center; }
+  .transform-images { order: -1; }
+}
+@media (max-width: 768px) {
+  .moments-grid { grid-template-columns: 1fr; max-width: 480px; }
+  .related-grid { grid-template-columns: 1fr; max-width: 340px; }
+  .hero-entrance-img { display: none; }
+  .rpg-section, .moments-section, .related-section, .transform-section { padding: 70px 0; }
+}
+</style>
+</head>
+
+<body>
+<canvas id="particles"></canvas>
+
+<!-- NAVBAR -->
+<nav class="navbar">
+  <div class="container">
+    <a href="../index.html" class="logo">
+      <img src="https://static.wixstatic.com/media/e5d12f_cc878e14d7ee46948e92d05e9463b70c~mv2.png" alt="YALDY Heroes Logo">
+    </a>
+    <ul class="nav-links">
+      <li><a href="../index.html" data-en="Home" data-he="ראשי">Home</a></li>
+      <li><a href="../index.html#heroes" data-en="Heroes" data-he="הגיבורים">Heroes</a></li>
+      <li><a href="../index.html#collection" data-en="Collection" data-he="האוסף">Collection</a></li>
+      <li><a href="../index.html#about" data-en="Our Story" data-he="הסיפור שלנו">Our Story</a></li>
+      <li><a href="contact.html" data-en="Contact" data-he="צור קשר">Contact</a></li>
+      <li><button class="lang-toggle" onclick="toggleLang()">עברית</button></li>
+    </ul>
+    <div class="mobile-toggle" id="mobileToggle"><span></span><span></span><span></span></div>
+  </div>
+</nav>
+<div class="mob-menu" id="mobMenu">
+  <a href="../index.html" data-en="Home" data-he="ראשי">Home</a>
+  <a href="../index.html#heroes" data-en="Heroes" data-he="הגיבורים">Heroes</a>
+  <a href="../index.html#collection" data-en="Collection" data-he="האוסף">Collection</a>
+  <a href="../index.html#about" data-en="Our Story" data-he="הסיפור שלנו">Our Story</a>
+  <a href="contact.html" data-en="Contact" data-he="צור קשר">Contact</a>
+  <button class="lang-toggle" onclick="toggleLang()">עברית</button>
+</div>
+
+<!-- HERO ENTRANCE -->
+<section class="hero-entrance">
+  <div class="hero-entrance-bg"></div>
+  <div class="hero-entrance-overlay"></div>
+  <div class="container">
+    <div class="hero-entrance-content">
+      <div class="breadcrumb">
+        <a href="../index.html" data-en="Universe" data-he="יקום">Universe</a>
+        <span class="sep">›</span>
+        <a href="../index.html#heroes" data-en="Heroes" data-he="גיבורים">Heroes</a>
+        <span class="sep">›</span>
+        <span style="color:var(--gold)" data-en="King David" data-he="דוד המלך">King David</span>
+      </div>
+      <p class="hero-entrance-eyebrow">YALDY Universe · Hero Profile</p>
+      <p class="hero-entrance-label">HERO · 002</p>
+      <h1 data-en="KING DAVID" data-he="דוד המלך">KING DAVID</h1>
+      <p class="hero-entrance-title-sub" data-en="The Warrior King of Israel" data-he="מלך הלוחם של ישראל">The Warrior King of Israel</p>
+      <p class="hero-entrance-desc" data-en="From shepherd to sovereign. A fearless warrior, strategic leader, and psalmist who united a nation. The crown was not given — it was forged through fire, faith, and sacrifice." data-he="מרועה צאן למלך. לוחם חסר פחד, מנהיג אסטרטגי ומשורר שאיחד עם. הכתר לא ניתן — הוא נוצר באש, באמונה ובהקרבה.">From shepherd to sovereign. A fearless warrior, strategic leader, and psalmist who united a nation. The crown was not given — it was forged through fire, faith, and sacrifice.</p>
+      <a href="#stats" class="cta-btn" data-en="View Full Profile" data-he="לפרופיל המלא">View Full Profile</a>
+    </div>
+    <div class="hero-entrance-img">
+      <img src="https://static.wixstatic.com/media/e5d12f_b8f55a34471449699f0a0ec6f5c6c573~mv2.png" alt="King David">
+    </div>
+  </div>
+</section>
+
+<!-- RPG STATS PANEL -->
+<section class="rpg-section" id="stats">
+  <div class="container">
+    <div class="rpg-grid">
+      <div class="rpg-profile-card fade-in">
+        <div class="rpg-card-label">Character Dossier</div>
+        <div class="rpg-profile-img">
+          <img src="https://static.wixstatic.com/media/e5d12f_ae3b52b588864cdc82e1e89026788a7d~mv2.png" alt="King David Profile">
+        </div>
+        <div class="stat-row">
+          <span class="stat-label" data-en="Name" data-he="שם">Name</span>
+          <span class="stat-value" data-en="King David" data-he="דוד המלך">King David</span>
+        </div>
+        <div class="stat-row">
+          <span class="stat-label" data-en="Title" data-he="תואר">Title</span>
+          <span class="stat-value" data-en="The Warrior King of Israel" data-he="מלך הלוחם של ישראל">The Warrior King of Israel</span>
+        </div>
+        <div class="stat-row">
+          <span class="stat-label" data-en="Age" data-he="גיל">Age</span>
+          <span class="stat-value">38</span>
+        </div>
+        <div class="stat-row">
+          <span class="stat-label" data-en="Height" data-he="גובה">Height</span>
+          <span class="stat-value">185 cm (6'1")</span>
+        </div>
+        <div class="stat-row">
+          <span class="stat-label" data-en="Origin" data-he="מוצא">Origin</span>
+          <span class="stat-value" data-en="Bethlehem, Judah" data-he="בית לחם, יהודה">Bethlehem, Judah</span>
+        </div>
+        <div class="stat-row">
+          <span class="stat-label" data-en="Role" data-he="תפקיד">Role</span>
+          <span class="stat-value" data-en="King · Warrior · Psalmist · Leader" data-he="מלך · לוחם · משורר · מנהיג">King · Warrior · Psalmist · Leader</span>
+        </div>
+        <div class="traits-section">
+          <div class="traits-title" data-en="Core Traits" data-he="תכונות ליבה">Core Traits</div>
+          <span class="trait-tag" data-en="Fearless Warrior" data-he="לוחם חסר פחד">Fearless Warrior</span>
+          <span class="trait-tag" data-en="Strategic" data-he="אסטרטגי">Strategic</span>
+          <span class="trait-tag" data-en="Deep Faith" data-he="אמונה עמוקה">Deep Faith</span>
+          <span class="trait-tag" data-en="Protector" data-he="מגן">Protector</span>
+          <span class="trait-tag" data-en="Poet & Musician" data-he="משורר ומוזיקאי">Poet &amp; Musician</span>
+        </div>
+      </div>
+
+      <div class="stat-panel fade-in">
+        <p class="section-eyebrow">Power Analysis</p>
+        <h2 class="stat-bars-title" data-en="Combat Stats" data-he="נתוני כוח">Combat Stats</h2>
+        <p class="stat-bars-sub" data-en="Measured at the peak of his reign. Battle-tested. The most complete warrior-king in biblical history." data-he="נמדד בשיא שלטונו. מלך-לוחם מנוסה. השלם ביותר בהיסטוריה המקראית.">Measured at the peak of his reign. Battle-tested. The most complete warrior-king in biblical history.</p>
+
+        <div class="stat-bar-group">
+          <div class="stat-bar-header">
+            <span class="stat-bar-name" data-en="Strength" data-he="כוח">Strength</span>
+            <span class="stat-bar-val">88 / 100</span>
+          </div>
+          <div class="stat-bar-track"><div class="stat-bar-fill" data-width="88"></div></div>
+        </div>
+        <div class="stat-bar-group">
+          <div class="stat-bar-header">
+            <span class="stat-bar-name" data-en="Speed" data-he="מהירות">Speed</span>
+            <span class="stat-bar-val">70 / 100</span>
+          </div>
+          <div class="stat-bar-track"><div class="stat-bar-fill" data-width="70"></div></div>
+        </div>
+        <div class="stat-bar-group">
+          <div class="stat-bar-header">
+            <span class="stat-bar-name" data-en="Faith" data-he="אמונה">Faith</span>
+            <span class="stat-bar-val">95 / 100</span>
+          </div>
+          <div class="stat-bar-track"><div class="stat-bar-fill" data-width="95"></div></div>
+        </div>
+        <div class="stat-bar-group">
+          <div class="stat-bar-header">
+            <span class="stat-bar-name" data-en="Defense" data-he="הגנה">Defense</span>
+            <span class="stat-bar-val">85 / 100</span>
+          </div>
+          <div class="stat-bar-track"><div class="stat-bar-fill" data-width="85"></div></div>
+        </div>
+        <div class="stat-bar-group">
+          <div class="stat-bar-header">
+            <span class="stat-bar-name" data-en="Courage" data-he="אומץ">Courage</span>
+            <span class="stat-bar-val">95 / 100</span>
+          </div>
+          <div class="stat-bar-track"><div class="stat-bar-fill crimson" data-width="95"></div></div>
+        </div>
+        <div class="stat-bar-group">
+          <div class="stat-bar-header">
+            <span class="stat-bar-name" data-en="Wisdom" data-he="חוכמה">Wisdom</span>
+            <span class="stat-bar-val">90 / 100</span>
+          </div>
+          <div class="stat-bar-track"><div class="stat-bar-fill" data-width="90"></div></div>
+        </div>
+
+        <div style="margin-top: 35px;">
+          <a href="#moments" class="cta-btn" data-en="Legendary Moments" data-he="רגעים אגדיים">Legendary Moments</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- LEGENDARY MOMENTS -->
+<section class="moments-section" id="moments">
+  <div class="container">
+    <div class="section-header">
+      <p class="section-eyebrow">Chapter Archives</p>
+      <h2 class="section-title" data-en="Legendary Moments" data-he="רגעים אגדיים">Legendary Moments</h2>
+      <p class="section-sub" data-en="The defining conquests that forged a king" data-he="הכיבושים שעיצבו מלך">The defining conquests that forged a king</p>
+      <div class="divider"></div>
+    </div>
+    <div class="moments-grid">
+      <div class="moment-card fade-in">
+        <div class="moment-img">
+          <img src="https://static.wixstatic.com/media/e5d12f_2d306cedc008479bb69c69bb76dc0fbd~mv2.jpg" alt="City of David">
+        </div>
+        <div class="moment-body">
+          <div class="moment-label">Chapter III · The City</div>
+          <h3 data-en="&quot;One Silent Move Opens a Kingdom&quot;" data-he="&quot;מהלך שקט אחד פותח ממלכה&quot;">"One Silent Move Opens a Kingdom"</h3>
+          <p data-en="The Jebusites thought their fortress was unbreakable. They mocked David from the walls. But David found the water shaft — a hidden path that no army would dare take. One silent move, and the city fell." data-he="היבוסים חשבו שהמבצר שלהם בלתי ניתן לפריצה. הם לעגו לדוד מהחומות. אבל דוד מצא את פיר המים — נתיב סודי שאף צבא לא היה מעז. מהלך שקט אחד, והעיר נפלה.">The Jebusites thought their fortress was unbreakable. They mocked David from the walls. But David found the water shaft — a hidden path that no army would dare take. One silent move, and the city fell.</p>
+        </div>
+      </div>
+      <div class="moment-card fade-in">
+        <div class="moment-img">
+          <img src="https://static.wixstatic.com/media/e5d12f_fc67a0eaa6a94103aefac5a5b60b9707~mv2.jpeg" alt="Valley of Elah">
+        </div>
+        <div class="moment-body">
+          <div class="moment-label">Chapter IV · The Valley</div>
+          <h3 data-en="&quot;The Victory Begins with Listening&quot;" data-he="&quot;הניצחון מתחיל בהקשבה&quot;">"The Victory Begins with Listening"</h3>
+          <p data-en="Before every battle, David listened. Not to his generals — but to God. In the Valley of Elah, while others saw an impossible enemy, David heard a promise. Strategy born from faith." data-he="לפני כל קרב, דוד הקשיב. לא לגנרלים שלו — אלא לאלוהים. בעמק האלה, בעוד אחרים ראו אויב בלתי אפשרי, דוד שמע הבטחה. אסטרטגיה שנולדה מאמונה.">Before every battle, David listened. Not to his generals — but to God. In the Valley of Elah, while others saw an impossible enemy, David heard a promise. Strategy born from faith.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CITY QUOTE -->
+<section class="song-section">
+  <div class="container">
+    <p class="section-eyebrow">The City of David</p>
+    <p class="song-quote" data-en="&quot;This city does not need a ruler — it has a hero. The walls were not conquered by force, but by the will of one who believed when no one else did.&quot;" data-he="&quot;העיר הזו לא צריכה שליט — יש לה גיבור. החומות לא נכבשו בכוח, אלא ברצון של מי שהאמין כשאף אחד אחר לא.&quot;">"This city does not need a ruler — it has a <em>hero</em>. The walls were not conquered by force, but by the <em>will</em> of one who believed when no one else did."</p>
+    <p class="song-attr">The Conquest of Jerusalem</p>
+  </div>
+</section>
+
+<!-- RELATED ARTIFACTS -->
+<section class="related-section">
+  <div class="container">
+    <div class="section-header">
+      <p class="section-eyebrow">Artifact Room</p>
+      <h2 class="section-title" data-en="Connected Artifacts" data-he="אוצרות קשורים">Connected Artifacts</h2>
+      <p class="section-sub" data-en="Artifacts linked to King David's legacy" data-he="אוצרות הקשורים למורשת דוד המלך">Artifacts linked to King David's legacy</p>
+      <div class="divider"></div>
+    </div>
+    <div class="related-grid">
+      <div class="related-card fade-in">
+        <div class="related-card-img">
+          <img src="https://static.wixstatic.com/media/e5d12f_2d306cedc008479bb69c69bb76dc0fbd~mv2.jpg" alt="City of David Puzzle">
+        </div>
+        <div class="related-card-info">
+          <h3 data-en="City of David 500Pcs" data-he="עיר דוד 500 חלקים">City of David 500Pcs</h3>
+          <div class="related-price"><span class="price-old">₪139</span><span class="price-new">₪119</span></div>
+          <a href="https://wa.me/972506500750?text=Hi!%20I'm%20interested%20in%20the%20City%20of%20David%20puzzle%20(500pcs%20%E2%82%AA139)" target="_blank" rel="noopener" class="cta-btn" style="display:block;text-align:center;padding:12px 20px;font-size:0.75rem;" data-en="PRE-ORDER · WhatsApp" data-he="הזמנה · WhatsApp">PRE-ORDER · WhatsApp</a>
+        </div>
+      </div>
+      <div class="related-card fade-in">
+        <div class="related-card-img">
+          <img src="https://static.wixstatic.com/media/e5d12f_fc67a0eaa6a94103aefac5a5b60b9707~mv2.jpeg" alt="Valley Strike Puzzle">
+        </div>
+        <div class="related-card-info">
+          <h3 data-en="Valley Strike 1000Pcs" data-he="מכת העמק 1000 חלקים">Valley Strike 1000Pcs</h3>
+          <div class="related-price"><span class="price-old">₪169</span><span class="price-new">₪149</span></div>
+          <a href="https://wa.me/972506500750?text=Hi!%20I'm%20interested%20in%20the%20Valley%20Strike%20puzzle%20(1000pcs%20%E2%82%AA149)" target="_blank" rel="noopener" class="cta-btn" style="display:block;text-align:center;padding:12px 20px;font-size:0.75rem;" data-en="PRE-ORDER · WhatsApp" data-he="הזמנה · WhatsApp">PRE-ORDER · WhatsApp</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ORIGIN TEASER: King → Shepherd -->
+<section class="transform-section">
+  <div class="container">
+    <div class="transform-content">
+      <div class="transform-text">
+        <p class="section-eyebrow">The Origin Story</p>
+        <h2 data-en="EVERY KING WAS ONCE A BOY" data-he="כל מלך היה פעם נער">EVERY KING<br>WAS ONCE A <span>BOY</span></h2>
+        <p data-en="Before the throne, before the armies, before Jerusalem — there was a boy in the hills of Bethlehem, guarding sheep under the stars. The journey begins long before the crown." data-he="לפני הכס, לפני הצבאות, לפני ירושלים — היה נער בגבעות בית לחם, שומר על צאן מתחת לכוכבים. המסע מתחיל הרבה לפני הכתר.">Before the throne, before the armies, before Jerusalem — there was a boy in the hills of Bethlehem, guarding sheep under the stars. The journey begins long before the crown.</p>
+        <a href="david-shepherd.html" class="cta-btn-solid" data-en="← Meet The Shepherd" data-he="← הכירו את הרועה">← Meet The Shepherd</a>
+      </div>
+      <div class="transform-images">
+        <img src="https://static.wixstatic.com/media/e5d12f_b8f55a34471449699f0a0ec6f5c6c573~mv2.png" alt="King David">
+        <span class="transform-arrow">←</span>
+        <img src="https://static.wixstatic.com/media/e5d12f_6e07efcc6f054ef8acf771f9a14c7587~mv2.png" alt="David the Shepherd">
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="footer-inner">
+    <div class="footer-brand">
+      <img src="https://static.wixstatic.com/media/e5d12f_cc878e14d7ee46948e92d05e9463b70c~mv2.png" alt="YALDY" style="height:40px">
+      <p data-en="Real Heroes. True Strength. Premium biblical hero puzzles and stories for children and families." data-he="גיבורים אמיתיים. כוח אמיתי. פאזלים וסיפורי גיבורים תנ״כיים פרימיום לילדים ומשפחות.">Real Heroes. True Strength. Premium biblical hero puzzles and stories for children and families.</p>
+    </div>
+    <div class="footer-col">
+      <h4 data-en="Explore" data-he="גלו">Explore</h4>
+      <a href="../index.html" data-en="Home" data-he="ראשי">Home</a>
+      <a href="david-shepherd.html" data-en="David the Shepherd" data-he="דוד הרועה">David the Shepherd</a>
+      <a href="david-king.html" data-en="King David" data-he="דוד המלך">King David</a>
+      <a href="story.html" data-en="Our Story" data-he="הסיפור שלנו">Our Story</a>
+    </div>
+    <div class="footer-col">
+      <h4 data-en="Contact" data-he="צור קשר">Contact</h4>
+      <p><a href="mailto:info@yaldyheroes.com" style="color:var(--gold)">info@yaldyheroes.com</a></p>
+      <p>+972-50-650-0750</p>
+      <p data-en="Rosh HaAyin, Israel" data-he="ראש העין, ישראל">Rosh HaAyin, Israel</p>
+    </div>
+    <div class="footer-col">
+      <h4 data-en="Legal" data-he="מדיניות">Legal</h4>
+      <a href="policy.html" data-en="Shipping & Returns" data-he="משלוחים והחזרות">Shipping &amp; Returns</a>
+      <a href="policy.html" data-en="Privacy Policy" data-he="פרטיות">Privacy Policy</a>
+      <a href="policy.html" data-en="Terms" data-he="תנאים">Terms</a>
+      <a href="faq.html" data-en="FAQ" data-he="שאלות נפוצות">FAQ</a>
+    </div>
+  </div>
+  <div class="footer-bottom">&copy; 2025 YALDY&trade; All rights reserved. Real Heroes. True Strength.</div>
+</footer>
+
+<script src="../js/universe.js"></script>
+</body>
+</html>

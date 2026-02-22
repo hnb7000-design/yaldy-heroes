@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>FAQ | YALDY Heroes Universe</title>
+<meta name="description" content="Frequently asked questions about YALDY Heroes puzzles, shipping, and more.">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://yaldyheroes.com/pages/faq.html">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="FAQ | YALDY Heroes">
+    <meta property="og:description" content="Frequently asked questions about YALDY Heroes puzzles, shipping, and more.">
+    <meta property="og:image" content="https://static.wixstatic.com/media/e5d12f_cc878e14d7ee46948e92d05e9463b70c~mv2.png">
+    <meta property="og:url" content="https://yaldyheroes.com/pages/faq.html">
+    <meta property="og:site_name" content="YALDY Heroes Universe">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="FAQ | YALDY Heroes">
+    <meta name="twitter:description" content="Frequently asked questions about YALDY Heroes puzzles, shipping, and more.">
+    <meta name="twitter:image" content="https://static.wixstatic.com/media/e5d12f_cc878e14d7ee46948e92d05e9463b70c~mv2.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Oswald:wght@300;400;500;600;700;900&family=Open+Sans:wght@300;400;500;600;700&family=Heebo:wght@300;400;500;600;700;900&family=Frank+Ruhl+Libre:wght@400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../css/universe.css">
+<style>
+/* ===== PAGE-SPECIFIC: FAQ Hero Banner ===== */
+.faq-hero {
+  min-height: 40vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 120px 24px 50px;
+  position: relative;
+  z-index: 1;
+  background: linear-gradient(180deg, rgba(10,14,26,0.3) 0%, var(--navy) 100%);
+}
+.faq-hero h1 {
+  font-family: var(--font-hero);
+  font-size: clamp(2.2rem, 5vw, 3.5rem);
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  color: var(--gold);
+  margin-bottom: 12px;
+}
+[dir="rtl"] .faq-hero h1 {
+  letter-spacing: 0;
+}
+
+/* ===== PAGE-SPECIFIC: FAQ Content Section ===== */
+.faq-content-section {
+  position: relative;
+  z-index: 1;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px 24px 80px;
+}
+
+/* ===== PAGE-SPECIFIC: FAQ Border-Left Gold Accent ===== */
+.faq-content-section .faq-item {
+  border-left: 3px solid var(--gold);
+  border-radius: 0 8px 8px 0;
+  background: rgba(17, 24, 39, 0.6);
+  max-width: 100%;
+}
+[dir="rtl"] .faq-content-section .faq-item {
+  border-left: none;
+  border-right: 3px solid var(--gold);
+  border-radius: 8px 0 0 8px;
+}
+.faq-content-section .faq-item:hover {
+  background: rgba(17, 24, 39, 0.85);
+}
+
+/* Increase max-height for longer FAQ answers */
+.faq-content-section .faq-item.open .faq-a {
+  max-height: 500px;
+}
+
+@media (max-width: 768px) {
+  .faq-hero { min-height: 35vh; padding-top: 90px; }
+}
+</style>
+</head>
+
+<body>
+<canvas id="particles"></canvas>
+
+<!-- NAVBAR -->
+<nav class="navbar" id="navbar">
+  <div class="container">
+    <a href="../index.html" class="logo">
+      <img src="https://static.wixstatic.com/media/e5d12f_cc878e14d7ee46948e92d05e9463b70c~mv2.png" alt="YALDY Heroes Logo">
+    </a>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="../index.html" data-en="Home" data-he="ראשי">Home</a></li>
+      <li><a href="../index.html#heroes" data-en="Heroes" data-he="הגיבורים">Heroes</a></li>
+      <li><a href="../index.html#collection" data-en="Collection" data-he="האוסף">Collection</a></li>
+      <li><a href="../index.html#about" data-en="Our Story" data-he="הסיפור שלנו">Our Story</a></li>
+      <li><a href="contact.html" data-en="Contact" data-he="צור קשר">Contact</a></li>
+      <li><button class="lang-toggle" onclick="toggleLang()">עברית</button></li>
+    </ul>
+    <div class="mobile-toggle" id="mobileToggle"><span></span><span></span><span></span></div>
+  </div>
+</nav>
+
+<!-- MOBILE MENU -->
+<div class="mob-menu" id="mobMenu">
+  <a href="../index.html" data-en="Home" data-he="ראשי">Home</a>
+  <a href="../index.html#heroes" data-en="Heroes" data-he="הגיבורים">Heroes</a>
+  <a href="../index.html#collection" data-en="Collection" data-he="האוסף">Collection</a>
+  <a href="../index.html#about" data-en="Our Story" data-he="הסיפור שלנו">Our Story</a>
+  <a href="contact.html" data-en="Contact" data-he="צור קשר">Contact</a>
+  <button class="lang-toggle" onclick="toggleLang()">עברית</button>
+</div>
+
+<!-- HERO BANNER -->
+<section class="faq-hero">
+  <h1 data-en="FAQ" data-he="שאלות נפוצות">FAQ</h1>
+  <div class="breadcrumb">
+    <a href="../index.html" data-en="Home" data-he="ראשי">Home</a> &nbsp;/&nbsp;
+    <span data-en="FAQ" data-he="שאלות נפוצות">FAQ</span>
+  </div>
+</section>
+
+<!-- FAQ CONTENT -->
+<section class="faq-content-section">
+
+  <!-- Q1 -->
+  <div class="faq-item fade-in">
+    <div class="faq-q">
+      <span data-en="What is YALDY?" data-he="מה זה YALDY?">What is YALDY?</span>
+    </div>
+    <div class="faq-a">
+      <p data-en="YALDY (Your Adventure Lies in Daring You) is a brand by Bible Heroes &ndash; Power of Truth. We create collectible puzzles featuring legendary biblical heroes, each with unique artwork, character lore cards, and hidden QR codes that unlock bonus digital content. It's an immersive experience that combines education, art, and discovery for the whole family." data-he="YALDY (Your Adventure Lies in Daring You) הוא מותג של Bible Heroes &ndash; Power of Truth. אנו יוצרים פאזלים אספנותיים המציגים גיבורי תנ&quot;ך אגדיים, כל אחד עם עיצוב ייחודי, כרטיסי סיפור דמות וקודי QR נסתרים שפותחים תוכן דיגיטלי בונוס. זהו חוויה סוחפת המשלבת חינוך, אמנות וגילוי לכל המשפחה.">YALDY (Your Adventure Lies in Daring You) is a brand by Bible Heroes &ndash; Power of Truth. We create collectible puzzles featuring legendary biblical heroes, each with unique artwork, character lore cards, and hidden QR codes that unlock bonus digital content. It's an immersive experience that combines education, art, and discovery for the whole family.</p>
+    </div>
+  </div>
+
+  <!-- Q2 -->
+  <div class="faq-item fade-in">
+    <div class="faq-q">
+      <span data-en="What ages are the puzzles for?" data-he="לאיזה גילאים מתאימים הפאזלים?">What ages are the puzzles for?</span>
+    </div>
+    <div class="faq-a">
+      <p data-en="Our puzzles are designed for ages 6 and up. Younger children can enjoy assembling the puzzles with parental help, while older kids and adults will appreciate the detailed artwork, character lore, and the QR scavenger hunt challenge. They make a great family activity!" data-he="הפאזלים שלנו מיועדים לגילאי 6 ומעלה. ילדים צעירים יותר יכולים ליהנות מהרכבת הפאזלים בעזרת הורים, בעוד ילדים גדולים ומבוגרים יעריכו את העיצוב המפורט, סיפורי הדמויות ואתגר ציד ה-QR. זו פעילות משפחתית מעולה!">Our puzzles are designed for ages 6 and up. Younger children can enjoy assembling the puzzles with parental help, while older kids and adults will appreciate the detailed artwork, character lore, and the QR scavenger hunt challenge. They make a great family activity!</p>
+    </div>
+  </div>
+
+  <!-- Q3 -->
+  <div class="faq-item fade-in">
+    <div class="faq-q">
+      <span data-en="What's included in each puzzle?" data-he="מה כלול בכל פאזל?">What's included in each puzzle?</span>
+    </div>
+    <div class="faq-a">
+      <p data-en="Each YALDY puzzle set includes: a premium-quality puzzle with original hero artwork, a collectible character lore card with the hero's story and abilities, a hidden QR code within the puzzle that unlocks exclusive digital bonus content, and a collector's guide. Everything comes in a beautifully designed keepsake box." data-he="כל ערכת פאזל YALDY כוללת: פאזל באיכות פרימיום עם עיצוב גיבור מקורי, כרטיס אספנותי של סיפור הדמות עם הסיפור והכוחות שלה, קוד QR נסתר בתוך הפאזל שפותח תוכן דיגיטלי בונוס בלעדי, ומדריך אספנים. הכל מגיע בקופסה מעוצבת להפליא.">Each YALDY puzzle set includes: a premium-quality puzzle with original hero artwork, a collectible character lore card with the hero's story and abilities, a hidden QR code within the puzzle that unlocks exclusive digital bonus content, and a collector's guide. Everything comes in a beautifully designed keepsake box.</p>
+    </div>
+  </div>
+
+  <!-- Q4 -->
+  <div class="faq-item fade-in">
+    <div class="faq-q">
+      <span data-en="How does the QR bonus work?" data-he="איך עובד בונוס ה-QR?">How does the QR bonus work?</span>
+    </div>
+    <div class="faq-a">
+      <p data-en="Hidden within each completed puzzle is a QR code. Once you've assembled the puzzle, find and scan the QR code with your phone camera. This unlocks exclusive digital content: animated hero introductions, behind-the-scenes artwork, bonus lore about the hero's world, and sometimes special discount codes for future releases!" data-he="בתוך כל פאזל מורכב מוסתר קוד QR. לאחר שהרכבתם את הפאזל, מצאו וסרקו את קוד ה-QR עם מצלמת הטלפון. זה פותח תוכן דיגיטלי בלעדי: הקדמות אנימציה של גיבורים, עיצובים מאחורי הקלעים, סיפורים נוספים על עולם הגיבור, ולפעמים קודי הנחה מיוחדים להשקות עתידיות!">Hidden within each completed puzzle is a QR code. Once you've assembled the puzzle, find and scan the QR code with your phone camera. This unlocks exclusive digital content: animated hero introductions, behind-the-scenes artwork, bonus lore about the hero's world, and sometimes special discount codes for future releases!</p>
+    </div>
+  </div>
+
+  <!-- Q5 -->
+  <div class="faq-item fade-in">
+    <div class="faq-q">
+      <span data-en="Do you ship internationally?" data-he="האם אתם שולחים לחו&quot;ל?">Do you ship internationally?</span>
+    </div>
+    <div class="faq-a">
+      <p data-en="Currently, we offer domestic shipping within Israel with delivery in 5&ndash;7 business days. International shipping is available upon request. Please contact us at info@yaldyheroes.com for international shipping rates and estimated delivery times to your location." data-he="כרגע, אנו מציעים משלוחים בתוך ישראל עם אספקה תוך 5&ndash;7 ימי עסקים. משלוחים בינלאומיים זמינים לפי בקשה. אנא צרו קשר בכתובת info@yaldyheroes.com לקבלת מחירי משלוח בינלאומיים וזמני אספקה משוערים ליעד שלכם.">Currently, we offer domestic shipping within Israel with delivery in 5&ndash;7 business days. International shipping is available upon request. Please contact us at info@yaldyheroes.com for international shipping rates and estimated delivery times to your location.</p>
+    </div>
+  </div>
+
+  <!-- Q6 -->
+  <div class="faq-item fade-in">
+    <div class="faq-q">
+      <span data-en="What is your return policy?" data-he="מה מדיניות ההחזרות?">What is your return policy?</span>
+    </div>
+    <div class="faq-a">
+      <p data-en="We offer a 14-day return policy from the date of delivery. Items must be in their original, unopened packaging to be eligible for a return. To initiate a return, contact our team at info@yaldyheroes.com with your order number. Once your return is approved, we'll provide shipping instructions. Refunds are processed within 7&ndash;10 business days after we receive the item." data-he="אנו מציעים מדיניות החזרות של 14 יום מתאריך האספקה. המוצרים חייבים להיות באריזה המקורית שלא נפתחה כדי להיות זכאים להחזרה. ליזום החזרה, צרו קשר עם הצוות שלנו בכתובת info@yaldyheroes.com עם מספר ההזמנה שלכם. לאחר אישור ההחזרה, נספק הוראות משלוח. החזרים כספיים מעובדים תוך 7&ndash;10 ימי עסקים לאחר קבלת המוצר.">We offer a 14-day return policy from the date of delivery. Items must be in their original, unopened packaging to be eligible for a return. To initiate a return, contact our team at info@yaldyheroes.com with your order number. Once your return is approved, we'll provide shipping instructions. Refunds are processed within 7&ndash;10 business days after we receive the item.</p>
+    </div>
+  </div>
+
+  <!-- Q7 -->
+  <div class="faq-item fade-in">
+    <div class="faq-q">
+      <span data-en='What are "Artifacts"?' data-he='מה זה "אוצרות"?'>What are "Artifacts"?</span>
+    </div>
+    <div class="faq-a">
+      <p data-en="Artifacts are the legendary items wielded by each YALDY hero. Each artifact has its own lore, unique abilities, and visual design. In the puzzle sets, artifacts are featured as special collectible elements. Some artifacts include David's Sling, Moses' Staff, Solomon's Ring, and more. As the YALDY Universe expands, new artifacts will be introduced with new heroes." data-he="אוצרות הם החפצים האגדיים שכל גיבור YALDY נושא. לכל אוצר יש סיפור משלו, כוחות ייחודיים ועיצוב חזותי. בערכות הפאזלים, אוצרות מוצגים כאלמנטים אספנותיים מיוחדים. חלק מהאוצרות כוללים את קלע דוד, מטה משה, טבעת שלמה ועוד. ככל שיקום YALDY מתרחב, אוצרות חדשים יוצגו עם גיבורים חדשים.">Artifacts are the legendary items wielded by each YALDY hero. Each artifact has its own lore, unique abilities, and visual design. In the puzzle sets, artifacts are featured as special collectible elements. Some artifacts include David's Sling, Moses' Staff, Solomon's Ring, and more. As the YALDY Universe expands, new artifacts will be introduced with new heroes.</p>
+    </div>
+  </div>
+
+  <!-- Q8 -->
+  <div class="faq-item fade-in">
+    <div class="faq-q">
+      <span data-en="Will there be more heroes?" data-he="האם יהיו עוד גיבורים?">Will there be more heroes?</span>
+    </div>
+    <div class="faq-a">
+      <p data-en="Absolutely! The YALDY Universe is ever-expanding. We have an exciting roadmap of new biblical heroes, each with their own puzzle sets, artifact lore, and digital bonus content. Follow us on social media and sign up for our newsletter to be the first to know about new hero releases and limited-edition collections." data-he="בהחלט! יקום YALDY מתרחב כל הזמן. יש לנו מפת דרכים מרגשת של גיבורי תנ&quot;ך חדשים, כל אחד עם ערכות פאזלים, סיפורי אוצרות ותוכן דיגיטלי בונוס משלו. עקבו אחרינו ברשתות החברתיות והירשמו לניוזלטר שלנו כדי להיות הראשונים לדעת על השקות גיבורים חדשים ואוספים במהדורה מוגבלת.">Absolutely! The YALDY Universe is ever-expanding. We have an exciting roadmap of new biblical heroes, each with their own puzzle sets, artifact lore, and digital bonus content. Follow us on social media and sign up for our newsletter to be the first to know about new hero releases and limited-edition collections.</p>
+    </div>
+  </div>
+
+  <!-- Q9 -->
+  <div class="faq-item fade-in">
+    <div class="faq-q">
+      <span data-en="Can I use YALDY puzzles for educational purposes?" data-he="האם אפשר להשתמש בפאזלי YALDY למטרות חינוכיות?">Can I use YALDY puzzles for educational purposes?</span>
+    </div>
+    <div class="faq-a">
+      <p data-en="Yes! YALDY puzzles are perfect for educational settings. Many teachers, homeschool families, and religious educators use them to bring biblical stories to life. The character lore cards provide age-appropriate historical and narrative context. For bulk educational orders, please contact us at info@yaldyheroes.com for special pricing." data-he="כן! פאזלי YALDY מושלמים לסביבות חינוכיות. מורים רבים, משפחות חינוך ביתי ומחנכים דתיים משתמשים בהם כדי להחיות סיפורי תנ&quot;ך. כרטיסי סיפור הדמויות מספקים הקשר היסטורי ונרטיבי המותאם לגיל. להזמנות חינוכיות בכמויות, צרו קשר בכתובת info@yaldyheroes.com למחירים מיוחדים.">Yes! YALDY puzzles are perfect for educational settings. Many teachers, homeschool families, and religious educators use them to bring biblical stories to life. The character lore cards provide age-appropriate historical and narrative context. For bulk educational orders, please contact us at info@yaldyheroes.com for special pricing.</p>
+    </div>
+  </div>
+
+  <!-- Q10 -->
+  <div class="faq-item fade-in">
+    <div class="faq-q">
+      <span data-en="How can I contact YALDY support?" data-he="איך אפשר ליצור קשר עם תמיכת YALDY?">How can I contact YALDY support?</span>
+    </div>
+    <div class="faq-a">
+      <p data-en="You can reach our team by email at info@yaldyheroes.com. We aim to respond within 1&ndash;2 business days. For the latest news, sneak peeks, and community discussions, follow us on our social media channels. We love hearing from our community of heroes!" data-he="ניתן לפנות לצוות שלנו בדוא&quot;ל info@yaldyheroes.com. אנו שואפים להשיב תוך 1&ndash;2 ימי עסקים. לחדשות אחרונות, הצצות ודיונים קהילתיים, עקבו אחרינו בערוצי המדיה החברתית שלנו. אנחנו אוהבים לשמוע מקהילת הגיבורים שלנו!">You can reach our team by email at info@yaldyheroes.com. We aim to respond within 1&ndash;2 business days. For the latest news, sneak peeks, and community discussions, follow us on our social media channels. We love hearing from our community of heroes!</p>
+    </div>
+  </div>
+
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="footer-inner">
+    <div class="footer-brand">
+      <img src="https://static.wixstatic.com/media/e5d12f_cc878e14d7ee46948e92d05e9463b70c~mv2.png" alt="YALDY" style="height:40px">
+      <p data-en="Real Heroes. True Strength. Premium biblical hero puzzles and stories for children and families." data-he="גיבורים אמיתיים. כוח אמיתי. פאזלים וסיפורי גיבורים תנ״כיים פרימיום לילדים ומשפחות.">Real Heroes. True Strength. Premium biblical hero puzzles and stories for children and families.</p>
+    </div>
+    <div class="footer-col">
+      <h4 data-en="Explore" data-he="גלו">Explore</h4>
+      <a href="../index.html" data-en="Home" data-he="ראשי">Home</a>
+      <a href="david-shepherd.html" data-en="David the Shepherd" data-he="דוד הרועה">David the Shepherd</a>
+      <a href="david-king.html" data-en="King David" data-he="דוד המלך">King David</a>
+      <a href="story.html" data-en="Our Story" data-he="הסיפור שלנו">Our Story</a>
+    </div>
+    <div class="footer-col">
+      <h4 data-en="Contact" data-he="צור קשר">Contact</h4>
+      <p><a href="mailto:info@yaldyheroes.com" style="color:var(--gold)">info@yaldyheroes.com</a></p>
+      <p>+972-50-650-0750</p>
+      <p data-en="Rosh HaAyin, Israel" data-he="ראש העין, ישראל">Rosh HaAyin, Israel</p>
+    </div>
+    <div class="footer-col">
+      <h4 data-en="Legal" data-he="מדיניות">Legal</h4>
+      <a href="policy.html" data-en="Shipping & Returns" data-he="משלוחים והחזרות">Shipping & Returns</a>
+      <a href="policy.html" data-en="Privacy Policy" data-he="פרטיות">Privacy Policy</a>
+      <a href="policy.html" data-en="Terms" data-he="תנאים">Terms</a>
+      <a href="faq.html" data-en="FAQ" data-he="שאלות נפוצות">FAQ</a>
+    </div>
+  </div>
+  <div class="footer-bottom">&copy; 2026 YALDY&trade; All rights reserved. Real Heroes. True Strength.</div>
+</footer>
+
+<script src="../js/universe.js"></script>
+</body>
+</html>

@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contact Us | YALDY Heroes Universe</title>
+<meta name="description" content="Get in touch with the YALDY Heroes team. Reach out for questions, collaborations, or anything about our biblical hero universe for kids and families.">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://yaldyheroes.com/pages/contact.html">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Contact Us | YALDY Heroes">
+    <meta property="og:description" content="Get in touch with the YALDY Heroes team. We'd love to hear from you.">
+    <meta property="og:image" content="https://static.wixstatic.com/media/e5d12f_cc878e14d7ee46948e92d05e9463b70c~mv2.png">
+    <meta property="og:url" content="https://yaldyheroes.com/pages/contact.html">
+    <meta property="og:site_name" content="YALDY Heroes Universe">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Contact Us | YALDY Heroes">
+    <meta name="twitter:description" content="Get in touch with the YALDY Heroes team. We'd love to hear from you.">
+    <meta name="twitter:image" content="https://static.wixstatic.com/media/e5d12f_cc878e14d7ee46948e92d05e9463b70c~mv2.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Oswald:wght@300;400;500;600;700;900&family=Open+Sans:wght@300;400;500;600;700&family=Heebo:wght@300;400;500;600;700;900&family=Frank+Ruhl+Libre:wght@400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../css/universe.css">
+
+<style>
+/* ===== CONTACT HERO ===== */
+.contact-hero {
+  min-height: 50vh; display: flex; align-items: center; justify-content: center;
+  position: relative; overflow: hidden; padding-top: 70px; text-align: center;
+}
+.contact-hero-overlay {
+  position: absolute; inset: 0;
+  background: linear-gradient(180deg, rgba(10,14,26,0.92) 0%, rgba(17,24,39,0.88) 50%, rgba(10,14,26,0.95) 100%);
+}
+.contact-hero-bg {
+  position: absolute; inset: 0;
+  background: radial-gradient(ellipse at 50% 30%, rgba(212,175,55,0.06) 0%, transparent 70%);
+}
+.contact-hero .container { position: relative; z-index: 2; }
+.contact-hero .hero-eyebrow {
+  font-family: var(--font-heading); font-size: 0.72rem; font-weight: 600;
+  color: var(--gold); letter-spacing: 4px; text-transform: uppercase; margin-bottom: 12px; opacity: 0.8;
+}
+[dir="rtl"] .contact-hero .hero-eyebrow { letter-spacing: 1px; }
+.contact-hero h1 {
+  font-family: var(--font-heading); font-size: clamp(2.8rem, 6vw, 4.8rem);
+  font-weight: 900; letter-spacing: 2px; line-height: 1.05; margin-bottom: 20px; text-transform: uppercase;
+}
+[dir="rtl"] .contact-hero h1 { font-family: var(--font-hebrew); letter-spacing: 0; }
+.contact-hero h1 span { color: var(--gold); }
+.contact-hero-desc {
+  font-size: 1.05rem; color: var(--text-light); margin: 0 auto; line-height: 1.85;
+  font-weight: 300; max-width: 550px;
+}
+.hero-line {
+  width: 60px; height: 2px; margin: 28px auto 0;
+  background: linear-gradient(90deg, transparent, var(--gold), transparent);
+}
+
+/* ===== CONTACT CARDS ===== */
+.contact-cards-section { background: var(--navy); padding-top: 80px; padding-bottom: 30px; }
+.contact-cards-grid {
+  display: grid; grid-template-columns: repeat(3, 1fr); gap: 28px; max-width: 1000px; margin: 0 auto;
+}
+.contact-card {
+  background: rgba(17,24,39,0.7); border: 1px solid rgba(212,175,55,0.08);
+  padding: 40px 28px; text-align: center; transition: var(--ease);
+  clip-path: polygon(0 0, calc(100% - 12px) 0, 100% 12px, 100% 100%, 12px 100%, 0 calc(100% - 12px));
+}
+.contact-card:hover {
+  transform: translateY(-6px); border-color: rgba(212,175,55,0.3);
+  box-shadow: 0 15px 40px rgba(0,0,0,0.4);
+}
+.contact-card-icon {
+  width: 56px; height: 56px; margin: 0 auto 20px;
+  border: 1px solid rgba(212,175,55,0.3); border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+  background: rgba(212,175,55,0.06);
+}
+.contact-card-icon svg { width: 22px; height: 22px; stroke: var(--gold); fill: none; stroke-width: 1.5; }
+.contact-card h3 {
+  font-family: var(--font-heading); font-size: 0.95rem; margin-bottom: 12px;
+  letter-spacing: 2px; text-transform: uppercase; color: var(--white);
+}
+[dir="rtl"] .contact-card h3 { font-family: var(--font-hebrew); letter-spacing: 0; }
+.contact-card p { font-size: 0.92rem; color: var(--text-muted); line-height: 1.7; }
+.contact-card a { color: var(--gold); text-decoration: none; transition: var(--ease); }
+.contact-card a:hover { color: var(--gold-light); }
+
+/* ===== CONTACT FORM SECTION ===== */
+.contact-form-section {
+  background: linear-gradient(180deg, var(--navy), var(--navy-mid));
+  padding-top: 80px; padding-bottom: 100px;
+}
+.contact-form-wrapper {
+  max-width: 680px; margin: 0 auto; position: relative; z-index: 1;
+}
+.contact-form {
+  display: flex; flex-direction: column; gap: 18px;
+}
+.contact-form input,
+.contact-form textarea {
+  width: 100%; padding: 15px 18px;
+  background: rgba(255,255,255,0.06); border: 1px solid rgba(255,255,255,0.12);
+  color: var(--white); font-family: var(--font-body); font-size: 0.95rem;
+  transition: var(--ease); resize: none;
+}
+[dir="rtl"] .contact-form input,
+[dir="rtl"] .contact-form textarea { font-family: var(--font-hebrew); text-align: right; }
+.contact-form input::placeholder,
+.contact-form textarea::placeholder { color: rgba(255,255,255,0.4); }
+.contact-form input:focus,
+.contact-form textarea:focus { outline: none; border-color: var(--gold); background: rgba(255,255,255,0.1); }
+.contact-form textarea { min-height: 160px; line-height: 1.7; }
+.form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; }
+.form-submit-row { text-align: center; margin-top: 8px; }
+.contact-form .cta-btn-solid { width: 100%; max-width: 320px; }
+.form-note {
+  font-size: 0.9rem; color: var(--gold); margin-top: 18px; text-align: center;
+  display: none; animation: fadeUp 0.4s ease;
+}
+
+/* ===== SOCIAL SECTION ===== */
+.social-section {
+  background: var(--navy-mid); padding: 70px 0; text-align: center;
+  border-top: 1px solid rgba(212,175,55,0.06);
+}
+.social-links { display: flex; justify-content: center; gap: 24px; margin-top: 30px; }
+.social-link {
+  width: 52px; height: 52px; border-radius: 50%;
+  border: 1px solid rgba(212,175,55,0.3); display: flex; align-items: center; justify-content: center;
+  transition: var(--ease); background: rgba(212,175,55,0.04); text-decoration: none;
+}
+.social-link:hover {
+  background: rgba(212,175,55,0.12); border-color: var(--gold);
+  transform: translateY(-4px); box-shadow: 0 8px 25px rgba(212,175,55,0.15);
+}
+.social-link svg { width: 20px; height: 20px; fill: var(--gold); }
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 768px) {
+  .contact-cards-grid { grid-template-columns: 1fr; max-width: 400px; margin: 0 auto; }
+  .form-row { grid-template-columns: 1fr; }
+  .contact-hero { min-height: 45vh; }
+}
+
+/* ===== KEYFRAMES ===== */
+@keyframes fadeUp { from { opacity: 0; transform: translateY(25px); } to { opacity: 1; transform: translateY(0); } }
+</style>
+</head>
+
+<body>
+<canvas id="particles"></canvas>
+<div class="overlay" id="overlay"></div>
+
+<!-- NAVBAR -->
+<nav class="navbar">
+  <div class="container">
+    <a href="../index.html" class="logo">
+      <img src="https://static.wixstatic.com/media/e5d12f_cc878e14d7ee46948e92d05e9463b70c~mv2.png" alt="YALDY Heroes Logo">
+    </a>
+    <ul class="nav-links">
+      <li><a href="../index.html" data-en="Home" data-he="ראשי">Home</a></li>
+      <li><a href="../index.html#heroes" data-en="Heroes" data-he="הגיבורים">Heroes</a></li>
+      <li><a href="../index.html#collection" data-en="Collection" data-he="האוסף">Collection</a></li>
+      <li><a href="../index.html#about" data-en="Our Story" data-he="הסיפור שלנו">Our Story</a></li>
+      <li><a href="contact.html" data-en="Contact" data-he="צור קשר">Contact</a></li>
+      <li><button class="lang-toggle" onclick="toggleLang()">עברית</button></li>
+    </ul>
+    <div class="mobile-toggle" id="mobileToggle"><span></span><span></span><span></span></div>
+  </div>
+</nav>
+<div class="mob-menu" id="mobMenu">
+  <a href="../index.html" data-en="Home" data-he="ראשי">Home</a>
+  <a href="../index.html#heroes" data-en="Heroes" data-he="הגיבורים">Heroes</a>
+  <a href="../index.html#collection" data-en="Collection" data-he="האוסף">Collection</a>
+  <a href="../index.html#about" data-en="Our Story" data-he="הסיפור שלנו">Our Story</a>
+  <a href="contact.html" data-en="Contact" data-he="צור קשר">Contact</a>
+  <button class="lang-toggle" onclick="toggleLang()">עברית</button>
+</div>
+
+<!-- HERO BANNER -->
+<section class="contact-hero">
+  <div class="contact-hero-overlay"></div>
+  <div class="contact-hero-bg"></div>
+  <div class="container">
+    <p class="hero-eyebrow" data-en="Get in Touch" data-he="נשמח לשמוע מכם">Get in Touch</p>
+    <h1 data-en="CONTACT <span>US</span>" data-he="צור <span>קשר</span>">CONTACT <span>US</span></h1>
+    <p class="contact-hero-desc" data-en="Have a question, idea, or want to collaborate? We'd love to hear from you." data-he="יש לכם שאלה, רעיון או הצעה לשיתוף פעולה? נשמח לשמוע מכם.">Have a question, idea, or want to collaborate? We'd love to hear from you.</p>
+    <div class="hero-line"></div>
+  </div>
+</section>
+
+<!-- CONTACT INFO CARDS -->
+<section class="contact-cards-section">
+  <div class="container">
+    <div class="contact-cards-grid">
+      <!-- Email Card -->
+      <div class="contact-card fade-in">
+        <div class="contact-card-icon">
+          <svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="M22 4L12 13 2 4"/></svg>
+        </div>
+        <h3 data-en="Email" data-he="אימייל">Email</h3>
+        <p><a href="mailto:info@yaldyheroes.com">info@yaldyheroes.com</a></p>
+      </div>
+      <!-- Phone Card -->
+      <div class="contact-card fade-in">
+        <div class="contact-card-icon">
+          <svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"/></svg>
+        </div>
+        <h3 data-en="Phone" data-he="טלפון">Phone</h3>
+        <p><a href="tel:+972506500750">+972-50-650-0750</a></p>
+      </div>
+      <!-- Location Card -->
+      <div class="contact-card fade-in">
+        <div class="contact-card-icon">
+          <svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+        </div>
+        <h3 data-en="Location" data-he="מיקום">Location</h3>
+        <p data-en="Ali HaCohen St<br>Rosh HaAyin, Israel" data-he="רחוב עלי הכהן<br>ראש העין, ישראל">Ali HaCohen St<br>Rosh HaAyin, Israel</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT FORM -->
+<section class="contact-form-section">
+  <div class="container">
+    <div class="section-header fade-in">
+      <p class="section-eyebrow" data-en="YALDY Heroes" data-he="YALDY Heroes">YALDY Heroes</p>
+      <h2 class="section-title" data-en="Send Us a Message" data-he="שלחו לנו הודעה">Send Us a Message</h2>
+      <p class="section-sub" data-en="We'll get back to you as soon as possible" data-he="נחזור אליכם בהקדם האפשרי">We'll get back to you as soon as possible</p>
+      <div class="divider"></div>
+    </div>
+    <div class="contact-form-wrapper fade-in">
+      <form class="contact-form" id="contactForm">
+        <div class="form-row">
+          <input type="text" id="contactName" placeholder="Full Name" required>
+          <input type="email" id="contactEmail" placeholder="Email Address" required>
+        </div>
+        <input type="text" id="contactSubject" placeholder="Subject" required>
+        <textarea id="contactMessage" placeholder="Your message..." required></textarea>
+        <div class="form-submit-row">
+          <button type="submit" class="cta-btn-solid" data-en="Send Message" data-he="שלחו הודעה">Send Message</button>
+        </div>
+      </form>
+      <p class="form-note" id="formNote" data-en="Thank you! Your message has been sent." data-he="תודה! ההודעה שלכם נשלחה בהצלחה.">Thank you! Your message has been sent.</p>
+    </div>
+  </div>
+</section>
+
+<!-- SOCIAL LINKS -->
+<section class="social-section">
+  <div class="container">
+    <div class="section-header fade-in">
+      <p class="section-eyebrow" data-en="Follow Us" data-he="עקבו אחרינו">Follow Us</p>
+      <h2 class="section-title" data-en="Join the Community" data-he="הצטרפו לקהילה">Join the Community</h2>
+      <div class="divider"></div>
+    </div>
+    <div class="social-links fade-in">
+      <!-- Instagram -->
+      <a href="#" class="social-link" aria-label="Instagram" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
+      </a>
+      <!-- Facebook -->
+      <a href="#" class="social-link" aria-label="Facebook" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+      </a>
+      <!-- TikTok -->
+      <a href="#" class="social-link" aria-label="TikTok" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24"><path d="M12.525.02c1.31-.02 2.61-.01 3.91-.02.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.05-2.89-.35-4.2-.97-.57-.26-1.1-.59-1.62-.93-.01 2.92.01 5.84-.02 8.75-.08 1.4-.54 2.79-1.35 3.94-1.31 1.92-3.58 3.17-5.91 3.21-1.43.08-2.86-.31-4.08-1.03-2.02-1.19-3.44-3.37-3.65-5.71-.02-.5-.03-1-.01-1.49.18-1.9 1.12-3.72 2.58-4.96 1.66-1.44 3.98-2.13 6.15-1.72.02 1.48-.04 2.96-.04 4.44-.99-.32-2.15-.23-3.02.37-.63.41-1.11 1.04-1.36 1.75-.21.51-.15 1.07-.14 1.61.24 1.64 1.82 3.02 3.5 2.87 1.12-.01 2.19-.66 2.77-1.61.19-.33.4-.67.41-1.06.1-1.79.06-3.57.07-5.36.01-4.03-.01-8.05.02-12.07z"/></svg>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="footer-inner">
+    <div class="footer-brand">
+      <img src="https://static.wixstatic.com/media/e5d12f_cc878e14d7ee46948e92d05e9463b70c~mv2.png" alt="YALDY" style="height:40px">
+      <p data-en="Real Heroes. True Strength. Premium biblical hero puzzles and stories for children and families." data-he="גיבורים אמיתיים. כוח אמיתי. פאזלים וסיפורי גיבורים תנ״כיים פרימיום לילדים ומשפחות.">Real Heroes. True Strength. Premium biblical hero puzzles and stories for children and families.</p>
+    </div>
+    <div class="footer-col">
+      <h4 data-en="Explore" data-he="גלו">Explore</h4>
+      <a href="../index.html" data-en="Home" data-he="ראשי">Home</a>
+      <a href="david-shepherd.html" data-en="David the Shepherd" data-he="דוד הרועה">David the Shepherd</a>
+      <a href="david-king.html" data-en="King David" data-he="דוד המלך">King David</a>
+      <a href="story.html" data-en="Our Story" data-he="הסיפור שלנו">Our Story</a>
+    </div>
+    <div class="footer-col">
+      <h4 data-en="Contact" data-he="צור קשר">Contact</h4>
+      <p><a href="mailto:info@yaldyheroes.com" style="color:var(--gold)">info@yaldyheroes.com</a></p>
+      <p>+972-50-650-0750</p>
+      <p data-en="Rosh HaAyin, Israel" data-he="ראש העין, ישראל">Rosh HaAyin, Israel</p>
+    </div>
+    <div class="footer-col">
+      <h4 data-en="Legal" data-he="מדיניות">Legal</h4>
+      <a href="policy.html" data-en="Shipping & Returns" data-he="משלוחים והחזרות">Shipping & Returns</a>
+      <a href="policy.html" data-en="Privacy Policy" data-he="פרטיות">Privacy Policy</a>
+      <a href="policy.html" data-en="Terms" data-he="תנאים">Terms</a>
+      <a href="faq.html" data-en="FAQ" data-he="שאלות נפוצות">FAQ</a>
+    </div>
+  </div>
+  <div class="footer-bottom">&copy; 2026 YALDY&trade; All rights reserved. Real Heroes. True Strength.</div>
+</footer>
+
+<script src="../js/universe.js"></script>
+<script>
+// Handle contactSubject placeholder for bilingual support
+(function(){
+  var subj = document.getElementById('contactSubject');
+  if (!subj) return;
+  function updateSubjectPlaceholder() {
+    subj.placeholder = document.documentElement.dir === 'rtl' ? '\u05E0\u05D5\u05E9\u05D0' : 'Subject';
+  }
+  updateSubjectPlaceholder();
+  // Listen for language changes via MutationObserver on <html> dir attribute
+  var obs = new MutationObserver(updateSubjectPlaceholder);
+  obs.observe(document.documentElement, { attributes: true, attributeFilter: ['dir'] });
+})();
+</script>
+</body>
+</html>

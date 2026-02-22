@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>David the Shepherd | YALDY Heroes Universe</title>
+<meta name="description" content="Meet David the Shepherd — a 14-year-old boy who protected his flock, fought a lion, and stood against a giant. Discover his full RPG hero profile.">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://yaldyheroes.com/pages/david-shepherd.html">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="David the Shepherd | YALDY Heroes">
+    <meta property="og:description" content="The young shepherd who became a hero. Explore David's journey from the wilderness.">
+    <meta property="og:image" content="https://static.wixstatic.com/media/e5d12f_6e07efcc6f054ef8acf771f9a14c7587~mv2.png">
+    <meta property="og:url" content="https://yaldyheroes.com/pages/david-shepherd.html">
+    <meta property="og:site_name" content="YALDY Heroes Universe">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="David the Shepherd | YALDY Heroes">
+    <meta name="twitter:description" content="The young shepherd who became a hero. Explore David's journey from the wilderness.">
+    <meta name="twitter:image" content="https://static.wixstatic.com/media/e5d12f_6e07efcc6f054ef8acf771f9a14c7587~mv2.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Oswald:wght@300;400;500;600;700;900&family=Open+Sans:wght@300;400;500;600;700&family=Heebo:wght@300;400;500;600;700;900&family=Frank+Ruhl+Libre:wght@400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../css/universe.css">
+<style>
+/* ===== PAGE-SPECIFIC: RPG Hero Profile ===== */
+.hero-entrance-content { max-width: 600px; }
+.hero-entrance-eyebrow {
+  font-family: var(--font-heading); font-size: 0.72rem; font-weight: 600;
+  color: var(--gold); letter-spacing: 4px; text-transform: uppercase; margin-bottom: 10px; opacity: 0.8;
+}
+.hero-entrance-label {
+  font-family: var(--font-heading); font-size: 0.65rem; font-weight: 500;
+  color: var(--text-muted); letter-spacing: 4px; text-transform: uppercase; margin-bottom: 8px;
+}
+.hero-entrance h1 {
+  font-family: var(--font-hero); font-size: clamp(2.5rem, 5.5vw, 4.2rem);
+  font-weight: 900; letter-spacing: 2px; line-height: 1.05; margin-bottom: 6px; text-transform: uppercase;
+}
+.hero-entrance h1 span { color: var(--gold); }
+.hero-entrance-title-sub {
+  font-family: var(--font-heading); font-size: 1.3rem; font-weight: 300;
+  color: var(--gold); letter-spacing: 3px; text-transform: uppercase; margin-bottom: 24px;
+}
+.hero-entrance-desc {
+  font-size: 1.05rem; color: var(--text-light); margin-bottom: 30px;
+  line-height: 1.85; font-weight: 300; max-width: 480px;
+}
+
+/* RPG Stats Panel */
+.rpg-section { padding: 100px 0; position: relative; z-index: 1; background: var(--navy-mid); }
+.rpg-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: start; }
+.rpg-profile-card {
+  background: rgba(17,24,39,0.7); border: 1px solid rgba(212,175,55,0.12);
+  padding: 40px 35px; position: relative; overflow: hidden;
+  clip-path: polygon(0 0, calc(100% - 18px) 0, 100% 18px, 100% 100%, 18px 100%, 0 calc(100% - 18px));
+}
+.rpg-profile-card::before {
+  content: ''; position: absolute; top: 0; left: 0; right: 0; height: 3px;
+  background: linear-gradient(90deg, transparent, var(--gold), transparent);
+}
+.rpg-card-label {
+  font-family: var(--font-heading); font-size: 0.6rem; font-weight: 600;
+  letter-spacing: 4px; color: var(--gold); text-transform: uppercase; margin-bottom: 18px; opacity: 0.7;
+}
+.rpg-profile-img { width: 100%; aspect-ratio: 3/4; overflow: hidden; margin-bottom: 28px; border: 1px solid rgba(212,175,55,0.15); }
+.rpg-profile-img img { width: 100%; height: 100%; object-fit: cover; object-position: top; }
+.stat-info-row { display: flex; justify-content: space-between; align-items: center; padding: 10px 0; border-bottom: 1px solid rgba(255,255,255,0.04); }
+.stat-info-label { font-family: var(--font-heading); font-size: 0.7rem; font-weight: 600; letter-spacing: 2px; text-transform: uppercase; color: var(--text-muted); }
+.stat-info-value { font-family: var(--font-heading); font-size: 0.95rem; font-weight: 500; color: var(--white); letter-spacing: 0.5px; }
+.traits-section { margin-top: 24px; }
+.traits-title { font-family: var(--font-heading); font-size: 0.65rem; font-weight: 600; letter-spacing: 3px; color: var(--gold); text-transform: uppercase; margin-bottom: 14px; }
+.trait-tag {
+  display: inline-block; padding: 6px 14px; margin: 4px 6px 4px 0;
+  background: rgba(212,175,55,0.08); border: 1px solid rgba(212,175,55,0.15);
+  font-family: var(--font-heading); font-size: 0.72rem; font-weight: 500;
+  color: var(--gold-light); letter-spacing: 1px; text-transform: uppercase;
+}
+
+/* Stat Bars */
+.stat-bars-panel { padding-top: 10px; }
+.stat-bars-title {
+  font-family: var(--font-hero); font-size: clamp(1.4rem, 3vw, 2rem);
+  letter-spacing: 2px; text-transform: uppercase; margin-bottom: 8px;
+}
+.stat-bars-sub { font-size: 0.95rem; color: var(--text-muted); margin-bottom: 35px; line-height: 1.7; font-weight: 300; }
+.stat-bar-group { margin-bottom: 18px; }
+.stat-bar-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 6px; }
+.stat-bar-name { font-family: var(--font-heading); font-size: 0.78rem; font-weight: 600; letter-spacing: 1.5px; text-transform: uppercase; color: var(--text-light); }
+.stat-bar-val { font-family: var(--font-heading); font-size: 0.75rem; font-weight: 500; color: var(--gold); letter-spacing: 1px; }
+.stat-bar-fill::after {
+  content: ''; position: absolute; right: 0; top: 0; bottom: 0; width: 20px;
+  background: linear-gradient(90deg, transparent, rgba(255,255,255,0.3));
+}
+
+/* Moments */
+.moments-section { padding: 100px 0; position: relative; z-index: 1; background: var(--navy); }
+.moments-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 35px; max-width: 1050px; margin: 0 auto; }
+.moment-img { width: 100%; height: 260px; overflow: hidden; }
+.moment-img img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.5s ease; }
+.moment-card:hover .moment-img img { transform: scale(1.05); }
+.moment-body { padding: 28px 24px; }
+.moment-label { font-family: var(--font-heading); font-size: 0.6rem; font-weight: 600; letter-spacing: 3px; color: var(--gold); text-transform: uppercase; margin-bottom: 8px; opacity: 0.7; }
+.moment-body h3 { font-family: var(--font-hero); font-size: 1.2rem; letter-spacing: 1px; text-transform: uppercase; margin-bottom: 12px; color: var(--white); line-height: 1.3; }
+.moment-body p { font-size: 0.95rem; color: var(--text-light); line-height: 1.75; font-weight: 300; }
+
+/* Song Quote */
+.song-section { padding: 80px 0; text-align: center; background: linear-gradient(180deg, var(--navy-mid), var(--navy)); position: relative; z-index: 1; }
+.song-quote { font-family: var(--font-heading); font-size: clamp(1.1rem, 2.5vw, 1.6rem); color: var(--text-light); max-width: 750px; margin: 0 auto 14px; line-height: 1.8; font-weight: 300; letter-spacing: 1px; font-style: italic; }
+.song-quote em { color: var(--gold); font-style: normal; }
+.song-attr { font-family: var(--font-heading); font-size: 0.7rem; font-weight: 500; color: var(--text-muted); letter-spacing: 2px; text-transform: uppercase; }
+
+/* Related Artifacts */
+.related-section { padding: 100px 0; background: var(--navy-mid); position: relative; z-index: 1; }
+.related-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 28px; max-width: 700px; margin: 0 auto; }
+.related-card { background: rgba(17,24,39,0.7); overflow: hidden; transition: var(--ease); border: 1px solid rgba(212,175,55,0.08); clip-path: polygon(0 0, calc(100% - 10px) 0, 100% 10px, 100% 100%, 10px 100%, 0 calc(100% - 10px)); }
+.related-card:hover { transform: translateY(-6px); border-color: rgba(212,175,55,0.3); box-shadow: 0 15px 40px rgba(0,0,0,0.4); }
+.related-card-img { width: 100%; height: 200px; overflow: hidden; }
+.related-card-img img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.5s ease; }
+.related-card:hover .related-card-img img { transform: scale(1.07); }
+.related-card-info { padding: 22px 18px; }
+.related-card-info h3 { font-family: var(--font-hero); font-size: 0.95rem; margin-bottom: 10px; letter-spacing: 0.5px; line-height: 1.35; color: var(--white); }
+.related-price { display: flex; align-items: center; gap: 10px; margin-bottom: 14px; }
+.related-price .price-old { font-size: 0.9rem; color: var(--text-muted); text-decoration: line-through; }
+.related-price .price-new { font-size: 1.3rem; color: var(--gold); font-weight: 700; }
+
+/* Transformation */
+.transform-section { padding: 100px 0; position: relative; z-index: 1; overflow: hidden; background: linear-gradient(135deg, #0d1b2a, #1b1040); }
+.transform-section::before { content: ''; position: absolute; inset: 0; background: url('https://static.wixstatic.com/media/e5d12f_9cd9cc15f8794cc1b5de600b4abe3ccc~mv2.png') center/cover; opacity: 0.1; }
+.transform-content { position: relative; z-index: 2; display: grid; grid-template-columns: 1fr 1fr; gap: 55px; align-items: center; }
+.transform-text h2 { font-family: var(--font-hero); font-size: clamp(1.8rem, 4vw, 2.8rem); margin-bottom: 18px; text-transform: uppercase; letter-spacing: 2px; line-height: 1.15; }
+.transform-text h2 span { color: var(--gold); }
+.transform-text p { font-size: 1.05rem; color: var(--text-light); line-height: 1.85; margin-bottom: 28px; font-weight: 300; }
+.transform-images { display: flex; gap: 20px; align-items: center; justify-content: center; }
+.transform-images img { width: 45%; max-width: 220px; border-radius: 4px; box-shadow: 0 12px 40px rgba(0,0,0,0.5); border: 1px solid rgba(212,175,55,0.1); }
+.transform-arrow { font-size: 2rem; color: var(--gold); opacity: 0.6; animation: pulseArrow 2s ease-in-out infinite; }
+@keyframes pulseArrow { 0%, 100% { opacity: 0.4; transform: scale(1); } 50% { opacity: 0.8; transform: scale(1.15); } }
+
+/* Responsive overrides */
+@media (max-width: 1024px) {
+  .rpg-grid { grid-template-columns: 1fr; }
+  .rpg-profile-card { max-width: 480px; margin: 0 auto; }
+  .transform-content { grid-template-columns: 1fr; text-align: center; }
+  .transform-images { order: -1; }
+}
+@media (max-width: 768px) {
+  .moments-grid { grid-template-columns: 1fr; max-width: 480px; }
+  .related-grid { grid-template-columns: 1fr; max-width: 340px; }
+  .rpg-section, .moments-section, .related-section, .transform-section { padding: 70px 0; }
+}
+</style>
+</head>
+
+<body>
+<canvas id="particles"></canvas>
+<div class="overlay" id="overlay"></div>
+
+<!-- NAVBAR -->
+<nav class="navbar" id="navbar">
+  <div class="container">
+    <a href="../index.html" class="logo">
+      <img src="https://static.wixstatic.com/media/e5d12f_cc878e14d7ee46948e92d05e9463b70c~mv2.png" alt="YALDY Heroes Logo">
+    </a>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="../index.html" data-en="Home" data-he="בית">Home</a></li>
+      <li><a href="../index.html#heroes" data-en="Heroes" data-he="הגיבורים">Heroes</a></li>
+      <li><a href="../index.html#collection" data-en="Collection" data-he="האוסף">Collection</a></li>
+      <li><a href="contact.html" data-en="Contact" data-he="צור קשר">Contact</a></li>
+      <li><button class="lang-toggle" onclick="toggleLang()">עברית</button></li>
+    </ul>
+    <div class="mobile-toggle" id="mobileToggle"><span></span><span></span><span></span></div>
+  </div>
+</nav>
+
+<!-- MOBILE MENU -->
+<div class="mob-menu" id="mobMenu">
+  <a href="../index.html" data-en="Home" data-he="בית">Home</a>
+  <a href="../index.html#heroes" data-en="Heroes" data-he="הגיבורים">Heroes</a>
+  <a href="../index.html#collection" data-en="Collection" data-he="האוסף">Collection</a>
+  <a href="contact.html" data-en="Contact" data-he="צור קשר">Contact</a>
+  <button class="lang-toggle" onclick="toggleLang()">עברית</button>
+</div>
+
+<!-- HERO ENTRANCE -->
+<section class="hero-entrance">
+  <div class="hero-entrance-bg" style="background: url('https://static.wixstatic.com/media/e5d12f_e916af3ef85e41ee9d63650acff93b05~mv2.png') center/cover;"></div>
+  <div class="hero-entrance-overlay"></div>
+  <div class="container">
+    <div class="hero-entrance-content">
+      <div class="breadcrumb">
+        <a href="../index.html" data-en="Universe" data-he="יקום">Universe</a>
+        <span class="sep">›</span>
+        <a href="../index.html#heroes" data-en="Heroes" data-he="גיבורים">Heroes</a>
+        <span class="sep">›</span>
+        <span style="color:var(--gold)" data-en="The Shepherd" data-he="הרועה">The Shepherd</span>
+      </div>
+      <p class="hero-entrance-eyebrow">YALDY Universe · Hero Profile</p>
+      <p class="hero-entrance-label">HERO · 001</p>
+      <h1 data-en="DAVID THE SHEPHERD" data-he="דוד הרועה">DAVID <span>THE SHEPHERD</span></h1>
+      <p class="hero-entrance-title-sub" data-en="The Young Lion" data-he="האריה הצעיר">The Young Lion</p>
+      <p class="hero-entrance-desc" data-en="A 14-year-old shepherd from Bethlehem who protected his flock with nothing but faith and a sling. Before the crown, before the kingdom — there was a boy who refused to run." data-he="רועה צאן בן 14 מבית לחם ששמר על עדרו באמונה ובקלע בלבד. לפני הכתר, לפני הממלכה — היה נער שסירב לברוח.">A 14-year-old shepherd from Bethlehem who protected his flock with nothing but faith and a sling. Before the crown, before the kingdom — there was a boy who refused to run.</p>
+      <a href="#stats" class="cta-btn" data-en="View Full Profile" data-he="לפרופיל המלא">View Full Profile</a>
+    </div>
+    <div class="hero-entrance-img">
+      <img src="https://static.wixstatic.com/media/e5d12f_6e07efcc6f054ef8acf771f9a14c7587~mv2.png" alt="David the Shepherd">
+    </div>
+  </div>
+</section>
+
+<!-- RPG STATS PANEL -->
+<section class="rpg-section" id="stats">
+  <div class="container">
+    <div class="rpg-grid">
+      <div class="rpg-profile-card fade-in">
+        <div class="rpg-card-label">Character Dossier</div>
+        <div class="rpg-profile-img">
+          <img src="https://static.wixstatic.com/media/e5d12f_c67b3b7ae703464fb45f62ad8b670285~mv2.webp" alt="David the Shepherd Profile">
+        </div>
+        <div class="stat-info-row">
+          <span class="stat-info-label" data-en="Name" data-he="שם">Name</span>
+          <span class="stat-info-value" data-en="David the Shepherd" data-he="דוד הרועה">David the Shepherd</span>
+        </div>
+        <div class="stat-info-row">
+          <span class="stat-info-label" data-en="Title" data-he="תואר">Title</span>
+          <span class="stat-info-value" data-en="The Young Lion" data-he="האריה הצעיר">The Young Lion</span>
+        </div>
+        <div class="stat-info-row">
+          <span class="stat-info-label" data-en="Age" data-he="גיל">Age</span>
+          <span class="stat-info-value">14</span>
+        </div>
+        <div class="stat-info-row">
+          <span class="stat-info-label" data-en="Height" data-he="גובה">Height</span>
+          <span class="stat-info-value">165 cm (5'5")</span>
+        </div>
+        <div class="stat-info-row">
+          <span class="stat-info-label" data-en="Origin" data-he="מוצא">Origin</span>
+          <span class="stat-info-value" data-en="Bethlehem, Judah" data-he="בית לחם, יהודה">Bethlehem, Judah</span>
+        </div>
+        <div class="stat-info-row">
+          <span class="stat-info-label" data-en="Role" data-he="תפקיד">Role</span>
+          <span class="stat-info-value" data-en="Shepherd · Protector · Future King" data-he="רועה · מגן · מלך העתיד">Shepherd · Protector · Future King</span>
+        </div>
+        <div class="traits-section">
+          <div class="traits-title" data-en="Core Traits" data-he="תכונות ליבה">Core Traits</div>
+          <span class="trait-tag" data-en="Swift & Agile" data-he="מהיר וזריז">Swift & Agile</span>
+          <span class="trait-tag" data-en="Brave" data-he="אמיץ">Brave</span>
+          <span class="trait-tag" data-en="Loyal" data-he="נאמן">Loyal</span>
+          <span class="trait-tag" data-en="Natural Leader" data-he="מנהיג טבעי">Natural Leader</span>
+          <span class="trait-tag" data-en="Strong Faith" data-he="אמונה חזקה">Strong Faith</span>
+        </div>
+      </div>
+
+      <div class="stat-bars-panel stat-panel fade-in">
+        <p class="section-eyebrow">Power Analysis</p>
+        <h2 class="stat-bars-title" data-en="Combat Stats" data-he="נתוני כוח">Combat Stats</h2>
+        <p class="stat-bars-sub" data-en="Measured at age 14, before the battle against Goliath. Raw potential — not yet fully unlocked." data-he="נמדד בגיל 14, לפני הקרב עם גוליית. פוטנציאל גולמי — טרם נפתח במלואו.">Measured at age 14, before the battle against Goliath. Raw potential — not yet fully unlocked.</p>
+
+        <div class="stat-bar-group">
+          <div class="stat-bar-header"><span class="stat-bar-name" data-en="Strength" data-he="כוח">Strength</span><span class="stat-bar-val">65 / 100</span></div>
+          <div class="stat-bar-track"><div class="stat-bar-fill gold" data-width="65"></div></div>
+        </div>
+        <div class="stat-bar-group">
+          <div class="stat-bar-header"><span class="stat-bar-name" data-en="Speed" data-he="מהירות">Speed</span><span class="stat-bar-val">85 / 100</span></div>
+          <div class="stat-bar-track"><div class="stat-bar-fill gold" data-width="85"></div></div>
+        </div>
+        <div class="stat-bar-group">
+          <div class="stat-bar-header"><span class="stat-bar-name" data-en="Faith" data-he="אמונה">Faith</span><span class="stat-bar-val">95 / 100</span></div>
+          <div class="stat-bar-track"><div class="stat-bar-fill gold" data-width="95"></div></div>
+        </div>
+        <div class="stat-bar-group">
+          <div class="stat-bar-header"><span class="stat-bar-name" data-en="Defense" data-he="הגנה">Defense</span><span class="stat-bar-val">60 / 100</span></div>
+          <div class="stat-bar-track"><div class="stat-bar-fill gold" data-width="60"></div></div>
+        </div>
+        <div class="stat-bar-group">
+          <div class="stat-bar-header"><span class="stat-bar-name" data-en="Courage" data-he="אומץ">Courage</span><span class="stat-bar-val">90 / 100</span></div>
+          <div class="stat-bar-track"><div class="stat-bar-fill crimson" data-width="90"></div></div>
+        </div>
+        <div class="stat-bar-group">
+          <div class="stat-bar-header"><span class="stat-bar-name" data-en="Wisdom" data-he="חוכמה">Wisdom</span><span class="stat-bar-val">70 / 100</span></div>
+          <div class="stat-bar-track"><div class="stat-bar-fill gold" data-width="70"></div></div>
+        </div>
+
+        <div style="margin-top: 35px;">
+          <a href="#moments" class="cta-btn" data-en="Legendary Moments" data-he="רגעים אגדיים">Legendary Moments</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- LEGENDARY MOMENTS -->
+<section class="moments-section" id="moments">
+  <div class="container">
+    <div class="section-header">
+      <p class="section-eyebrow">Chapter Archives</p>
+      <h2 class="section-title" data-en="Legendary Moments" data-he="רגעים אגדיים">Legendary Moments</h2>
+      <p class="section-sub" data-en="The defining chapters that shaped a hero" data-he="הפרקים שעיצבו גיבור">The defining chapters that shaped a hero</p>
+      <div class="divider"></div>
+    </div>
+    <div class="moments-grid">
+      <div class="moment-card fade-in">
+        <div class="moment-img"><img src="https://static.wixstatic.com/media/e5d12f_c265fe32cc8041198b247f0f65d320eb~mv2.jpg" alt="David and the Lion"></div>
+        <div class="moment-body">
+          <div class="moment-label">Chapter I · The Lion</div>
+          <h3 data-en="This Is How a Hero Is Born" data-he="ככה נולד גיבור">"This Is How a Hero Is Born"</h3>
+          <p data-en="Alone in the wilderness. A lion attacks the flock. No weapon. No armor. Only faith and bare hands. In that moment, a shepherd became something more." data-he="לבד במדבר. אריה תוקף את העדר. בלי נשק. בלי שריון. רק אמונה וידיים חשופות. ברגע הזה, רועה הפך למשהו גדול יותר.">Alone in the wilderness. A lion attacks the flock. No weapon. No armor. Only faith and bare hands. In that moment, a shepherd became something more.</p>
+        </div>
+      </div>
+      <div class="moment-card fade-in">
+        <div class="moment-img"><img src="https://static.wixstatic.com/media/e5d12f_13d50adebb314bacbb3221210062ebb4~mv2.jpg" alt="David vs Goliath"></div>
+        <div class="moment-body">
+          <div class="moment-label">Chapter II · Goliath</div>
+          <h3 data-en="This Is How Faith Is Measured" data-he="ככה מודדים אמונה">"This Is How Faith Is Measured"</h3>
+          <p data-en="An entire army frozen in fear. A giant who mocked the God of Israel. And one boy who stepped forward — not with a sword, but with a stone and unshakable belief." data-he="צבא שלם קפוא מפחד. ענק שלעג לאלוהי ישראל. ונער אחד שצעד קדימה — לא עם חרב, אלא עם אבן ואמונה בלתי ניתנת לערעור.">An entire army frozen in fear. A giant who mocked the God of Israel. And one boy who stepped forward — not with a sword, but with a stone and unshakable belief.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SHEPHERD'S SONG -->
+<section class="song-section">
+  <div class="container">
+    <p class="section-eyebrow">The Shepherd's Song</p>
+    <p class="song-quote" data-en="Through melody and song, the shepherd spoke to the stars. His voice carried across the hills of Judah — a prayer, a promise, a prophecy." data-he="דרך מנגינה ושיר, הרועה דיבר אל הכוכבים. קולו נישא על גבעות יהודה — תפילה, הבטחה, נבואה.">"Through <em>melody</em> and <em>song</em>, the shepherd spoke to the stars. His voice carried across the hills of Judah — a prayer, a promise, a prophecy."</p>
+    <p class="song-attr">Psalms of David · The Beginning</p>
+  </div>
+</section>
+
+<!-- RELATED ARTIFACTS -->
+<section class="related-section">
+  <div class="container">
+    <div class="section-header">
+      <p class="section-eyebrow">Artifact Room</p>
+      <h2 class="section-title" data-en="Connected Artifacts" data-he="אוצרות קשורים">Connected Artifacts</h2>
+      <p class="section-sub" data-en="Artifacts linked to David the Shepherd's journey" data-he="אוצרות הקשורים למסע דוד הרועה">Artifacts linked to David the Shepherd's journey</p>
+      <div class="divider"></div>
+    </div>
+    <div class="related-grid">
+      <div class="related-card fade-in">
+        <div class="related-card-img"><img src="https://static.wixstatic.com/media/e5d12f_c265fe32cc8041198b247f0f65d320eb~mv2.jpg" alt="David and the Lion Puzzle"></div>
+        <div class="related-card-info">
+          <h3 data-en="David vs Lion · 150 Pcs" data-he="דוד מול האריה · 150 חלקים">David vs Lion · 150 Pcs</h3>
+          <div class="related-price"><span class="price-new">₪99</span></div>
+          <a href="../index.html#collection" class="cta-btn" style="display:block;text-align:center;padding:12px 20px;font-size:0.75rem;" data-en="View Artifact" data-he="צפו באוצר">View Artifact</a>
+        </div>
+      </div>
+      <div class="related-card fade-in">
+        <div class="related-card-img"><img src="https://static.wixstatic.com/media/e5d12f_13d50adebb314bacbb3221210062ebb4~mv2.jpg" alt="David vs Goliath Puzzle"></div>
+        <div class="related-card-info">
+          <h3 data-en="David vs Goliath · 300 Pcs" data-he="דוד מול גוליית · 300 חלקים">David vs Goliath · 300 Pcs</h3>
+          <div class="related-price"><span class="price-new">₪119</span></div>
+          <a href="../index.html#collection" class="cta-btn" style="display:block;text-align:center;padding:12px 20px;font-size:0.75rem;" data-en="View Artifact" data-he="צפו באוצר">View Artifact</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TRANSFORMATION: Shepherd → King -->
+<section class="transform-section">
+  <div class="container">
+    <div class="transform-content">
+      <div class="transform-text">
+        <p class="section-eyebrow">The Journey Continues</p>
+        <h2 data-en="FROM SHEPHERD TO KING" data-he="מרועה למלך">FROM SHEPHERD<br>TO <span>KING</span></h2>
+        <p data-en="The boy who fought a lion grew into the warrior who conquered a city. The shepherd became the greatest king Israel has ever known. Every hero has a next chapter." data-he="הנער שנלחם באריה גדל לתוך הלוחם שכבש עיר. הרועה הפך למלך הגדול ביותר שישראל ידעה. לכל גיבור יש פרק הבא.">The boy who fought a lion grew into the warrior who conquered a city. The shepherd became the greatest king Israel has ever known. Every hero has a next chapter.</p>
+        <a href="david-king.html" class="cta-btn-solid" data-en="Meet King David →" data-he="הכירו את דוד המלך →">Meet King David →</a>
+      </div>
+      <div class="transform-images">
+        <img src="https://static.wixstatic.com/media/e5d12f_6e07efcc6f054ef8acf771f9a14c7587~mv2.png" alt="David the Shepherd">
+        <span class="transform-arrow">→</span>
+        <img src="https://static.wixstatic.com/media/e5d12f_b8f55a34471449699f0a0ec6f5c6c573~mv2.png" alt="King David">
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="footer-inner">
+    <div class="footer-brand">
+      <img src="https://static.wixstatic.com/media/e5d12f_cc878e14d7ee46948e92d05e9463b70c~mv2.png" alt="YALDY" style="height:40px">
+      <p data-en="Real Heroes. True Strength. Premium biblical hero puzzles and stories for children and families." data-he="גיבורים אמיתיים. כוח אמיתי. פאזלים וסיפורי גיבורים תנ״כיים פרימיום לילדים ומשפחות.">Real Heroes. True Strength. Premium biblical hero puzzles and stories for children and families.</p>
+    </div>
+    <div class="footer-col">
+      <h4 data-en="Explore" data-he="גלו">Explore</h4>
+      <a href="../index.html" data-en="Home" data-he="ראשי">Home</a>
+      <a href="david-shepherd.html" data-en="David the Shepherd" data-he="דוד הרועה">David the Shepherd</a>
+      <a href="david-king.html" data-en="King David" data-he="דוד המלך">King David</a>
+      <a href="story.html" data-en="Our Story" data-he="הסיפור שלנו">Our Story</a>
+    </div>
+    <div class="footer-col">
+      <h4 data-en="Contact" data-he="צור קשר">Contact</h4>
+      <p><a href="mailto:info@yaldyheroes.com" style="color:var(--gold)">info@yaldyheroes.com</a></p>
+      <p>+972-50-650-0750</p>
+      <p data-en="Rosh HaAyin, Israel" data-he="ראש העין, ישראל">Rosh HaAyin, Israel</p>
+    </div>
+    <div class="footer-col">
+      <h4 data-en="Legal" data-he="מדיניות">Legal</h4>
+      <a href="policy.html" data-en="Shipping & Returns" data-he="משלוחים והחזרות">Shipping & Returns</a>
+      <a href="policy.html" data-en="Privacy" data-he="פרטיות">Privacy</a>
+      <a href="policy.html" data-en="Terms" data-he="תנאים">Terms</a>
+      <a href="faq.html" data-en="FAQ" data-he="שאלות נפוצות">FAQ</a>
+    </div>
+  </div>
+  <div class="footer-bottom">&copy; 2026 YALDY&trade; All rights reserved. Real Heroes. True Strength.</div>
+</footer>
+
+<script src="../js/universe.js"></script>
+</body>
+</html>

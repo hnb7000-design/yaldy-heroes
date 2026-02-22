@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Our Story | YALDY Heroes Universe</title>
+<meta name="description" content="The origin story of YALDY Heroes Universe. How one father's answer to his son's question created a cinematic hero universe built around real heroes.">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://yaldyheroes.com/pages/story.html">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Our Story | YALDY Heroes">
+    <meta property="og:description" content="How YALDY was born — a father's mission to bring real heroes to the next generation.">
+    <meta property="og:image" content="https://static.wixstatic.com/media/e5d12f_4b6db25d893e4d69a7434360330654a2~mv2.jpg">
+    <meta property="og:url" content="https://yaldyheroes.com/pages/story.html">
+    <meta property="og:site_name" content="YALDY Heroes Universe">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Our Story | YALDY Heroes">
+    <meta name="twitter:description" content="How YALDY was born — a father's mission to bring real heroes to the next generation.">
+    <meta name="twitter:image" content="https://static.wixstatic.com/media/e5d12f_4b6db25d893e4d69a7434360330654a2~mv2.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Oswald:wght@300;400;500;600;700;900&family=Open+Sans:wght@300;400;500;600;700&family=Heebo:wght@300;400;500;600;700;900&family=Frank+Ruhl+Libre:wght@400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../css/universe.css">
+</head>
+
+<body>
+<canvas id="particles"></canvas>
+<div class="overlay" id="overlay"></div>
+
+<!-- NAVBAR -->
+<nav class="navbar" id="navbar">
+  <div class="container">
+    <a href="../index.html" class="logo">
+      <img src="https://static.wixstatic.com/media/e5d12f_cc878e14d7ee46948e92d05e9463b70c~mv2.png" alt="YALDY Heroes Logo">
+    </a>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="../index.html" data-en="Home" data-he="ראשי">Home</a></li>
+      <li><a href="../index.html#heroes" data-en="Heroes" data-he="הגיבורים">Heroes</a></li>
+      <li><a href="../index.html#collection" data-en="Collection" data-he="האוסף">Collection</a></li>
+      <li><a href="../index.html#about" data-en="Our Story" data-he="הסיפור שלנו">Our Story</a></li>
+      <li><a href="contact.html" data-en="Contact" data-he="צור קשר">Contact</a></li>
+      <li><button class="lang-toggle" onclick="toggleLang()">עברית</button></li>
+    </ul>
+    <div class="mobile-toggle" id="mobileToggle"><span></span><span></span><span></span></div>
+  </div>
+</nav>
+
+<!-- MOBILE MENU -->
+<div class="mob-menu" id="mobMenu">
+  <a href="../index.html" data-en="Home" data-he="ראשי">Home</a>
+  <a href="../index.html#heroes" data-en="Heroes" data-he="הגיבורים">Heroes</a>
+  <a href="../index.html#collection" data-en="Collection" data-he="האוסף">Collection</a>
+  <a href="../index.html#about" data-en="Our Story" data-he="הסיפור שלנו">Our Story</a>
+  <a href="contact.html" data-en="Contact" data-he="צור קשר">Contact</a>
+  <button class="lang-toggle" onclick="toggleLang()">עברית</button>
+</div>
+
+<!-- PAGE SPACER -->
+<div class="page-spacer"></div>
+
+<!-- BREADCRUMB -->
+<div class="container">
+  <div class="breadcrumb">
+    <a href="../index.html" data-en="Home" data-he="ראשי">Home</a>
+    <span>&rsaquo;</span>
+    <span data-en="Our Story" data-he="הסיפור שלנו" style="color:var(--gold)">Our Story</span>
+  </div>
+</div>
+
+<!-- HERO BANNER -->
+<section class="hero-story-banner" style="position:relative;min-height:60vh;display:flex;align-items:center;justify-content:center;overflow:hidden;padding:60px 24px 80px;">
+  <div style="position:absolute;inset:0;background:url('https://static.wixstatic.com/media/e5d12f_e916af3ef85e41ee9d63650acff93b05~mv2.png') center/cover;opacity:0.2;animation:slowZoom 22s ease-in-out infinite alternate;"></div>
+  <div style="position:absolute;inset:0;background:linear-gradient(180deg,rgba(10,14,26,0.85) 0%,rgba(10,14,26,0.7) 50%,rgba(10,14,26,0.95) 100%);"></div>
+  <div class="container" style="position:relative;z-index:2;text-align:center;max-width:800px;">
+    <p class="section-eyebrow fade-in" data-en="Origin Story" data-he="סיפור ההתחלה">Origin Story</p>
+    <h1 class="section-title fade-in" style="font-size:clamp(2.5rem,6vw,4.5rem);margin-bottom:20px;">
+      <span data-en="THE QUESTION THAT" data-he="השאלה">THE QUESTION THAT</span><br>
+      <span class="gold" data-en="STARTED IT ALL" data-he="שהתחילה הכל">STARTED IT ALL</span>
+    </h1>
+    <div class="divider"></div>
+    <p class="fade-in" style="margin-top:24px;font-size:1.1rem;color:var(--text-light);max-width:600px;margin-left:auto;margin-right:auto;line-height:1.85;font-weight:300;"
+       data-en="How one evening, one child, and one impossible question gave birth to a cinematic hero universe."
+       data-he="איך ערב אחד, ילד אחד ושאלה בלתי אפשרית אחת הולידו יקום גיבורים קולנועי.">How one evening, one child, and one impossible question gave birth to a cinematic hero universe.</p>
+  </div>
+</section>
+
+<!-- THE STORY CONTENT -->
+<section style="padding:80px 0;">
+  <div class="container">
+    <div style="max-width:700px;margin:0 auto;text-align:center;">
+
+      <!-- The Question -->
+      <p class="section-eyebrow fade-in" data-en="The Moment" data-he="הרגע">The Moment</p>
+      <h2 class="section-title fade-in" style="margin-bottom:16px;">
+        <span data-en="IT STARTED WITH" data-he="זה התחיל">IT STARTED WITH</span> <span class="gold" data-en="A QUESTION" data-he="בשאלה">A QUESTION</span>
+      </h2>
+      <div class="divider" style="margin-bottom:32px;"></div>
+
+      <!-- Opening paragraph -->
+      <p class="fade-in" style="font-size:1.05rem;color:var(--text-light);line-height:1.9;margin-bottom:28px;font-weight:300;text-align:left;"
+         data-en="It started with a question. My son looked up at me one evening and asked: 'Abba — who is stronger, Superman or David?'"
+         data-he="זה התחיל בשאלה. הבן שלי הסתכל עליי ערב אחד ושאל: 'אבא — מי יותר חזק, סופרמן או דוד?'">It started with a question. My son looked up at me one evening and asked: 'Abba — who is stronger, Superman or David?'</p>
+
+      <!-- The realization -->
+      <p class="fade-in" style="font-size:1.05rem;color:var(--text-light);line-height:1.9;margin-bottom:28px;font-weight:300;text-align:left;"
+         data-en="I didn't have a quick answer. Superman is fictional. David was real. But no product on the shelf brought David to life the way Marvel and DC bring their heroes."
+         data-he="לא הייתה לי תשובה מהירה. סופרמן הוא בדיוני. דוד היה אמיתי. אבל שום מוצר על המדף לא הביא את דוד לחיים כמו שמארוול ו-DC מביאים את הגיבורים שלהם.">I didn't have a quick answer. Superman is fictional. David was real. But no product on the shelf brought David to life the way Marvel and DC bring their heroes.</p>
+
+      <!-- The vision -->
+      <p class="fade-in" style="font-size:1.05rem;color:var(--text-light);line-height:1.9;margin-bottom:28px;font-weight:300;text-align:left;"
+         data-en="That question wouldn't leave me. What if the greatest heroes — the ones who shaped real history — could be experienced with the same power, the same cinematic intensity, the same awe?"
+         data-he="השאלה הזו לא עזבה אותי. מה אם הגיבורים הגדולים ביותר — אלה שעיצבו היסטוריה אמיתית — יכולים להיחוות עם אותו כוח, אותה עוצמה קולנועית, אותה התרגשות?">That question wouldn't leave me. What if the greatest heroes — the ones who shaped real history — could be experienced with the same power, the same cinematic intensity, the same awe?</p>
+
+      <!-- The birth -->
+      <div class="divider fade-in" style="margin:40px auto;"></div>
+
+      <p class="section-eyebrow fade-in" data-en="The Birth of YALDY" data-he="הולדת YALDY">The Birth of YALDY</p>
+      <h2 class="section-title fade-in" style="margin-bottom:16px;">
+        <span data-en="BORN FROM" data-he="נולד מ">BORN FROM</span> <span class="gold" data-en="THAT MOMENT" data-he="הרגע הזה">THAT MOMENT</span>
+      </h2>
+      <div class="divider" style="margin-bottom:32px;"></div>
+
+      <p class="fade-in" style="font-size:1.05rem;color:var(--text-light);line-height:1.9;margin-bottom:28px;font-weight:300;text-align:left;"
+         data-en="YALDY™ was born from that moment. A cinematic hero universe built around real heroes. Not to preach — but to inspire."
+         data-he="YALDY™ נולד מהרגע הזה. יקום גיבורים קולנועי שנבנה סביב גיבורים אמיתיים. לא כדי להטיף — אלא כדי להשריש.">YALDY™ was born from that moment. A cinematic hero universe built around real heroes. Not to preach — but to inspire.</p>
+
+      <p class="fade-in" style="font-size:1.05rem;color:var(--text-light);line-height:1.9;margin-bottom:40px;font-weight:300;text-align:left;"
+         data-en="Every puzzle, every story, every visual — designed to make kids say: 'David is MY hero.'"
+         data-he="כל פאזל, כל סיפור, כל ויזואל — מעוצב כדי שילדים יגידו: 'דוד הוא הגיבור שלי.'">Every puzzle, every story, every visual — designed to make kids say: 'David is MY hero.'</p>
+
+      <!-- Closing Quote -->
+      <div class="divider fade-in" style="margin:40px auto 32px;"></div>
+
+      <p class="quote-text fade-in" style="font-size:clamp(1.1rem,2.5vw,1.5rem);line-height:1.8;margin-bottom:12px;"
+         data-en="&ldquo;Real heroes don't wear capes. They carry slings.&rdquo;"
+         data-he="&ldquo;גיבורים אמיתיים לא לובשים גלימות. הם נושאים קלעים.&rdquo;">&ldquo;Real heroes don't wear capes. They carry slings.&rdquo;</p>
+
+      <p class="fade-in" style="font-family:var(--font-heading);font-size:0.7rem;font-weight:500;color:var(--text-muted);letter-spacing:2px;text-transform:uppercase;"
+         data-en="Founder &middot; YALDY Heroes"
+         data-he="מייסד &middot; YALDY Heroes">Founder &middot; YALDY Heroes</p>
+
+      <!-- CTA -->
+      <div style="margin-top:50px;" class="fade-in">
+        <a href="../index.html#heroes" class="cta-btn" data-en="MEET THE HEROES" data-he="הכירו את הגיבורים">MEET THE HEROES</a>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="footer-inner">
+    <div class="footer-brand">
+      <img src="https://static.wixstatic.com/media/e5d12f_cc878e14d7ee46948e92d05e9463b70c~mv2.png" alt="YALDY">
+      <p data-en="Real Heroes. True Strength. Premium biblical hero puzzles and stories for children and families." data-he="גיבורים אמיתיים. כוח אמיתי. פאזלים וסיפורי גיבורים תנ״כיים פרימיום לילדים ומשפחות.">Real Heroes. True Strength. Premium biblical hero puzzles and stories for children and families.</p>
+    </div>
+    <div class="footer-col">
+      <h4 data-en="Explore" data-he="גלו">Explore</h4>
+      <a href="../index.html" data-en="Home" data-he="ראשי">Home</a>
+      <a href="david-shepherd.html" data-en="David the Shepherd" data-he="דוד הרועה">David the Shepherd</a>
+      <a href="david-king.html" data-en="King David" data-he="דוד המלך">King David</a>
+      <a href="story.html" data-en="Our Story" data-he="הסיפור שלנו">Our Story</a>
+    </div>
+    <div class="footer-col">
+      <h4 data-en="Contact" data-he="צור קשר">Contact</h4>
+      <p><a href="mailto:info@yaldyheroes.com" style="color:var(--gold)">info@yaldyheroes.com</a></p>
+      <p>+972-50-650-0750</p>
+      <p data-en="Rosh HaAyin, Israel" data-he="ראש העין, ישראל">Rosh HaAyin, Israel</p>
+    </div>
+    <div class="footer-col">
+      <h4 data-en="Legal" data-he="מדיניות">Legal</h4>
+      <a href="shipping-returns.html" data-en="Shipping & Returns" data-he="משלוחים והחזרות">Shipping & Returns</a>
+      <a href="privacy.html" data-en="Privacy Policy" data-he="פרטיות">Privacy Policy</a>
+      <a href="terms.html" data-en="Terms" data-he="תנאים">Terms</a>
+      <a href="faq.html" data-en="FAQ" data-he="שאלות נפוצות">FAQ</a>
+    </div>
+  </div>
+  <div class="footer-bottom">&copy; 2026 YALDY&trade; All rights reserved. Real Heroes. True Strength.</div>
+</footer>
+
+<script src="../js/universe.js"></script>
+</body>
+</html>
