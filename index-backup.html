@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>YALDY Heroes | Real Heroes. True Strength.</title>
+<meta name="description" content="YALDY is a cinematic hero universe for kids and families. Premium biblical hero puzzles combining art, storytelling, and values.">
+<meta name="keywords" content="YALDY, heroes, biblical puzzles, kids puzzles, family games, David, premium puzzles, Israel">
+<meta name="author" content="YALDY Heroes">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://yaldyheroes.com/">
+<!-- Open Graph -->
+<meta property="og:type" content="website">
+<meta property="og:title" content="YALDY Heroes | Real Heroes. True Strength.">
+<meta property="og:description" content="Premium biblical hero puzzles for kids and families. Cinematic art, epic stories, real values.">
+<meta property="og:image" content="https://static.wixstatic.com/media/e5d12f_9cd9cc15f8794cc1b5de600b4abe3ccc~mv2.png">
+<meta property="og:url" content="https://yaldyheroes.com/">
+<meta property="og:site_name" content="YALDY Heroes Universe">
+<meta property="og:locale" content="en_US">
+<meta property="og:locale:alternate" content="he_IL">
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="YALDY Heroes | Real Heroes. True Strength.">
+<meta name="twitter:description" content="Premium biblical hero puzzles for kids and families.">
+<meta name="twitter:image" content="https://static.wixstatic.com/media/e5d12f_9cd9cc15f8794cc1b5de600b4abe3ccc~mv2.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Oswald:wght@300;400;500;600;700;900&family=Open+Sans:wght@300;400;500;600;700&family=Heebo:wght@300;400;500;600;700;900&family=Frank+Ruhl+Libre:wght@400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/universe.css">
+</head>
+
+<body>
+<canvas id="particles"></canvas>
+<div class="overlay" id="overlay"></div>
+
+<!-- NAVBAR -->
+<nav class="navbar" id="navbar">
+  <div class="container">
+    <a href="index.html" class="logo">
+      <img src="https://static.wixstatic.com/media/e5d12f_cc878e14d7ee46948e92d05e9463b70c~mv2.png" alt="YALDY Heroes Logo">
+    </a>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="#heroes" data-en="Heroes" data-he="הגיבורים">Heroes</a></li>
+      <li><a href="#collection" data-en="Collection" data-he="האוסף">Collection</a></li>
+      <li><a href="#about" data-en="Our Story" data-he="הסיפור שלנו">Our Story</a></li>
+      <li><a href="pages/contact.html" data-en="Contact" data-he="צור קשר">Contact</a></li>
+      <li><button class="lang-toggle" onclick="toggleLang()">עברית</button></li>
+    </ul>
+    <div class="mobile-toggle" id="mobileToggle"><span></span><span></span><span></span></div>
+  </div>
+</nav>
+
+<!-- MOBILE MENU -->
+<div class="mob-menu" id="mobMenu">
+  <a href="#heroes" data-en="Heroes" data-he="הגיבורים">Heroes</a>
+  <a href="#collection" data-en="Collection" data-he="האוסף">Collection</a>
+  <a href="#about" data-en="Our Story" data-he="הסיפור שלנו">Our Story</a>
+  <a href="pages/contact.html" data-en="Contact" data-he="צור קשר">Contact</a>
+  <button class="lang-toggle" onclick="toggleLang()">עברית</button>
+</div>
+
+<!-- ═══════════════════════════════════════════
+     HERO SLIDER (4 cinematic slides)
+     ═══════════════════════════════════════════ -->
+<section class="hero-slider" id="top">
+  <!-- Slide 1: Before the Crown — שער העיר -->
+  <div class="hero-slide active">
+    <img class="bg" src="images/דוד שער.webp" alt="Before the Crown — David at the city gates">
+    <div class="hero-slide-overlay"></div>
+    <div class="hero-slide-text">
+      <div class="hero-slide-label" data-en="YALDY™ Heroes Universe" data-he="יקום הגיבורים של YALDY™">YALDY™ Heroes Universe</div>
+      <h1 class="hero-slide-title"><span data-en="BEFORE THE" data-he="לפני">BEFORE THE</span> <span class="gold" data-en="CROWN" data-he="הכתר">CROWN</span></h1>
+      <p class="hero-slide-sub" data-en="Heroes are not born. They are shaped by moments, choices, and inner strength." data-he="גיבורים לא נולדים. הם נבנים מרגעים, בחירות וכוח פנימי.">Heroes are not born. They are shaped by moments, choices, and inner strength.</p>
+      <a href="#collection" class="hero-cta" data-en="DISCOVER THE COLLECTION →" data-he="גלו את האוסף →">DISCOVER THE COLLECTION →</a>
+    </div>
+  </div>
+  <!-- Slide 2: The Faithful Shepherd — כבשים בשקיעה -->
+  <div class="hero-slide">
+    <img class="bg" src="images/דוד15155.webp" alt="The Faithful Shepherd — David with the flock">
+    <div class="hero-slide-overlay"></div>
+    <div class="hero-slide-text">
+      <div class="hero-slide-label" data-en="Chapter I" data-he="פרק א׳">Chapter I</div>
+      <h1 class="hero-slide-title"><span data-en="THE FAITHFUL" data-he="הרועה">THE FAITHFUL</span> <span class="gold" data-en="SHEPHERD" data-he="הנאמן">SHEPHERD</span></h1>
+      <p class="hero-slide-sub" data-en="Alone in the wilderness, a boy learns to protect his flock — and discovers his true calling." data-he="לבד במדבר, נער לומד להגן על עדרו — ומגלה את ייעודו האמיתי.">Alone in the wilderness, a boy learns to protect his flock — and discovers his true calling.</p>
+      <a href="#collection" class="hero-cta" data-en="DISCOVER THE COLLECTION →" data-he="גלו את האוסף →">DISCOVER THE COLLECTION →</a>
+    </div>
+  </div>
+  <!-- Slide 3: Born to Lead — מבט על עקבות האריה -->
+  <div class="hero-slide">
+    <img class="bg" src="images/דוד הגשש copy.webp" alt="Born to Lead — David tracking the lion">
+    <div class="hero-slide-overlay"></div>
+    <div class="hero-slide-text">
+      <div class="hero-slide-label" data-en="Chapter II" data-he="פרק ב׳">Chapter II</div>
+      <h1 class="hero-slide-title"><span data-en="BORN TO" data-he="נולד">BORN TO</span> <span class="gold" data-en="LEAD" data-he="להנהיג">LEAD</span></h1>
+      <p class="hero-slide-sub" data-en="When danger approaches, David doesn't run. He reads the signs — and prepares to act." data-he="כשהסכנה מתקרבת, דוד לא בורח. הוא קורא את הסימנים — ומתכונן לפעולה.">When danger approaches, David doesn't run. He reads the signs — and prepares to act.</p>
+      <a href="#collection" class="hero-cta" data-en="DISCOVER THE COLLECTION →" data-he="גלו את האוסף →">DISCOVER THE COLLECTION →</a>
+    </div>
+  </div>
+  <!-- Slide 4: To Protect and Guard — מול האריה -->
+  <div class="hero-slide">
+    <img class="bg" src="images/דוד אריה.webp" alt="To Protect and Guard — David vs Lion">
+    <div class="hero-slide-overlay"></div>
+    <div class="hero-slide-text">
+      <div class="hero-slide-label" data-en="Chapter III" data-he="פרק ג׳">Chapter III</div>
+      <h1 class="hero-slide-title"><span data-en="TO PROTECT" data-he="להגן">TO PROTECT</span> <span class="gold" data-en="& GUARD" data-he="ולשמור">& GUARD</span></h1>
+      <p class="hero-slide-sub" data-en="A boy against a lion. No army. No armor. Just faith and a shepherd's sling." data-he="נער מול אריה. ללא צבא. ללא שריון. רק אמונה וקלע של רועה.">A boy against a lion. No army. No armor. Just faith and a shepherd's sling.</p>
+      <a href="#collection" class="hero-cta" data-en="DISCOVER THE COLLECTION →" data-he="גלו את האוסף →">DISCOVER THE COLLECTION →</a>
+    </div>
+  </div>
+  <!-- Dots -->
+  <div class="hero-dots">
+    <button class="hero-dot active" onclick="goSlide(0)"></button>
+    <button class="hero-dot" onclick="goSlide(1)"></button>
+    <button class="hero-dot" onclick="goSlide(2)"></button>
+    <button class="hero-dot" onclick="goSlide(3)"></button>
+  </div>
+  <!-- Arrows -->
+  <div class="hero-arrows">
+    <button class="hero-arrow" onclick="prevSlide()">&#8592;</button>
+    <button class="hero-arrow" onclick="nextSlide()">&#8594;</button>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════
+     UNIVERSE VALUES — Faith. Courage. Truth.
+     ═══════════════════════════════════════════ -->
+<section class="quote-section">
+  <div class="container">
+    <p class="section-eyebrow fade-in" data-en="The Source of Heroes" data-he="מקור הגיבורים">The Source of Heroes</p>
+    <h2 class="section-title fade-in">FAITH. COURAGE. <span class="gold">TRUTH.</span></h2>
+    <div class="divider"></div>
+    <p class="quote-text fade-in" style="margin-top:24px" data-en="Every puzzle holds a story. Every story holds a lesson. Every lesson builds a hero." data-he="כל פאזל מחזיק סיפור. כל סיפור מחזיק שיעור. כל שיעור בונה גיבור.">Every puzzle holds a story. Every story holds a lesson. Every lesson builds a hero.</p>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════
+     HEROES HUB — Choose Your Hero
+     ═══════════════════════════════════════════ -->
+<section class="heroes-section" id="heroes">
+  <div class="container">
+    <div class="section-header">
+      <p class="section-eyebrow" data-en="YALDY Heroes Universe" data-he="יקום הגיבורים של YALDY">YALDY Heroes Universe</p>
+      <h2 class="section-title" data-en="CHOOSE YOUR HERO" data-he="בחרו את הגיבור">CHOOSE YOUR <span class="gold">HERO</span></h2>
+      <div class="divider"></div>
+    </div>
+    <div class="heroes-grid">
+      <!-- David the Shepherd -->
+      <a href="pages/david-shepherd.html" class="hero-card fade-in">
+        <div class="hero-card-img"><img src="images/דוד קרבי אתר.webp" alt="David the Shepherd"></div>
+        <div class="hero-card-overlay">
+          <div class="hero-card-label">HERO · 001</div>
+          <h3 data-en="The Shepherd" data-he="דוד הרועה">The Shepherd</h3>
+          <div class="hero-card-cta" data-en="EXPLORE →" data-he="גלו →">EXPLORE →</div>
+        </div>
+      </a>
+      <!-- King David -->
+      <a href="pages/david-king.html" class="hero-card fade-in">
+        <div class="hero-card-img"><img src="images/דוד המלך עומד.webp" alt="King David"></div>
+        <div class="hero-card-overlay">
+          <div class="hero-card-label">HERO · 002</div>
+          <h3 data-en="King David" data-he="דוד המלך">King David</h3>
+          <div class="hero-card-cta" data-en="EXPLORE →" data-he="גלו →">EXPLORE →</div>
+        </div>
+      </a>
+      <!-- Joab — Locked -->
+      <div class="hero-card locked fade-in">
+        <div class="hero-card-img"><img src="images/יואב לאתר קרבי.webp" alt="Joab"></div>
+        <div class="lock-badge">🔒</div>
+        <div class="hero-card-overlay">
+          <div class="hero-card-label">HERO · 003</div>
+          <h3 data-en="Joab Ben Tzeruya" data-he="יואב בן צרויה">Joab Ben Tzeruya</h3>
+          <div class="hero-card-cta" data-en="COMING SOON" data-he="בקרוב">COMING SOON</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════
+     PANORAMIC BANNER
+     ═══════════════════════════════════════════ -->
+<div class="panoramic">
+  <img src="https://static.wixstatic.com/media/e5d12f_e916af3ef85e41ee9d63650acff93b05~mv2.png" alt="David vs Lion Panoramic">
+  <div class="panoramic-overlay">
+    <div class="panoramic-text" data-en="THE STORY BEHIND THE PUZZLE" data-he="הסיפור מאחורי הפאזל">THE STORY BEHIND THE <span class="gold">PUZZLE</span></div>
+  </div>
+</div>
+
+<!-- ═══════════════════════════════════════════
+     COLLECTION — Premium Puzzles
+     ═══════════════════════════════════════════ -->
+<section class="artifacts-section" id="collection">
+  <div class="container">
+    <div class="section-header">
+      <p class="section-eyebrow" data-en="The Collection" data-he="האוסף">The Collection</p>
+      <h2 class="section-title">PREMIUM PUZZLE <span class="gold">& STORY</span></h2>
+      <p class="section-sub fade-in" data-en="Each box contains a premium puzzle, a bilingual illustrated flipbook story, and exclusive bonus content via QR code." data-he="כל קופסה מכילה פאזל פרימיום, חוברת סיפור דו-לשונית, ותוכן בונוס בלעדי דרך קוד QR.">Each box contains a premium puzzle, a bilingual illustrated flipbook story, and exclusive bonus content via QR code.</p>
+      <div class="divider"></div>
+    </div>
+    <div class="products-grid">
+      <!-- David vs Lion 150pcs -->
+      <div class="product-card fade-in">
+        <div class="product-image">
+          <span class="product-badge">PRE-ORDER</span>
+          <img src="images/150.webp" alt="David vs Lion Puzzle">
+        </div>
+        <div class="product-info">
+          <div class="product-name" data-en="David vs Lion" data-he="דוד מול האריה">David vs Lion</div>
+          <div class="product-specs" data-en="150 Pieces · 45×38cm · Ages 5+" data-he="150 חלקים · 45×38 ס״מ · גילאי 5+">150 Pieces · 45×38cm · Ages 5+</div>
+          <div class="product-price">₪99</div>
+          <div class="product-inc" data-en="Puzzle + Flipbook + QR Content" data-he="פאזל + חוברת + תוכן QR">Puzzle + Flipbook + QR Content</div>
+          <a href="https://wa.me/972506500750?text=Hi!%20I'm%20interested%20in%20the%20David%20vs%20Lion%20puzzle%20(150pcs%20%E2%82%AA99)" class="product-btn" target="_blank" rel="noopener" data-en="PRE-ORDER · WhatsApp" data-he="הזמנה מוקדמת · WhatsApp">PRE-ORDER · WhatsApp</a>
+        </div>
+      </div>
+      <!-- David vs Goliath 300pcs -->
+      <div class="product-card fade-in">
+        <div class="product-image">
+          <span class="product-badge">PRE-ORDER</span>
+          <img src="images/300.webp" alt="David vs Goliath Puzzle">
+        </div>
+        <div class="product-info">
+          <div class="product-name" data-en="David vs Goliath" data-he="דוד מול גוליית">David vs Goliath</div>
+          <div class="product-specs" data-en="300 Pieces · 52×38cm · Ages 8+" data-he="300 חלקים · 52×38 ס״מ · גילאי 8+">300 Pieces · 52×38cm · Ages 8+</div>
+          <div class="product-price">₪119</div>
+          <div class="product-inc" data-en="Puzzle + Flipbook + QR Content" data-he="פאזל + חוברת + תוכן QR">Puzzle + Flipbook + QR Content</div>
+          <a href="https://wa.me/972506500750?text=Hi!%20I'm%20interested%20in%20the%20David%20vs%20Goliath%20puzzle%20(300pcs%20%E2%82%AA119)" class="product-btn" target="_blank" rel="noopener" data-en="PRE-ORDER · WhatsApp" data-he="הזמנה מוקדמת · WhatsApp">PRE-ORDER · WhatsApp</a>
+        </div>
+      </div>
+      <!-- City of David 500pcs -->
+      <div class="product-card fade-in">
+        <div class="product-image">
+          <span class="product-badge">PRE-ORDER</span>
+          <img src="images/500.webp" alt="City of David Puzzle">
+        </div>
+        <div class="product-info">
+          <div class="product-name" data-en="City of David" data-he="עיר דוד">City of David</div>
+          <div class="product-specs" data-en="500 Pieces · 61×46cm · Ages 12+" data-he="500 חלקים · 61×46 ס״מ · גילאי 12+">500 Pieces · 61×46cm · Ages 12+</div>
+          <div class="product-price">₪139</div>
+          <div class="product-inc" data-en="Puzzle + Flipbook + QR Content" data-he="פאזל + חוברת + תוכן QR">Puzzle + Flipbook + QR Content</div>
+          <a href="https://wa.me/972506500750?text=Hi!%20I'm%20interested%20in%20the%20City%20of%20David%20puzzle%20(500pcs%20%E2%82%AA139)" class="product-btn" target="_blank" rel="noopener" data-en="PRE-ORDER · WhatsApp" data-he="הזמנה מוקדמת · WhatsApp">PRE-ORDER · WhatsApp</a>
+        </div>
+      </div>
+      <!-- Valley Strike 1000pcs -->
+      <div class="product-card fade-in">
+        <div class="product-image">
+          <span class="product-badge">PRE-ORDER</span>
+          <img src="images/1000.webp" alt="Valley Strike Puzzle">
+        </div>
+        <div class="product-info">
+          <div class="product-name" data-en="Valley Strike" data-he="מכת העמק">Valley Strike</div>
+          <div class="product-specs" data-en="1000 Pieces · 70×50cm · Ages 16+" data-he="1000 חלקים · 70×50 ס״מ · גילאי 16+">1000 Pieces · 70×50cm · Ages 16+</div>
+          <div class="product-price">₪149</div>
+          <div class="product-inc" data-en="Puzzle + Flipbook + QR Content" data-he="פאזל + חוברת + תוכן QR">Puzzle + Flipbook + QR Content</div>
+          <a href="https://wa.me/972506500750?text=Hi!%20I'm%20interested%20in%20the%20Valley%20Strike%20puzzle%20(1000pcs%20%E2%82%AA149)" class="product-btn" target="_blank" rel="noopener" data-en="PRE-ORDER · WhatsApp" data-he="הזמנה מוקדמת · WhatsApp">PRE-ORDER · WhatsApp</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════
+     WHAT'S INSIDE EVERY BOX (from FINAL_1)
+     ═══════════════════════════════════════════ -->
+<section class="inside-section" id="inside">
+  <div class="container">
+    <div class="inside-grid">
+      <div class="inside-img fade-in">
+        <img src="https://static.wixstatic.com/media/e5d12f_a4a63201f5d544c6aa056a10b5f0ab9b~mv2.png" alt="What's Inside Every Box">
+      </div>
+      <div class="inside-text">
+        <p class="section-eyebrow fade-in" data-en="What's Inside Every Box" data-he="מה בתוך כל קופסה">What's Inside Every Box</p>
+        <h2 class="section-title fade-in">A COMPLETE <span class="gold">EXPERIENCE</span></h2>
+        <div class="divider" style="margin: 12px 0 16px"></div>
+        <p class="fade-in" data-en="Every YALDY box is a complete experience. Premium puzzle pieces with cinematic artwork, a bilingual flipbook story, and exclusive digital content accessed through a QR code." data-he="כל קופסת YALDY היא חוויה שלמה. חלקי פאזל פרימיום עם אומנות קולנועית, חוברת סיפור דו-לשונית, ותוכן דיגיטלי בלעדי דרך קוד QR.">Every YALDY box is a complete experience. Premium puzzle pieces with cinematic artwork, a bilingual flipbook story, and exclusive digital content accessed through a QR code.</p>
+        <div class="feat-list">
+          <div class="feat-item fade-in"><img src="https://static.wixstatic.com/media/e5d12f_c67b3b7ae703464fb45f62ad8b670285~mv2.webp" alt="Art"><span data-en="Premium Cinematic Artwork" data-he="אומנות קולנועית פרימיום">Premium Cinematic Artwork</span></div>
+          <div class="feat-item fade-in"><img src="https://static.wixstatic.com/media/e5d12f_e40beea5dd3f40ca9a2ab30bfe329bca~mv2.webp" alt="Story"><span data-en="Bilingual Flipbook Story" data-he="חוברת סיפור דו-לשונית">Bilingual Flipbook Story</span></div>
+          <div class="feat-item fade-in"><img src="https://static.wixstatic.com/media/e5d12f_a5a850f691304decbb57c88c77a75199~mv2.webp" alt="QR"><span data-en="Exclusive QR Bonus Content" data-he="תוכן בונוס בלעדי QR">Exclusive QR Bonus Content</span></div>
+          <div class="feat-item fade-in"><img src="https://static.wixstatic.com/media/e5d12f_ae3b52b588864cdc82e1e89026788a7d~mv2.png" alt="Box"><span data-en="Collector-Grade Box" data-he="קופסת אספנים">Collector-Grade Box</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════
+     OUR STORY — Brief + Values
+     ═══════════════════════════════════════════ -->
+<section class="about-section" id="about">
+  <div class="container">
+    <div class="section-header">
+      <p class="section-eyebrow" data-en="Our Story" data-he="הסיפור שלנו">Our Story</p>
+      <h2 class="section-title">HEROES, NOT <span class="gold">PREACHERS</span></h2>
+      <div class="divider"></div>
+      <p class="quote-text fade-in" style="margin-top:20px" data-en="YALDY™ is a cinematic hero universe for kids and families. Through heroic stories, families enter a world where courage, values, and imagination come to life. No preaching — values enter through experience." data-he="YALDY™ הוא יקום גיבורים קולנועי לילדים ומשפחות. דרך סיפורים הירואיים, משפחות נכנסות לעולם בו אומץ, ערכים ודמיון מתעוררים לחיים. ללא הטפה — ערכים נכנסים דרך חוויה.">YALDY™ is a cinematic hero universe for kids and families. Through heroic stories, families enter a world where courage, values, and imagination come to life. No preaching — values enter through experience.</p>
+      <p style="margin-top:16px"><a href="pages/story.html" style="color:var(--gold);font-family:var(--font-heading);font-size:12px;letter-spacing:3px;text-transform:uppercase;border-bottom:1px solid var(--gold);padding-bottom:2px" data-en="READ THE FULL STORY →" data-he="קראו את הסיפור המלא →">READ THE FULL STORY →</a></p>
+    </div>
+    <!-- Values grid -->
+    <div class="values-grid">
+      <div class="value-card fade-in">
+        <img src="https://static.wixstatic.com/media/e5d12f_c67b3b7ae703464fb45f62ad8b670285~mv2.webp" alt="Action">
+        <h4 data-en="Action" data-he="פעולה">Action</h4>
+        <p data-en="Heroes act. Every puzzle is a battle, every story is a mission." data-he="גיבורים פועלים. כל פאזל הוא קרב, כל סיפור הוא משימה.">Heroes act. Every puzzle is a battle, every story is a mission.</p>
+      </div>
+      <div class="value-card fade-in">
+        <img src="https://static.wixstatic.com/media/e5d12f_e40beea5dd3f40ca9a2ab30bfe329bca~mv2.webp" alt="Family Time">
+        <h4 data-en="Family Time" data-he="זמן משפחתי">Family Time</h4>
+        <p data-en="Screen-free quality time that matters." data-he="זמן איכות ללא מסכים שבאמת חשוב.">Screen-free quality time that matters.</p>
+      </div>
+      <div class="value-card fade-in">
+        <img src="https://static.wixstatic.com/media/e5d12f_a5a850f691304decbb57c88c77a75199~mv2.webp" alt="Values">
+        <h4 data-en="Values" data-he="ערכים">Values</h4>
+        <p data-en="Real values. Courage, faith, and leadership." data-he="ערכים אמיתיים. אומץ, אמונה ומנהיגות.">Real values. Courage, faith, and leadership.</p>
+      </div>
+      <div class="value-card fade-in">
+        <img src="https://static.wixstatic.com/media/e5d12f_ae3b52b588864cdc82e1e89026788a7d~mv2.png" alt="Premium">
+        <h4 data-en="Premium" data-he="פרימיום">Premium</h4>
+        <p data-en="AAA cinematic quality. Not a toy — an experience." data-he="איכות קולנועית AAA. לא צעצוע — חוויה.">AAA cinematic quality. Not a toy — an experience.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════
+     ENTER THE UNIVERSE / SIGNUP
+     ═══════════════════════════════════════════ -->
+<section class="signup-section" id="join">
+  <div class="container">
+    <div class="signup-box">
+      <div class="section-header">
+        <p class="section-eyebrow" data-en="Limited First Wave" data-he="גל ראשון מוגבל">Limited First Wave</p>
+        <h2 class="section-title">BE FIRST TO <span class="gold">KNOW</span></h2>
+        <div class="divider"></div>
+      </div>
+      <p class="signup-text fade-in" data-en="Join the heroes. Get exclusive early access, special offers, and behind-the-scenes content." data-he="הצטרפו לגיבורים. קבלו גישה מוקדמת בלעדית, הצעות מיוחדות ותוכן מאחורי הקלעים.">Join the heroes. Get exclusive early access, special offers, and behind-the-scenes content.</p>
+      <form class="signup-form" id="signupForm">
+        <input type="text" id="fullName" placeholder="Full name" required>
+        <input type="email" id="email" placeholder="Enter your email" required>
+        <button type="submit" class="cta-btn-solid" data-en="JOIN THE HEROES" data-he="הצטרפו לגיבורים">JOIN THE HEROES</button>
+      </form>
+      <p class="signup-note" id="signupNote" data-en="Welcome to the Universe!" data-he="ברוכים הבאים ליקום!">Welcome to the Universe!</p>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════
+     FOOTER (3-column)
+     ═══════════════════════════════════════════ -->
+<footer class="footer">
+  <div class="footer-inner">
+    <div class="footer-brand">
+      <img src="https://static.wixstatic.com/media/e5d12f_cc878e14d7ee46948e92d05e9463b70c~mv2.png" alt="YALDY" style="height:40px">
+      <p data-en="Real Heroes. True Strength. Premium biblical hero puzzles and stories for children and families." data-he="גיבורים אמיתיים. כוח אמיתי. פאזלים וסיפורי גיבורים תנ״כיים פרימיום לילדים ומשפחות.">Real Heroes. True Strength. Premium biblical hero puzzles and stories for children and families.</p>
+    </div>
+    <div class="footer-col">
+      <h4 data-en="Explore" data-he="גלו">Explore</h4>
+      <a href="index.html" data-en="Home" data-he="ראשי">Home</a>
+      <a href="pages/david-shepherd.html" data-en="David the Shepherd" data-he="דוד הרועה">David the Shepherd</a>
+      <a href="pages/david-king.html" data-en="King David" data-he="דוד המלך">King David</a>
+      <a href="pages/story.html" data-en="Our Story" data-he="הסיפור שלנו">Our Story</a>
+    </div>
+    <div class="footer-col">
+      <h4 data-en="Contact" data-he="צור קשר">Contact</h4>
+      <p><a href="mailto:info@yaldyheroes.com" style="color:var(--gold)">info@yaldyheroes.com</a></p>
+      <p>+972-50-650-0750</p>
+      <p data-en="Rosh HaAyin, Israel" data-he="ראש העין, ישראל">Rosh HaAyin, Israel</p>
+    </div>
+    <div class="footer-col">
+      <h4 data-en="Legal" data-he="מדיניות">Legal</h4>
+      <a href="pages/policy.html" data-en="Shipping & Returns" data-he="משלוחים והחזרות">Shipping & Returns</a>
+      <a href="pages/policy.html" data-en="Privacy Policy" data-he="פרטיות">Privacy Policy</a>
+      <a href="pages/policy.html" data-en="Terms" data-he="תנאים">Terms</a>
+      <a href="pages/faq.html" data-en="FAQ" data-he="שאלות נפוצות">FAQ</a>
+    </div>
+  </div>
+  <div class="footer-bottom">&copy; 2026 YALDY&trade; All rights reserved. Real Heroes. True Strength.</div>
+</footer>
+
+<script src="js/universe.js"></script>
+</body>
+</html>

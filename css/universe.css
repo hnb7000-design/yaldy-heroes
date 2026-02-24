@@ -629,7 +629,8 @@ section { padding: 100px 0; position: relative; z-index: 1; }
   .nav-links { display: none; }
   .mobile-toggle { display: flex; }
   .navbar { padding: 12px 20px; }
-  .hero-slide-text { bottom: 100px; left: 24px; right: 24px; }
+  .hero-slider { height: 75vh; }
+  .hero-slide-text { bottom: 70px; left: 24px; right: 24px; }
   .hero-dots { left: 24px; bottom: 30px; }
   .hero-arrows { right: 24px; bottom: 26px; }
   .heroes-grid { grid-template-columns: 1fr; max-width: 340px; margin: 0 auto; }
@@ -642,6 +643,8 @@ section { padding: 100px 0; position: relative; z-index: 1; }
 }
 
 @media (max-width: 480px) {
+  .hero-slider { height: 70vh; }
+  .hero-slide-text { bottom: 60px; left: 16px; right: 16px; }
   .hero-slide-title { font-size: 40px !important; }
   .products-grid { grid-template-columns: 1fr; }
 }
