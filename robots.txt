@@ -1,7 +1,5 @@
 User-agent: *
 Allow: /
-Sitemap: https://yaldyheroes.com/sitemap.xml
+Disallow: /404.html
 
-# Block admin/draft content if any
-Disallow: /drafts/
-Disallow: /admin/
+Sitemap: https://yaldyheroes.com/sitemap.xml
