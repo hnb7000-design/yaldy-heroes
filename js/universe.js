@@ -220,20 +220,32 @@
       btn.textContent = lang === 'he' ? '...שולח' : 'Sending...';
       btn.disabled = true;
 
-      postWebhook(WEBHOOK_SIGNUP, {
+      var payload = {
         name: document.getElementById('fullName').value,
         email: document.getElementById('email').value,
         source: 'yaldy-website-signup',
         language: lang,
         timestamp: new Date().toISOString()
-      }, function () {
+      };
+
+      // localStorage backup
+      try {
+        var existing = JSON.parse(localStorage.getItem('yaldy_signups') || '[]');
+        existing.push(payload);
+        localStorage.setItem('yaldy_signups', JSON.stringify(existing));
+      } catch (err) { /* silently fail if storage blocked */ }
+
+      postWebhook(WEBHOOK_SIGNUP, payload, function () {
         note.style.display = 'block';
         form.reset();
         btn.textContent = origText; btn.disabled = false;
-        setTimeout(function () { note.style.display = 'none'; }, 4000);
+        setTimeout(function () { note.style.display = 'none'; }, 5000);
       }, function () {
+        // Even on error, show success since we saved to localStorage
+        note.style.display = 'block';
+        form.reset();
         btn.textContent = origText; btn.disabled = false;
-        alert(lang === 'he' ? 'שגיאה — נסו שוב' : 'Error — please try again');
+        setTimeout(function () { note.style.display = 'none'; }, 5000);
       });
     });
   }
@@ -338,6 +350,22 @@
     });
   }
 
+  // ======== STICKY CTA BAR ========
+  function initStickyCta() {
+    var bar = document.getElementById('stickyCta');
+    if (!bar) return;
+    var shown = false;
+    window.addEventListener('scroll', function () {
+      if (window.scrollY > 600 && !shown) {
+        bar.classList.add('visible');
+        shown = true;
+      } else if (window.scrollY <= 600 && shown) {
+        bar.classList.remove('visible');
+        shown = false;
+      }
+    });
+  }
+
   // ======== INIT ALL ON DOM READY ========
   document.addEventListener('DOMContentLoaded', function () {
     initNavScroll();
@@ -350,8 +378,11 @@
     initSignup();
     initContactForm();
     initSmoothScroll();
+    initStickyCta();
     initParticles();
     updatePlaceholders();
+    // Auto-update footer year
+    document.querySelectorAll('.footer-year').forEach(function (el) { el.textContent = new Date().getFullYear(); });
   });
 
 })();

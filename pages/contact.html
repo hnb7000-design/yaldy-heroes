@@ -25,9 +25,11 @@
     </a>
     <ul class="nav-links" id="navLinks">
       <li><a href="../index.html#heroes" data-en="Heroes" data-he="הגיבורים">Heroes</a></li>
+      <li><a href="cast.html" data-en="The Cast" data-he="הדמויות">The Cast</a></li>
       <li><a href="../index.html#collection" data-en="Collection" data-he="האוסף">Collection</a></li>
-      <li><a href="../index.html#about" data-en="Our Story" data-he="הסיפור שלנו">Our Story</a></li>
+      <li><a href="about.html" data-en="Our Story" data-he="הסיפור שלנו">Our Story</a></li>
       <li><a href="contact.html" data-en="Contact" data-he="צור קשר">Contact</a></li>
+      <li><a href="../index.html#collection" class="nav-order-btn" data-en="ORDER" data-he="הזמנה">ORDER</a></li>
       <li><button class="lang-toggle" onclick="toggleLang()">עברית</button></li>
     </ul>
     <div class="mobile-toggle" id="mobileToggle"><span></span><span></span><span></span></div>
@@ -37,8 +39,9 @@
 <!-- MOBILE MENU -->
 <div class="mob-menu" id="mobMenu">
   <a href="../index.html#heroes" data-en="Heroes" data-he="הגיבורים">Heroes</a>
+  <a href="cast.html" data-en="The Cast" data-he="הדמויות">The Cast</a>
   <a href="../index.html#collection" data-en="Collection" data-he="האוסף">Collection</a>
-  <a href="../index.html#about" data-en="Our Story" data-he="הסיפור שלנו">Our Story</a>
+  <a href="about.html" data-en="Our Story" data-he="הסיפור שלנו">Our Story</a>
   <a href="contact.html" data-en="Contact" data-he="צור קשר">Contact</a>
   <button class="lang-toggle" onclick="toggleLang()">עברית</button>
 </div>
@@ -53,25 +56,30 @@
   <p data-en="Location: Rosh HaAyin, Israel" data-he="מיקום: ראש העין, ישראל">Location: Rosh HaAyin, Israel</p>
 
   <h2 data-en="Send Us a Message" data-he="שלחו לנו הודעה">Send Us a Message</h2>
-  <form class="contact-form" id="contactForm" style="display:flex;flex-direction:column;gap:16px;margin-top:20px">
-    <input type="text" id="contactName" placeholder="Full Name" required style="padding:14px 16px;background:rgba(255,255,255,0.05);border:1px solid rgba(201,168,76,0.3);border-radius:4px;color:#f5f5f5;font-size:1rem;font-family:inherit">
-    <input type="email" id="contactEmail" placeholder="Email" required style="padding:14px 16px;background:rgba(255,255,255,0.05);border:1px solid rgba(201,168,76,0.3);border-radius:4px;color:#f5f5f5;font-size:1rem;font-family:inherit">
-    <input type="text" id="contactSubject" placeholder="Subject" required style="padding:14px 16px;background:rgba(255,255,255,0.05);border:1px solid rgba(201,168,76,0.3);border-radius:4px;color:#f5f5f5;font-size:1rem;font-family:inherit">
-    <textarea id="contactMessage" placeholder="Message" rows="6" required style="padding:14px 16px;background:rgba(255,255,255,0.05);border:1px solid rgba(201,168,76,0.3);border-radius:4px;color:#f5f5f5;font-size:1rem;font-family:inherit;resize:vertical"></textarea>
+  <form class="contact-form" id="contactForm">
+    <label data-en="Full Name" data-he="שם מלא" style="font-size:0.85rem;color:var(--gold);font-family:var(--font-heading);letter-spacing:1px;text-transform:uppercase;margin-bottom:4px">Full Name</label>
+    <input type="text" name="name" id="contactName" placeholder="Full Name" required>
+    <label data-en="Email" data-he="אימייל" style="font-size:0.85rem;color:var(--gold);font-family:var(--font-heading);letter-spacing:1px;text-transform:uppercase;margin-bottom:4px">Email</label>
+    <input type="email" name="email" id="contactEmail" placeholder="Email" required>
+    <label data-en="Phone (optional)" data-he="טלפון (אופציונלי)" style="font-size:0.85rem;color:var(--gold);font-family:var(--font-heading);letter-spacing:1px;text-transform:uppercase;margin-bottom:4px">Phone (optional)</label>
+    <input type="tel" name="phone" id="contactPhone" placeholder="Phone (optional)">
+    <label data-en="Your Message" data-he="ההודעה שלך" style="font-size:0.85rem;color:var(--gold);font-family:var(--font-heading);letter-spacing:1px;text-transform:uppercase;margin-bottom:4px">Your Message</label>
+    <textarea name="message" id="contactMessage" placeholder="Your message" rows="6" required></textarea>
+    <p id="contactError" style="display:none;color:#e74c3c;font-size:0.85rem;margin:0"></p>
     <button type="submit" class="cta-btn-solid" style="align-self:flex-start" data-en="Send Message" data-he="שלח הודעה">Send Message</button>
   </form>
-  <p class="contact-note" id="contactNote" style="display:none;margin-top:16px;color:var(--gold)" data-en="Thank you! Your message has been sent." data-he="תודה! ההודעה שלך נשלחה.">Thank you! Your message has been sent.</p>
 </main>
 
 <footer class="footer">
   <div class="footer-inner">
     <div class="footer-brand">
-      <img src="../images/logo/logo-png.png" alt="YALDY" style="height:40px">
+      <img src="../images/logo/logo-png.png" alt="YALDY Heroes — Real Heroes. True Strength." style="height:40px">
       <p data-en="Real Heroes. True Strength. Premium biblical hero puzzles and stories for children and families." data-he="גיבורים אמיתיים. כוח אמיתי. פאזלים וסיפורי גיבורים תנ״כיים פרימיום לילדים ומשפחות.">Real Heroes. True Strength. Premium biblical hero puzzles and stories for children and families.</p>
     </div>
     <div class="footer-col">
       <h4 data-en="Explore" data-he="גלו">Explore</h4>
       <a href="../index.html" data-en="Home" data-he="ראשי">Home</a>
+      <a href="cast.html" data-en="The Cast" data-he="הדמויות">The Cast</a>
       <a href="david-shepherd.html" data-en="David the Shepherd" data-he="דוד הרועה">David the Shepherd</a>
       <a href="david-king.html" data-en="King David" data-he="דוד המלך">King David</a>
       <a href="about.html" data-en="Our Story" data-he="הסיפור שלנו">Our Story</a>
@@ -91,9 +99,46 @@
       <a href="accessibility.html" data-en="Accessibility" data-he="נגישות">Accessibility</a>
     </div>
   </div>
-  <div class="footer-bottom">&copy; 2026 YALDY&trade; All rights reserved. Real Heroes. True Strength.</div>
+  <div class="footer-bottom">&copy; <span class="footer-year">2026</span> YALDY&trade; All rights reserved. Real Heroes. True Strength.</div>
 </footer>
 
 <script src="../js/universe.js"></script>
+<script>
+// Contact form with validation + localStorage backup
+(function() {
+  var form = document.getElementById('contactForm');
+  if (!form) return;
+  form.addEventListener('submit', function(e) {
+    e.preventDefault();
+    var errEl = document.getElementById('contactError');
+    errEl.style.display = 'none';
+    var name = form.querySelector('[name="name"]').value.trim();
+    var email = form.querySelector('[name="email"]').value.trim();
+    var phone = form.querySelector('[name="phone"]').value.trim();
+    var message = form.querySelector('[name="message"]').value.trim();
+    var lang = document.documentElement.lang === 'he' ? 'he' : 'en';
+    if (!name || !email || !message) {
+      errEl.textContent = lang === 'he' ? 'נא למלא את כל שדות החובה' : 'Please fill in all required fields';
+      errEl.style.display = 'block';
+      return;
+    }
+    if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+      errEl.textContent = lang === 'he' ? 'נא להזין אימייל תקין' : 'Please enter a valid email';
+      errEl.style.display = 'block';
+      return;
+    }
+    // localStorage backup
+    try {
+      var contacts = JSON.parse(localStorage.getItem('yaldy_contacts') || '[]');
+      contacts.push({ name: name, email: email, phone: phone, message: message, date: new Date().toISOString() });
+      localStorage.setItem('yaldy_contacts', JSON.stringify(contacts));
+    } catch(err) {}
+    // Show success
+    form.innerHTML = '<p style="color: #c9a84c; font-size: 1.2rem; text-align: center; padding: 30px 0;">' + (lang === 'he' ? '&#10003; ההודעה נשלחה! נחזור אליך בהקדם.' : '&#10003; Message sent! We\'ll get back to you soon.') + '</p>';
+  });
+  // Dynamic footer year
+  document.querySelectorAll('.footer-year').forEach(function(el) { el.textContent = new Date().getFullYear(); });
+})();
+</script>
 </body>
 </html>

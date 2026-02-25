@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Cast | YALDY Heroes Universe</title>
+<meta name="description" content="Meet the heroes, villains, and legends of the YALDY™ universe. Explore the full cast of biblical characters.">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://yaldyheroes.com/pages/cast.html">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Oswald:wght@300;400;500;600;700;900&family=Open+Sans:wght@300;400;500;600;700&family=Heebo:wght@300;400;500;600;700;900&family=Frank+Ruhl+Libre:wght@400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../css/universe.css">
+<style>
+/* Cast Page Styles */
+.cast-hero {
+  padding: 160px 0 80px;
+  text-align: center;
+  background: linear-gradient(180deg, var(--navy-deep) 0%, var(--navy) 100%);
+  position: relative; z-index: 1;
+}
+.cast-hero::before {
+  content: ''; position: absolute; inset: 0;
+  background: radial-gradient(ellipse at center, rgba(212,175,55,0.04), transparent 70%);
+  pointer-events: none;
+}
+.cast-grid {
+  display: grid; grid-template-columns: repeat(4, 1fr);
+  gap: 24px; max-width: 1100px; margin: 0 auto;
+}
+.cast-card {
+  position: relative; overflow: hidden; display: block;
+  border: 1px solid rgba(212,175,55,0.08);
+  clip-path: polygon(0 0, calc(100% - 12px) 0, 100% 12px, 100% 100%, 12px 100%, 0 calc(100% - 12px));
+  transition: var(--ease); text-decoration: none; color: inherit;
+}
+.cast-card:hover { transform: translateY(-6px); border-color: rgba(212,175,55,0.3); box-shadow: 0 15px 40px rgba(0,0,0,0.4); }
+.cast-card-img { width: 100%; height: 340px; overflow: hidden; }
+.cast-card-img img { width: 100%; height: 100%; object-fit: cover; object-position: top; transition: transform 0.5s ease; }
+.cast-card:hover .cast-card-img img { transform: scale(1.06); }
+.cast-card-info {
+  position: absolute; bottom: 0; left: 0; right: 0;
+  padding: 24px 18px; background: linear-gradient(180deg, transparent, rgba(10,14,26,0.95));
+}
+.cast-card-label {
+  font-family: var(--font-heading); font-size: 0.55rem; font-weight: 600;
+  letter-spacing: 3px; color: var(--gold); text-transform: uppercase; margin-bottom: 4px; opacity: 0.7;
+}
+.cast-card-info h3 {
+  font-family: var(--font-hero); font-size: 1.3rem; color: var(--white);
+  letter-spacing: 2px; text-transform: uppercase; margin-bottom: 2px;
+}
+.cast-card-tagline {
+  font-family: var(--font-heading); font-size: 0.7rem; font-weight: 400;
+  color: var(--gold); letter-spacing: 1.5px; text-transform: uppercase;
+}
+/* Lore-only card */
+.cast-card.lore { cursor: default; }
+.cast-card.lore:hover { transform: none; border-color: rgba(212,175,55,0.08); }
+.cast-card.lore .cast-card-img img { filter: saturate(0.5); }
+.cast-card.lore:hover .cast-card-img img { transform: none; }
+.cast-card-soon {
+  position: absolute; top: 50%; left: 50%; transform: translate(-50%,-50%);
+  z-index: 6; font-family: var(--font-hero); font-size: 0.8rem;
+  letter-spacing: 4px; text-transform: uppercase; color: var(--gold);
+  background: rgba(10,14,26,0.7); padding: 8px 16px;
+  border: 1px solid rgba(212,175,55,0.25);
+}
+/* Locked card */
+.cast-card.locked { cursor: default; }
+.cast-card.locked:hover { transform: none; border-color: rgba(212,175,55,0.08); }
+.cast-card.locked .cast-card-img img { filter: saturate(0.3) brightness(0.6); }
+.cast-card.locked:hover .cast-card-img img { transform: none; }
+.cast-card .lock-overlay {
+  position: absolute; inset: 0; z-index: 6;
+  background: rgba(10,14,26,0.7); backdrop-filter: blur(2px);
+  display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 10px;
+}
+.cast-card .lock-overlay-icon { font-size: 2rem; opacity: 0.7; }
+.cast-card .lock-overlay-text {
+  font-family: var(--font-hero); font-size: 0.8rem;
+  letter-spacing: 4px; text-transform: uppercase; color: var(--gold); opacity: 0.9;
+  background: rgba(10,14,26,0.6); padding: 8px 16px;
+  border: 1px solid rgba(212,175,55,0.3);
+}
+/* Responsive */
+@media (max-width: 1024px) {
+  .cast-grid { grid-template-columns: repeat(3, 1fr); }
+}
+@media (max-width: 768px) {
+  .cast-grid { grid-template-columns: repeat(2, 1fr); gap: 16px; }
+  .cast-card-img { height: 280px; }
+  .cast-hero { padding: 120px 0 50px; }
+}
+@media (max-width: 480px) {
+  .cast-grid { grid-template-columns: 1fr; max-width: 320px; }
+}
+</style>
+</head>
+
+<body>
+<canvas id="particles"></canvas>
+<div class="overlay" id="overlay"></div>
+
+<!-- NAVBAR -->
+<nav class="navbar" id="navbar">
+  <div class="container">
+    <a href="../index.html" class="logo">
+      <img src="../images/logo/logo-png.png" alt="YALDY Heroes Logo">
+    </a>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="../index.html#heroes" data-en="Heroes" data-he="הגיבורים">Heroes</a></li>
+      <li><a href="cast.html" data-en="The Cast" data-he="הדמויות">The Cast</a></li>
+      <li><a href="../index.html#collection" data-en="Collection" data-he="האוסף">Collection</a></li>
+      <li><a href="about.html" data-en="Our Story" data-he="הסיפור שלנו">Our Story</a></li>
+      <li><a href="contact.html" data-en="Contact" data-he="צור קשר">Contact</a></li>
+      <li><a href="../index.html#collection" class="nav-order-btn" data-en="ORDER" data-he="הזמנה">ORDER</a></li>
+      <li><button class="lang-toggle" onclick="toggleLang()">עברית</button></li>
+    </ul>
+    <div class="mobile-toggle" id="mobileToggle"><span></span><span></span><span></span></div>
+  </div>
+</nav>
+
+<!-- MOBILE MENU -->
+<div class="mob-menu" id="mobMenu">
+  <a href="../index.html#heroes" data-en="Heroes" data-he="הגיבורים">Heroes</a>
+  <a href="cast.html" data-en="The Cast" data-he="הדמויות">The Cast</a>
+  <a href="../index.html#collection" data-en="Collection" data-he="האוסף">Collection</a>
+  <a href="about.html" data-en="Our Story" data-he="הסיפור שלנו">Our Story</a>
+  <a href="contact.html" data-en="Contact" data-he="צור קשר">Contact</a>
+  <button class="lang-toggle" onclick="toggleLang()">עברית</button>
+</div>
+
+<!-- HERO BANNER -->
+<section class="cast-hero">
+  <div class="container">
+    <p class="section-eyebrow fade-in" data-en="YALDY Heroes Universe" data-he="יקום הגיבורים של YALDY">YALDY Heroes Universe</p>
+    <h1 class="section-title fade-in" data-en="THE CAST" data-he="הדמויות">THE <span class="gold">CAST</span></h1>
+    <div class="divider"></div>
+    <p class="section-sub fade-in" style="margin-top:20px;max-width:600px;margin-left:auto;margin-right:auto" data-en="The heroes, villains, and legends of the YALDY universe" data-he="הגיבורים, הנבלים והאגדות של יקום YALDY">The heroes, villains, and legends of the YALDY universe</p>
+  </div>
+</section>
+
+<!-- CHARACTER GRID -->
+<section style="padding:60px 0 100px;background:var(--navy)">
+  <div class="container">
+    <div class="cast-grid">
+
+      <!-- 1. David the Shepherd — ACTIVE -->
+      <a href="david-shepherd.html" class="cast-card fade-in">
+        <div class="cast-card-img"><img src="../images/david-shepherd/david-stand-sling.webp" alt="David the Shepherd, 14-year-old biblical hero with red hair and a sling"></div>
+        <div class="cast-card-info">
+          <div class="cast-card-label">HERO · 001</div>
+          <h3 data-en="David the Shepherd" data-he="דוד הרועה">David the Shepherd</h3>
+          <p class="cast-card-tagline" data-en="The Young Lion" data-he="הארי הצעיר">The Young Lion</p>
+        </div>
+      </a>
+
+      <!-- 2. King David — ACTIVE -->
+      <a href="david-king.html" class="cast-card fade-in">
+        <div class="cast-card-img"><img src="../images/david-king/david-king-standing.webp" alt="King David in blue royal tunic with golden Star of David, crown and sword" style="object-position:center 20%"></div>
+        <div class="cast-card-info">
+          <div class="cast-card-label">HERO · 002</div>
+          <h3 data-en="King David" data-he="דוד המלך">King David</h3>
+          <p class="cast-card-tagline" data-en="The Warrior King" data-he="המלך הלוחם">The Warrior King</p>
+        </div>
+      </a>
+
+      <!-- 3. Goliath — LORE ONLY -->
+      <div class="cast-card lore fade-in">
+        <div class="cast-card-img"><img src="../images/goliath/goliat-front.png" alt="Goliath the Giant of Gath in heavy bronze armor with a massive sword"></div>
+        <div class="cast-card-soon" data-en="COMING SOON" data-he="בקרוב">COMING SOON</div>
+        <div class="cast-card-info">
+          <div class="cast-card-label">VILLAIN · 001</div>
+          <h3 data-en="Goliath" data-he="גוליית">Goliath</h3>
+          <p class="cast-card-tagline" data-en="The Giant of Gath" data-he="ענק גת">The Giant of Gath</p>
+        </div>
+      </div>
+
+      <!-- 4. The Lion — LORE ONLY -->
+      <div class="cast-card lore fade-in">
+        <div class="cast-card-img"><img src="../images/site/davidvslion.webp" alt="The Lion — a fearsome predator from David's shepherd days" style="object-position:center 60%"></div>
+        <div class="cast-card-soon" data-en="COMING SOON" data-he="בקרוב">COMING SOON</div>
+        <div class="cast-card-info">
+          <div class="cast-card-label">BEAST · 001</div>
+          <h3 data-en="The Lion" data-he="האריה">The Lion</h3>
+          <p class="cast-card-tagline" data-en="The Silent Predator" data-he="הטורף השקט">The Silent Predator</p>
+        </div>
+      </div>
+
+      <!-- 5. Joab — LOCKED -->
+      <div class="cast-card locked fade-in">
+        <div class="cast-card-img"><img src="../images/joab/joab-water.png" alt="Joab Ben Tzeruya, commander of King David's army — Coming Soon"></div>
+        <div class="lock-overlay">
+          <div class="lock-overlay-icon">🔒</div>
+          <div class="lock-overlay-text" data-en="COMING IN WAVE 2" data-he="בגל השני">COMING IN WAVE 2</div>
+        </div>
+        <div class="cast-card-info">
+          <div class="cast-card-label">HERO · 003</div>
+          <h3 data-en="Joab Ben Tzeruya" data-he="יואב בן צרויה">Joab Ben Tzeruya</h3>
+          <p class="cast-card-tagline" data-en="The Shadow Commander" data-he="מפקד הצללים">The Shadow Commander</p>
+        </div>
+      </div>
+
+      <!-- 6. The Philistines — LORE ONLY -->
+      <div class="cast-card lore fade-in">
+        <div class="cast-card-img"><img src="../images/goliath/goliat-box.jpg" alt="Philistine army — the iron warriors of the ancient world" style="object-position:center top"></div>
+        <div class="cast-card-soon" data-en="COMING SOON" data-he="בקרוב">COMING SOON</div>
+        <div class="cast-card-info">
+          <div class="cast-card-label">FACTION · 001</div>
+          <h3 data-en="The Philistines" data-he="הפלישתים">The Philistines</h3>
+          <p class="cast-card-tagline" data-en="The Iron Army" data-he="צבא הברזל">The Iron Army</p>
+        </div>
+      </div>
+
+      <!-- 7. Tamar — LORE ONLY -->
+      <div class="cast-card lore fade-in">
+        <div class="cast-card-img"><img src="../images/products/box-front-valley-1000.webp" alt="Tamar — The Hidden Flame, a heroine of the Valley Strike story"></div>
+        <div class="cast-card-soon" data-en="COMING SOON" data-he="בקרוב">COMING SOON</div>
+        <div class="cast-card-info">
+          <div class="cast-card-label">HEROINE · 001</div>
+          <h3 data-en="Tamar" data-he="תמר">Tamar</h3>
+          <p class="cast-card-tagline" data-en="The Hidden Flame" data-he="הלהבה הנסתרת">The Hidden Flame</p>
+        </div>
+      </div>
+
+      <!-- 8. David's Warriors — LOCKED -->
+      <div class="cast-card locked fade-in">
+        <div class="cast-card-img"><img src="../images/david-king/david-king-battle.webp" alt="David's Warriors — The Mighty Thirty who fought alongside King David"></div>
+        <div class="lock-overlay">
+          <div class="lock-overlay-icon">🔒</div>
+          <div class="lock-overlay-text" data-en="COMING IN WAVE 2" data-he="בגל השני">COMING IN WAVE 2</div>
+        </div>
+        <div class="cast-card-info">
+          <div class="cast-card-label">SQUAD · 001</div>
+          <h3 data-en="David's Warriors" data-he="לוחמי דוד">David's Warriors</h3>
+          <p class="cast-card-tagline" data-en="The Mighty Thirty" data-he="שלושים הגיבורים">The Mighty Thirty</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section style="padding:80px 0;background:linear-gradient(180deg,var(--navy),var(--navy-mid));text-align:center">
+  <div class="container">
+    <h2 class="section-title fade-in" data-en="The Story Is Just Beginning" data-he="הסיפור רק מתחיל">The Story Is Just <span class="gold">Beginning</span></h2>
+    <div class="divider"></div>
+    <p class="section-sub fade-in" style="margin-top:20px;max-width:550px;margin-left:auto;margin-right:auto" data-en="New characters, puzzles, and stories are in development. Join the journey to be the first to know." data-he="דמויות, פאזלים וסיפורים חדשים בפיתוח. הצטרפו למסע כדי להיות הראשונים לדעת.">New characters, puzzles, and stories are in development. Join the journey to be the first to know.</p>
+    <a href="../index.html#signup" class="cta-btn-solid fade-in" style="margin-top:30px" data-en="JOIN THE HEROES" data-he="הצטרפו לגיבורים">JOIN THE HEROES</a>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="footer-inner">
+    <div class="footer-brand">
+      <img src="../images/logo/logo-png.png" alt="YALDY Heroes — Real Heroes. True Strength." style="height:40px">
+      <p data-en="Real Heroes. True Strength. Premium biblical hero puzzles and stories for children and families." data-he="גיבורים אמיתיים. כוח אמיתי. פאזלים וסיפורי גיבורים תנ״כיים פרימיום לילדים ומשפחות.">Real Heroes. True Strength. Premium biblical hero puzzles and stories for children and families.</p>
+    </div>
+    <div class="footer-col">
+      <h4 data-en="Explore" data-he="גלו">Explore</h4>
+      <a href="../index.html" data-en="Home" data-he="ראשי">Home</a>
+      <a href="cast.html" data-en="The Cast" data-he="הדמויות">The Cast</a>
+      <a href="david-shepherd.html" data-en="David the Shepherd" data-he="דוד הרועה">David the Shepherd</a>
+      <a href="david-king.html" data-en="King David" data-he="דוד המלך">King David</a>
+      <a href="about.html" data-en="Our Story" data-he="הסיפור שלנו">Our Story</a>
+    </div>
+    <div class="footer-col">
+      <h4 data-en="Contact" data-he="צור קשר">Contact</h4>
+      <p><a href="mailto:info@yaldyheroes.com" style="color:var(--gold)">info@yaldyheroes.com</a></p>
+      <p>+972-50-650-0750</p>
+      <p data-en="Rosh HaAyin, Israel" data-he="ראש העין, ישראל">Rosh HaAyin, Israel</p>
+    </div>
+    <div class="footer-col">
+      <h4 data-en="Legal" data-he="מדיניות">Legal</h4>
+      <a href="shipping.html" data-en="Shipping & Delivery" data-he="משלוחים ואספקה">Shipping & Delivery</a>
+      <a href="refund.html" data-en="Refund Policy" data-he="מדיניות החזרים">Refund Policy</a>
+      <a href="privacy.html" data-en="Privacy Policy" data-he="פרטיות">Privacy Policy</a>
+      <a href="terms.html" data-en="Terms & Conditions" data-he="תנאי שימוש">Terms & Conditions</a>
+      <a href="accessibility.html" data-en="Accessibility" data-he="נגישות">Accessibility</a>
+    </div>
+  </div>
+  <div class="footer-bottom">&copy; <span class="footer-year">2026</span> YALDY&trade; All rights reserved. Real Heroes. True Strength.</div>
+</footer>
+
+<script src="../js/universe.js"></script>
+</body>
+</html>

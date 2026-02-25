@@ -41,9 +41,11 @@
     </a>
     <ul class="nav-links" id="navLinks">
       <li><a href="#heroes" data-en="Heroes" data-he="הגיבורים">Heroes</a></li>
+      <li><a href="pages/cast.html" data-en="The Cast" data-he="הדמויות">The Cast</a></li>
       <li><a href="#collection" data-en="Collection" data-he="האוסף">Collection</a></li>
-      <li><a href="#about" data-en="Our Story" data-he="הסיפור שלנו">Our Story</a></li>
+      <li><a href="pages/about.html" data-en="Our Story" data-he="הסיפור שלנו">Our Story</a></li>
       <li><a href="pages/contact.html" data-en="Contact" data-he="צור קשר">Contact</a></li>
+      <li><a href="#collection" class="nav-order-btn" data-en="ORDER" data-he="הזמנה">ORDER</a></li>
       <li><button class="lang-toggle" onclick="toggleLang()">עברית</button></li>
     </ul>
     <div class="mobile-toggle" id="mobileToggle"><span></span><span></span><span></span></div>
@@ -53,8 +55,9 @@
 <!-- MOBILE MENU -->
 <div class="mob-menu" id="mobMenu">
   <a href="#heroes" data-en="Heroes" data-he="הגיבורים">Heroes</a>
+  <a href="pages/cast.html" data-en="The Cast" data-he="הדמויות">The Cast</a>
   <a href="#collection" data-en="Collection" data-he="האוסף">Collection</a>
-  <a href="#about" data-en="Our Story" data-he="הסיפור שלנו">Our Story</a>
+  <a href="pages/about.html" data-en="Our Story" data-he="הסיפור שלנו">Our Story</a>
   <a href="pages/contact.html" data-en="Contact" data-he="צור קשר">Contact</a>
   <button class="lang-toggle" onclick="toggleLang()">עברית</button>
 </div>
@@ -124,12 +127,13 @@
 <!-- ═══════════════════════════════════════════
      2. QUOTE SECTION — Faith. Courage. Truth.
      ═══════════════════════════════════════════ -->
-<section class="quote-section">
+<section class="quote-section" id="quote">
   <div class="container">
     <p class="section-eyebrow fade-in" data-en="The Source of Heroes" data-he="מקור הגיבורים">The Source of Heroes</p>
     <h2 class="section-title fade-in">FAITH. COURAGE. <span class="gold">TRUTH.</span></h2>
     <div class="divider"></div>
     <p class="quote-text fade-in" style="margin-top:24px" data-en="Before the crown… before the kingdom… there was a boy with a sling and unshakable faith." data-he="לפני הכתר... לפני הממלכה... היה נער עם קלע ואמונה שלא נשברת.">Before the crown… before the kingdom… there was a boy with a sling and unshakable faith.</p>
+    <a href="#heroes" class="cta-btn fade-in" style="margin-top:30px" data-en="MEET THE HEROES →" data-he="הכירו את הגיבורים →">MEET THE HEROES →</a>
   </div>
 </section>
 
@@ -146,7 +150,7 @@
     <div class="heroes-grid">
       <!-- David the Shepherd -->
       <a href="pages/david-shepherd.html" class="hero-card fade-in">
-        <div class="hero-card-img"><img src="images/david-shepherd/david-stand-sling.webp" alt="David the Shepherd"></div>
+        <div class="hero-card-img"><img src="images/david-shepherd/david-stand-sling.webp" alt="David the Shepherd, 14-year-old biblical hero with red hair and a sling"></div>
         <div class="hero-card-overlay">
           <div class="hero-card-label">HERO · 001</div>
           <h3 data-en="The Shepherd" data-he="דוד הרועה">The Shepherd</h3>
@@ -155,7 +159,7 @@
       </a>
       <!-- King David -->
       <a href="pages/david-king.html" class="hero-card fade-in">
-        <div class="hero-card-img"><img src="images/david-king/david-king-standing.webp" alt="King David" style="object-position:center 20%"></div>
+        <div class="hero-card-img"><img src="images/david-king/david-king-standing.webp" alt="King David in blue royal tunic with golden Star of David, crown and sword" style="object-position:center 20%"></div>
         <div class="hero-card-overlay">
           <div class="hero-card-label">HERO · 002</div>
           <h3 data-en="King David" data-he="דוד המלך">King David</h3>
@@ -164,8 +168,11 @@
       </a>
       <!-- Joab — Locked -->
       <div class="hero-card locked fade-in">
-        <div class="hero-card-img"><img src="images/joab/joab-water.png" alt="Joab Ben Tzeruya"></div>
-        <div class="lock-badge">🔒</div>
+        <div class="hero-card-img"><img src="images/joab/joab-water.png" alt="Joab Ben Tzeruya, commander of King David's army — Coming Soon"></div>
+        <div class="lock-overlay">
+          <div class="lock-overlay-icon">🔒</div>
+          <div class="lock-overlay-text" data-en="COMING IN WAVE 2" data-he="בגל השני">COMING IN WAVE 2</div>
+        </div>
         <div class="hero-card-overlay">
           <div class="hero-card-label">HERO · 003</div>
           <h3 data-en="Joab Ben Tzeruya" data-he="יואב בן צרויה">Joab Ben Tzeruya</h3>
@@ -179,8 +186,8 @@
 <!-- ═══════════════════════════════════════════
      3.5 KNOW YOUR ENEMY
      ═══════════════════════════════════════════ -->
-<div class="panoramic" style="height:500px">
-  <img src="images/goliath/goliat-box.jpg" alt="Goliath of Gath" style="object-fit:cover; object-position:center top; width:100%; height:100%">
+<div class="panoramic" id="villain" style="height:500px">
+  <img src="images/goliath/goliat-box.jpg" alt="Goliath the Giant of Gath in heavy bronze armor with a massive sword" style="object-fit:cover; object-position:center top; width:100%; height:100%">
   <div class="panoramic-overlay" style="background: linear-gradient(0deg, var(--navy) 0%, rgba(10,14,26,0.7) 30%, rgba(10,14,26,0.5) 60%, var(--navy-mid) 100%);">
     <div style="text-align:center;max-width:700px;padding:0 20px">
       <p class="section-eyebrow fade-in" style="color:var(--crimson);opacity:1" data-en="Know Your Enemy" data-he="הכירו את האויב">Know Your Enemy</p>
@@ -199,11 +206,11 @@
   <div class="container">
     <div class="inside-grid">
       <div class="inside-img fade-in" style="position:relative">
-        <img src="images/david-shepherd/david-play.webp" alt="The Shepherd" style="border-radius:2px">
+        <img src="images/david-shepherd/david-play.webp" alt="Young David the Shepherd playing his harp in the fields of Bethlehem" style="border-radius:2px">
         <div style="position:absolute;bottom:16px;left:16px;font-family:var(--font-heading);font-size:13px;letter-spacing:3px;text-transform:uppercase;color:var(--gold);background:rgba(10,14,26,0.75);padding:6px 14px" data-en="The Shepherd" data-he="הרועה">The Shepherd</div>
       </div>
       <div class="inside-img fade-in" style="position:relative">
-        <img src="images/david-king/david-king-battle.webp" alt="The Warrior" style="border-radius:2px">
+        <img src="images/david-king/david-king-battle.webp" alt="King David leading his warriors into battle" style="border-radius:2px">
         <div style="position:absolute;bottom:16px;left:16px;font-family:var(--font-heading);font-size:13px;letter-spacing:3px;text-transform:uppercase;color:var(--gold);background:rgba(10,14,26,0.75);padding:6px 14px" data-en="The King" data-he="המלך">The King</div>
       </div>
     </div>
@@ -231,58 +238,64 @@
       <div class="product-card fade-in">
         <div class="product-image">
           <span class="product-badge">PRE-ORDER</span>
-          <img src="images/products/box-front-lion-150.webp" alt="David vs Lion Puzzle">
+          <img src="images/products/box-front-lion-150.webp" alt="David vs Lion premium puzzle box — 150 pieces, YALDY First Edition">
         </div>
         <div class="product-info">
           <div class="product-name" data-en="David vs Lion" data-he="דוד מול האריה">David vs Lion</div>
           <div class="product-specs" data-en="150 Pieces · 45×38cm · Ages 5+" data-he="150 חלקים · 45×38 ס״מ · גילאי 5+">150 Pieces · 45×38cm · Ages 5+</div>
-          <div class="product-price">₪99</div>
+          <div class="product-price"><span class="price-original">₪129</span> ₪99 <span class="price-badge" data-en="LAUNCH PRICE" data-he="מחיר השקה">LAUNCH PRICE</span></div>
           <div class="product-inc" data-en="Puzzle + Flipbook + QR Content" data-he="פאזל + חוברת + תוכן QR">Puzzle + Flipbook + QR Content</div>
-          <a href="https://wa.me/972506500750?text=Hi!%20I'm%20interested%20in%20the%20David%20vs%20Lion%20puzzle%20(150pcs%20%E2%82%AA99)" class="product-btn" target="_blank" rel="noopener" data-en="PRE-ORDER · WhatsApp" data-he="הזמנה מוקדמת · WhatsApp">PRE-ORDER · WhatsApp</a>
+          <a href="https://wa.me/972506500750?text=Hi!%20I'd%20like%20to%20pre-order%20the%20*David%20vs%20Lion*%20puzzle%20(150pcs)%20%E2%80%93%20%E2%82%AA99%20%F0%9F%A6%81" class="product-btn" target="_blank" rel="noopener" data-en="PRE-ORDER · WhatsApp" data-he="הזמנה מוקדמת · WhatsApp">PRE-ORDER · WhatsApp</a>
         </div>
       </div>
       <!-- David vs Goliath 300pcs -->
       <div class="product-card fade-in">
         <div class="product-image">
           <span class="product-badge">PRE-ORDER</span>
-          <img src="images/products/box-front-goliath-300.webp" alt="David vs Goliath Puzzle">
+          <img src="images/products/box-front-goliath-300.webp" alt="David vs Goliath premium puzzle box — 300 pieces, YALDY First Edition">
         </div>
         <div class="product-info">
           <div class="product-name" data-en="David vs Goliath" data-he="דוד מול גוליית">David vs Goliath</div>
           <div class="product-specs" data-en="300 Pieces · 52×38cm · Ages 8+" data-he="300 חלקים · 52×38 ס״מ · גילאי 8+">300 Pieces · 52×38cm · Ages 8+</div>
-          <div class="product-price">₪119</div>
+          <div class="product-price"><span class="price-original">₪149</span> ₪119 <span class="price-badge" data-en="LAUNCH PRICE" data-he="מחיר השקה">LAUNCH PRICE</span></div>
           <div class="product-inc" data-en="Puzzle + Flipbook + QR Content" data-he="פאזל + חוברת + תוכן QR">Puzzle + Flipbook + QR Content</div>
-          <a href="https://wa.me/972506500750?text=Hi!%20I'm%20interested%20in%20the%20David%20vs%20Goliath%20puzzle%20(300pcs%20%E2%82%AA119)" class="product-btn" target="_blank" rel="noopener" data-en="PRE-ORDER · WhatsApp" data-he="הזמנה מוקדמת · WhatsApp">PRE-ORDER · WhatsApp</a>
+          <a href="https://wa.me/972506500750?text=Hi!%20I'd%20like%20to%20pre-order%20the%20*David%20vs%20Goliath*%20puzzle%20(300pcs)%20%E2%80%93%20%E2%82%AA119%20%E2%9A%94%EF%B8%8F" class="product-btn" target="_blank" rel="noopener" data-en="PRE-ORDER · WhatsApp" data-he="הזמנה מוקדמת · WhatsApp">PRE-ORDER · WhatsApp</a>
         </div>
       </div>
       <!-- City of David 500pcs -->
       <div class="product-card fade-in">
         <div class="product-image">
           <span class="product-badge">PRE-ORDER</span>
-          <img src="images/products/box-front-city-500.webp" alt="City of David Puzzle">
+          <img src="images/products/box-front-city-500.webp" alt="City of David premium puzzle box — 500 pieces, YALDY First Edition">
         </div>
         <div class="product-info">
           <div class="product-name" data-en="City of David" data-he="עיר דוד">City of David</div>
           <div class="product-specs" data-en="500 Pieces · 61×46cm · Ages 12+" data-he="500 חלקים · 61×46 ס״מ · גילאי 12+">500 Pieces · 61×46cm · Ages 12+</div>
-          <div class="product-price">₪139</div>
+          <div class="product-price"><span class="price-original">₪179</span> ₪139 <span class="price-badge" data-en="LAUNCH PRICE" data-he="מחיר השקה">LAUNCH PRICE</span></div>
           <div class="product-inc" data-en="Puzzle + Flipbook + QR Content" data-he="פאזל + חוברת + תוכן QR">Puzzle + Flipbook + QR Content</div>
-          <a href="https://wa.me/972506500750?text=Hi!%20I'm%20interested%20in%20the%20City%20of%20David%20puzzle%20(500pcs%20%E2%82%AA139)" class="product-btn" target="_blank" rel="noopener" data-en="PRE-ORDER · WhatsApp" data-he="הזמנה מוקדמת · WhatsApp">PRE-ORDER · WhatsApp</a>
+          <a href="https://wa.me/972506500750?text=Hi!%20I'd%20like%20to%20pre-order%20the%20*City%20of%20David*%20puzzle%20(500pcs)%20%E2%80%93%20%E2%82%AA139%20%F0%9F%8F%B0" class="product-btn" target="_blank" rel="noopener" data-en="PRE-ORDER · WhatsApp" data-he="הזמנה מוקדמת · WhatsApp">PRE-ORDER · WhatsApp</a>
         </div>
       </div>
       <!-- Valley Strike 1000pcs -->
       <div class="product-card fade-in">
         <div class="product-image">
           <span class="product-badge">PRE-ORDER</span>
-          <img src="images/products/box-front-valley-1000.webp" alt="Valley Strike Puzzle">
+          <img src="images/products/box-front-valley-1000.webp" alt="Valley Strike premium puzzle box — 1000 pieces, YALDY First Edition">
         </div>
         <div class="product-info">
           <div class="product-name" data-en="Valley Strike" data-he="מכת העמק">Valley Strike</div>
           <div class="product-specs" data-en="1000 Pieces · 70×50cm · Ages 16+" data-he="1000 חלקים · 70×50 ס״מ · גילאי 16+">1000 Pieces · 70×50cm · Ages 16+</div>
-          <div class="product-price">₪149</div>
+          <div class="product-price"><span class="price-original">₪199</span> ₪149 <span class="price-badge" data-en="LAUNCH PRICE" data-he="מחיר השקה">LAUNCH PRICE</span></div>
           <div class="product-inc" data-en="Puzzle + Flipbook + QR Content" data-he="פאזל + חוברת + תוכן QR">Puzzle + Flipbook + QR Content</div>
-          <a href="https://wa.me/972506500750?text=Hi!%20I'm%20interested%20in%20the%20Valley%20Strike%20puzzle%20(1000pcs%20%E2%82%AA149)" class="product-btn" target="_blank" rel="noopener" data-en="PRE-ORDER · WhatsApp" data-he="הזמנה מוקדמת · WhatsApp">PRE-ORDER · WhatsApp</a>
+          <a href="https://wa.me/972506500750?text=Hi!%20I'd%20like%20to%20pre-order%20the%20*Valley%20Strike*%20puzzle%20(1000pcs)%20%E2%80%93%20%E2%82%AA149%20%F0%9F%8F%B9" class="product-btn" target="_blank" rel="noopener" data-en="PRE-ORDER · WhatsApp" data-he="הזמנה מוקדמת · WhatsApp">PRE-ORDER · WhatsApp</a>
         </div>
       </div>
+    </div>
+    <p style="text-align:center;margin-top:28px;font-family:var(--font-heading);font-size:0.78rem;color:var(--gold);letter-spacing:1.5px" data-en="⚡ First Edition — Limited to 200 boxes per design" data-he="⚡ מהדורה ראשונה — מוגבל ל-200 קופסאות לעיצוב">⚡ First Edition — Limited to 200 boxes per design</p>
+    <div style="display:flex;justify-content:center;gap:30px;flex-wrap:wrap;margin:20px 0 0;padding:16px;background:rgba(212,175,55,0.04);border:1px solid rgba(212,175,55,0.08)">
+      <span style="font-family:var(--font-heading);font-size:0.72rem;color:var(--text-light);letter-spacing:1px">📦 <span data-en="Free Shipping in Israel" data-he="משלוח חינם בישראל">Free Shipping in Israel</span></span>
+      <span style="font-family:var(--font-heading);font-size:0.72rem;color:var(--text-light);letter-spacing:1px">↩️ <span data-en="Easy Cancellation" data-he="ביטול פשוט">Easy Cancellation</span></span>
+      <span style="font-family:var(--font-heading);font-size:0.72rem;color:var(--text-light);letter-spacing:1px">🎁 <span data-en="Puzzle + Story + QR Bonus" data-he="פאזל + סיפור + בונוס QR">Puzzle + Story + QR Bonus</span></span>
     </div>
   </div>
 </section>
@@ -294,8 +307,8 @@
   <div class="container">
     <div class="inside-grid">
       <div class="inside-img fade-in">
-        <img src="images/products/unbox-goliath-open.webp" alt="What's Inside Every Box">
-        <img src="images/products/booklets-all-four.webp" alt="All Four Bilingual Flipbook Stories" style="margin-top:20px">
+        <img src="images/products/unbox-goliath-open.webp" alt="YALDY puzzle box open showing premium puzzle pieces and bilingual story flipbook">
+        <img src="images/products/booklets-all-four.webp" alt="All four YALDY bilingual flipbook stories — Hebrew and English editions" style="margin-top:20px">
       </div>
       <div class="inside-text">
         <p class="section-eyebrow fade-in" data-en="What's Inside Every Box" data-he="מה בתוך כל קופסה">What's Inside Every Box</p>
@@ -316,21 +329,44 @@
 <!-- ═══════════════════════════════════════════
      7. WORLD TEASER — David Is Just The Beginning
      ═══════════════════════════════════════════ -->
-<div class="panoramic" style="height:600px">
+<div class="panoramic" id="universe" style="height:600px">
   <img src="images/site/yaldyworld-new.webp" alt="YALDY Universe — A world of biblical heroes" style="object-fit:cover; object-position:center top; width:100%; height:100%">
   <div class="panoramic-overlay">
     <div style="text-align:center;max-width:700px;padding:0 20px">
       <h2 class="section-title fade-in" style="text-shadow:0 2px 20px rgba(0,0,0,0.7)"><span data-en="David Is Just The" data-he="דוד הוא רק">David Is Just The</span> <span class="gold" data-en="Beginning" data-he="ההתחלה">Beginning</span></h2>
       <p class="fade-in" style="color:var(--cream);font-size:1rem;font-weight:300;letter-spacing:0.5px;line-height:1.8;margin:20px 0 30px;text-shadow:0 2px 10px rgba(0,0,0,0.7)" data-en="A universe of biblical heroes awaits. Warriors, prophets, kings, and matriarchs — each with a story that shaped history." data-he="יקום של גיבורים תנ״כיים מחכה. לוחמים, נביאים, מלכים ואימהות — לכל אחד סיפור שעיצב את ההיסטוריה.">A universe of biblical heroes awaits. Warriors, prophets, kings, and matriarchs — each with a story that shaped history.</p>
-      <a href="#join" class="cta-btn fade-in" data-en="Join the Journey" data-he="הצטרפו למסע">Join the Journey</a>
+      <a href="#signup" class="cta-btn fade-in" data-en="Join the Journey" data-he="הצטרפו למסע">Join the Journey</a>
     </div>
   </div>
 </div>
 
 <!-- ═══════════════════════════════════════════
+     8. FROM VISION TO REALITY (BTS)
+     ═══════════════════════════════════════════ -->
+<section id="bts" style="padding:80px 0;background:var(--navy-mid);position:relative;z-index:1">
+  <div class="container">
+    <div class="section-header">
+      <p class="section-eyebrow" data-en="Behind the Scenes" data-he="מאחורי הקלעים">Behind the Scenes</p>
+      <h2 class="section-title fade-in"><span data-en="FROM VISION TO" data-he="מהחזון">FROM VISION TO</span> <span class="gold" data-en="REALITY" data-he="למציאות">REALITY</span></h2>
+      <div class="divider"></div>
+    </div>
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:center;margin-top:40px" class="bts-grid">
+      <div class="fade-in">
+        <p style="color:var(--text-light);font-size:0.95rem;line-height:1.9;font-weight:300" data-en="Every YALDY puzzle begins as a story — researched from ancient sources, designed with cinematic precision, and crafted to bring families together around heroes who actually lived." data-he="כל פאזל YALDY מתחיל כסיפור — נחקר ממקורות עתיקים, מעוצב בדיוק קולנועי, ויוצר כדי לאחד משפחות סביב גיבורים שחיו באמת.">Every YALDY puzzle begins as a story — researched from ancient sources, designed with cinematic precision, and crafted to bring families together around heroes who actually lived.</p>
+        <p style="color:var(--text-muted);font-size:0.85rem;line-height:1.8;font-weight:300;margin-top:16px" data-en="From concept art to final production — each box goes through months of research, illustration, and quality control before reaching your family's table." data-he="מאומנות קונספט ועד הפקה סופית — כל קופסה עוברת חודשים של מחקר, איור ובקרת איכות לפני שהיא מגיעה לשולחן המשפחה שלכם.">From concept art to final production — each box goes through months of research, illustration, and quality control before reaching your family's table.</p>
+      </div>
+      <div class="fade-in" style="text-align:center">
+        <img src="images/bts/factory-boxes.jpg" alt="YALDY puzzle boxes at the production facility — first wave of 200 boxes per design" style="width:100%;border:1px solid rgba(212,175,55,0.1);max-width:500px">
+      </div>
+    </div>
+  </div>
+</section>
+<style>.bts-grid{grid-template-columns:1fr 1fr}@media(max-width:768px){.bts-grid{grid-template-columns:1fr!important}}</style>
+
+<!-- ═══════════════════════════════════════════
      8a. SIGNUP
      ═══════════════════════════════════════════ -->
-<section class="signup-section" id="join">
+<section class="signup-section" id="signup">
   <div class="container">
     <div class="signup-box">
       <div class="section-header">
@@ -361,6 +397,7 @@
     <div class="footer-col">
       <h4 data-en="Explore" data-he="גלו">Explore</h4>
       <a href="index.html" data-en="Home" data-he="ראשי">Home</a>
+      <a href="pages/cast.html" data-en="The Cast" data-he="הדמויות">The Cast</a>
       <a href="pages/david-shepherd.html" data-en="David the Shepherd" data-he="דוד הרועה">David the Shepherd</a>
       <a href="pages/david-king.html" data-en="King David" data-he="דוד המלך">King David</a>
       <a href="pages/about.html" data-en="Our Story" data-he="הסיפור שלנו">Our Story</a>
@@ -380,8 +417,16 @@
       <a href="pages/accessibility.html" data-en="Accessibility" data-he="נגישות">Accessibility</a>
     </div>
   </div>
-  <div class="footer-bottom">&copy; 2026 YALDY&trade; All rights reserved. Real Heroes. True Strength.</div>
+  <div class="footer-bottom">&copy; <span class="footer-year">2026</span> YALDY&trade; All rights reserved. Real Heroes. True Strength.</div>
 </footer>
+
+<!-- STICKY CTA BAR -->
+<div class="sticky-cta" id="stickyCta">
+  <div class="sticky-cta-inner">
+    <span class="sticky-cta-text" data-en="🔥 Limited Pre-Order — Get Yours Now" data-he="🔥 הזמנה מוקדמת מוגבלת — הזמינו עכשיו">🔥 Limited Pre-Order — Get Yours Now</span>
+    <a href="#collection" class="sticky-cta-btn" data-en="ORDER NOW" data-he="הזמינו עכשיו">ORDER NOW</a>
+  </div>
+</div>
 
 <script src="js/universe.js"></script>
 </body>
