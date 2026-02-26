@@ -8,10 +8,20 @@
   'use strict';
 
   // ======== LANGUAGE TOGGLE (data-en / data-he) ========
-  var lang = 'en';
+  // Priority: 1. localStorage  2. navigator.language  3. default 'en'
+  var lang = (function () {
+    try {
+      var saved = localStorage.getItem('yaldy-lang');
+      if (saved === 'he' || saved === 'en') return saved;
+    } catch (e) { /* storage blocked */ }
+    var nav = navigator.language || navigator.userLanguage || '';
+    if (nav.toLowerCase().indexOf('he') === 0) return 'he';
+    return 'en';
+  })();
 
   function setLang(newLang) {
     lang = newLang;
+    try { localStorage.setItem('yaldy-lang', lang); } catch (e) { /* silent */ }
     document.documentElement.dir = lang === 'he' ? 'rtl' : 'ltr';
     document.documentElement.lang = lang;
 
@@ -368,6 +378,13 @@
 
   // ======== INIT ALL ON DOM READY ========
   document.addEventListener('DOMContentLoaded', function () {
+    // Apply saved/detected language before anything else
+    if (lang !== 'en') setLang(lang);
+    // Always update toggle button text on load
+    document.querySelectorAll('.lang-toggle').forEach(function (btn) {
+      btn.textContent = lang === 'en' ? '\u05E2\u05D1\u05E8\u05D9\u05EA' : 'English';
+    });
+
     initNavScroll();
     initMobileMenu();
     initSlider();

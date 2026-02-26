@@ -3,6 +3,9 @@
 # 301 Permanent Redirects
 # ============================================
 
+# --- WWW → non-www canonical redirect ---
+https://www.yaldyheroes.com/* https://yaldyheroes.com/:splat 301
+
 # --- Old Wix product/category URLs ---
 /category/all-products                    /pages/cast.html  301
 /shop                                     /pages/cast.html  301
