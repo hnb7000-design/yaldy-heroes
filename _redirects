@@ -1,0 +1,32 @@
+# ============================================
+# YALDY Heroes — Cloudflare Pages Redirects
+# 301 Permanent Redirects
+# ============================================
+
+# --- Old Wix product/category URLs ---
+/category/all-products                    /pages/cast.html  301
+/shop                                     /pages/cast.html  301
+/product-page/david-and-the-lion          /pages/product-david-lion.html  301
+/product-page/david-vs-goliath            /pages/product-david-goliath.html  301
+/product-page/the-city-of-david           /pages/product-city-of-david.html  301
+/product-page/the-valley-strike           /pages/product-valley-strike.html  301
+/story-david-and-goliat                   /pages/david-shepherd.html  301
+/story-david-the-king                     /pages/david-king.html  301
+
+# --- Policy page aliases ---
+/shipping-policy                          /pages/shipping.html  301
+/refund-policy                            /pages/refund.html  301
+/privacy-policy                           /pages/privacy.html  301
+/terms                                    /pages/terms.html  301
+/terms-of-use                             /pages/terms.html  301
+/accessibility                            /pages/accessibility.html  301
+/accessibility-statement                  /pages/accessibility.html  301
+
+# --- Common Wix legacy paths ---
+/about                                    /pages/about.html  301
+/contact                                  /pages/contact.html  301
+/faq                                      /pages/faq.html  301
+/story                                    /pages/story.html  301
+/our-story                                /pages/story.html  301
+/cast                                     /pages/cast.html  301
+/policy                                   /pages/policy.html  301
