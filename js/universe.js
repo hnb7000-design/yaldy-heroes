@@ -25,9 +25,12 @@
     document.documentElement.dir = lang === 'he' ? 'rtl' : 'ltr';
     document.documentElement.lang = lang;
 
-    // Update all data-en / data-he elements
+    // Update all data-en / data-he elements (leaf nodes only, so child
+    // elements like <span class="gold"> are not destroyed)
     document.querySelectorAll('[data-' + lang + ']').forEach(function (el) {
       if (el.hasAttribute('data-en') && el.hasAttribute('data-he')) {
+        // Skip if any child element also carries data-en/data-he
+        if (el.querySelector('[data-en][data-he]')) return;
         el.textContent = el.getAttribute('data-' + lang);
       }
     });
@@ -83,14 +86,32 @@
     var overlay = document.getElementById('overlay');
     if (!toggle || !mob) return;
 
+    function updateAria(isOpen) {
+      toggle.setAttribute('aria-expanded', String(isOpen));
+      mob.setAttribute('aria-hidden', String(!isOpen));
+    }
+
+    // Set initial ARIA state
+    updateAria(mob.classList.contains('open'));
+
     function closeMenu() {
       mob.classList.remove('open');
       if (overlay) overlay.classList.remove('active');
+      updateAria(false);
     }
 
     toggle.addEventListener('click', function () {
+      var willOpen = !mob.classList.contains('open');
       mob.classList.toggle('open');
       if (overlay) overlay.classList.toggle('active');
+      updateAria(willOpen);
+    });
+
+    // Close on Escape key
+    document.addEventListener('keydown', function (e) {
+      if (e.key === 'Escape' && mob.classList.contains('open')) {
+        closeMenu();
+      }
     });
 
     if (overlay) overlay.addEventListener('click', closeMenu);
@@ -122,7 +143,9 @@
       if (lang === 'he') {
         setTimeout(function () {
           slides[cur].querySelectorAll('[data-he]').forEach(function (el) {
-            if (el.hasAttribute('data-en')) el.textContent = el.getAttribute('data-he');
+            if (el.hasAttribute('data-en') && !el.querySelector('[data-en][data-he]')) {
+              el.textContent = el.getAttribute('data-he');
+            }
           });
         }, 50);
       }
@@ -296,6 +319,7 @@
     var canvas = document.getElementById('particles');
     if (!canvas) return;
     var ctx = canvas.getContext('2d');
+    if (!ctx) return;
     var W, H, particles = [];
 
     function resize() {

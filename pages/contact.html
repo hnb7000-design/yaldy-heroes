@@ -31,8 +31,9 @@
 </head>
 
 <body>
-<canvas id="particles"></canvas>
-<div class="overlay" id="overlay"></div>
+<a href="#main-content" class="skip-nav" data-en="Skip to main content" data-he="דלג לתוכן הראשי">Skip to main content</a>
+<canvas id="particles" aria-hidden="true"></canvas>
+<div class="overlay" id="overlay" aria-hidden="true"></div>
 
 <!-- NAVBAR -->
 <nav class="navbar" id="navbar">
@@ -74,13 +75,13 @@
 
   <h2 data-en="Send Us a Message" data-he="שלחו לנו הודעה">Send Us a Message</h2>
   <form class="contact-form" id="contactForm">
-    <label data-en="Full Name" data-he="שם מלא" style="font-size:0.85rem;color:var(--gold);font-family:var(--font-heading);letter-spacing:1px;text-transform:uppercase;margin-bottom:4px">Full Name</label>
+    <label for="contactName" data-en="Full Name" data-he="שם מלא" style="font-size:0.85rem;color:var(--gold);font-family:var(--font-heading);letter-spacing:1px;text-transform:uppercase;margin-bottom:4px">Full Name</label>
     <input type="text" name="name" id="contactName" placeholder="Full Name" required>
-    <label data-en="Email" data-he="אימייל" style="font-size:0.85rem;color:var(--gold);font-family:var(--font-heading);letter-spacing:1px;text-transform:uppercase;margin-bottom:4px">Email</label>
+    <label for="contactEmail" data-en="Email" data-he="אימייל" style="font-size:0.85rem;color:var(--gold);font-family:var(--font-heading);letter-spacing:1px;text-transform:uppercase;margin-bottom:4px">Email</label>
     <input type="email" name="email" id="contactEmail" placeholder="Email" required>
-    <label data-en="Phone (optional)" data-he="טלפון (אופציונלי)" style="font-size:0.85rem;color:var(--gold);font-family:var(--font-heading);letter-spacing:1px;text-transform:uppercase;margin-bottom:4px">Phone (optional)</label>
+    <label for="contactPhone" data-en="Phone (optional)" data-he="טלפון (אופציונלי)" style="font-size:0.85rem;color:var(--gold);font-family:var(--font-heading);letter-spacing:1px;text-transform:uppercase;margin-bottom:4px">Phone (optional)</label>
     <input type="tel" name="phone" id="contactPhone" placeholder="Phone (optional)">
-    <label data-en="Your Message" data-he="ההודעה שלך" style="font-size:0.85rem;color:var(--gold);font-family:var(--font-heading);letter-spacing:1px;text-transform:uppercase;margin-bottom:4px">Your Message</label>
+    <label for="contactMessage" data-en="Your Message" data-he="ההודעה שלך" style="font-size:0.85rem;color:var(--gold);font-family:var(--font-heading);letter-spacing:1px;text-transform:uppercase;margin-bottom:4px">Your Message</label>
     <textarea name="message" id="contactMessage" placeholder="Your message" rows="6" required></textarea>
     <p id="contactError" style="display:none;color:#e74c3c;font-size:0.85rem;margin:0"></p>
     <button type="submit" class="cta-btn-solid" style="align-self:flex-start" data-en="Send Message" data-he="שלח הודעה">Send Message</button>
@@ -90,7 +91,7 @@
 <footer class="footer">
   <div class="footer-inner">
     <div class="footer-brand">
-      <img src="../images/logo/logo-png.png" alt="YALDY Heroes — Real Heroes. True Strength." style="height:40px">
+      <img src="../images/logo/logo-png.png" alt="YALDY Heroes — Real Heroes. True Strength." style="height:40px" loading="lazy">
       <p data-en="Real Heroes. True Strength. Premium biblical hero puzzles and stories for children and families." data-he="גיבורים אמיתיים. כוח אמיתי. פאזלים וסיפורי גיבורים תנ״כיים פרימיום לילדים ומשפחות.">Real Heroes. True Strength. Premium biblical hero puzzles and stories for children and families.</p>
     </div>
     <div class="footer-col">

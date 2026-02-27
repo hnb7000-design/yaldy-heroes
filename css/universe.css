@@ -783,6 +783,73 @@ section { padding: 100px 0; position: relative; z-index: 1; }
   padding-right: 24px;
 }
 
+/* ===== SCREEN READER ONLY (Accessibility) ===== */
+.sr-only {
+  position: absolute; width: 1px; height: 1px;
+  padding: 0; margin: -1px; overflow: hidden;
+  clip: rect(0,0,0,0); white-space: nowrap; border: 0;
+}
+
+/* ===== SKIP NAVIGATION (Accessibility) ===== */
+.skip-nav {
+  position: absolute; top: -100%; left: 50%; transform: translateX(-50%);
+  z-index: 10000; padding: 12px 28px;
+  background: var(--gold); color: var(--navy);
+  font-family: var(--font-heading); font-size: 0.85rem; font-weight: 700;
+  letter-spacing: 2px; text-transform: uppercase; text-decoration: none;
+  transition: top 0.2s ease;
+}
+.skip-nav:focus { top: 10px; }
+
+/* ===== FOCUS INDICATORS (Accessibility) ===== */
+*:focus-visible {
+  outline: 2px solid var(--gold);
+  outline-offset: 3px;
+}
+/* Remove outline for mouse users */
+*:focus:not(:focus-visible) { outline: none; }
+/* Special focus for buttons and links on dark bg */
+.cta-btn:focus-visible, .cta-btn-solid:focus-visible,
+.product-btn:focus-visible, .nav-order-btn:focus-visible {
+  outline: 2px solid var(--gold-light);
+  outline-offset: 4px;
+  box-shadow: 0 0 0 4px rgba(212,175,55,0.2);
+}
+.hero-dot:focus-visible, .hero-arrow:focus-visible {
+  outline: 2px solid var(--gold);
+  outline-offset: 2px;
+}
+
+/* ===== PREFERS-REDUCED-MOTION (Accessibility) ===== */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+  html { scroll-behavior: auto; }
+  .hero-slide { transition: opacity 0.3s ease; }
+  .fade-in { opacity: 1; transform: none; transition: none; }
+  .hero-entrance-bg { animation: none; }
+}
+
+/* ===== PRINT STYLES ===== */
+@media print {
+  body { background: #fff; color: #000; }
+  .navbar, .mob-menu, .overlay, .sticky-cta, #particles,
+  .hero-dots, .hero-arrows, .lang-toggle, .mobile-toggle,
+  .signup-section, .skip-nav { display: none !important; }
+  section { padding: 20px 0; }
+  .footer { background: #fff; color: #333; border-top: 1px solid #ccc; }
+  .footer-col a, .footer-col p { color: #333; }
+  .cta-btn, .cta-btn-solid, .product-btn { border: 1px solid #333; color: #333; background: transparent; }
+  a { color: #000; text-decoration: underline; }
+  img { max-width: 100%; }
+  .hero-slider { height: auto; }
+  .hero-slide { position: relative; opacity: 1; }
+}
+
 /* ===== UTILITY: page overlay for mobile menu ===== */
 .overlay {
   position: fixed; inset: 0; background: rgba(0,0,0,0.7);
