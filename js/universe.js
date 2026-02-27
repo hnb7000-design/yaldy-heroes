@@ -226,16 +226,21 @@
   }
 
   // ======== WEBHOOK CONFIG ========
-  // Replace these URLs with your Make.com (or Mailchimp/Zapier) webhook URLs
-  var WEBHOOK_SIGNUP  = ''; // e.g. 'https://hook.eu2.make.com/xxxxx'
-  var WEBHOOK_CONTACT = ''; // e.g. 'https://hook.eu2.make.com/yyyyy'
+  var WEBHOOK_SIGNUP  = 'https://hook.eu1.make.com/4uk3s7fpq42nyggr189npfkdvwfcfcl9';
+  var WEBHOOK_CONTACT = 'https://hook.eu1.make.com/27y36vo2mgtgfxb16ch1craj1tft072k';
 
   function postWebhook(url, data, onDone, onErr) {
-    if (!url) { if (onDone) onDone(); return; } // no webhook yet — just succeed silently
+    if (!url) { if (onDone) onDone(); return; }
     var xhr = new XMLHttpRequest();
     xhr.open('POST', url, true);
     xhr.setRequestHeader('Content-Type', 'application/json');
-    xhr.onload = function () { if (onDone) onDone(); };
+    xhr.onload = function () {
+      if (xhr.status >= 200 && xhr.status < 300) {
+        if (onDone) onDone();
+      } else {
+        if (onErr) onErr();
+      }
+    };
     xhr.onerror = function () { if (onErr) onErr(); };
     xhr.send(JSON.stringify(data));
   }
@@ -248,17 +253,32 @@
 
     form.addEventListener('submit', function (e) {
       e.preventDefault();
+
+      var emailEl = document.getElementById('email');
+      var nameEl = document.getElementById('fullName');
+      var email = (emailEl ? emailEl.value : '').trim();
+      var name = (nameEl ? nameEl.value : '').trim();
+
+      // Validate email
+      if (!email || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+        note.textContent = lang === 'he' ? '\u05E0\u05D0 \u05DC\u05D4\u05D6\u05D9\u05DF \u05D0\u05D9\u05DE\u05D9\u05D9\u05DC \u05EA\u05E7\u05D9\u05DF' : 'Please enter a valid email';
+        note.style.color = '#e74c3c';
+        note.style.display = 'block';
+        setTimeout(function () { note.style.display = 'none'; note.style.color = ''; }, 4000);
+        return;
+      }
+
       var btn = form.querySelector('button[type="submit"]');
       var origText = btn.textContent;
-      btn.textContent = lang === 'he' ? '...שולח' : 'Sending...';
+      btn.textContent = lang === 'he' ? '...\u05E9\u05D5\u05DC\u05D7' : 'Sending...';
       btn.disabled = true;
 
       var payload = {
-        name: document.getElementById('fullName').value,
-        email: document.getElementById('email').value,
-        source: 'yaldy-website-signup',
-        language: lang,
-        timestamp: new Date().toISOString()
+        name: name,
+        email: email,
+        source_page: window.location.href,
+        timestamp: new Date().toISOString(),
+        form_type: 'signup'
       };
 
       // localStorage backup
@@ -269,12 +289,16 @@
       } catch (err) { /* silently fail if storage blocked */ }
 
       postWebhook(WEBHOOK_SIGNUP, payload, function () {
+        note.textContent = lang === 'he' ? '\u2713 \u05E0\u05E8\u05E9\u05DE\u05EA \u05D1\u05D4\u05E6\u05DC\u05D7\u05D4!' : '\u2713 You\u2019re signed up!';
+        note.style.color = '';
         note.style.display = 'block';
         form.reset();
         btn.textContent = origText; btn.disabled = false;
         setTimeout(function () { note.style.display = 'none'; }, 5000);
       }, function () {
-        // Even on error, show success since we saved to localStorage
+        // Still show success since we saved to localStorage
+        note.textContent = lang === 'he' ? '\u2713 \u05E0\u05E8\u05E9\u05DE\u05EA \u05D1\u05D4\u05E6\u05DC\u05D7\u05D4!' : '\u2713 You\u2019re signed up!';
+        note.style.color = '';
         note.style.display = 'block';
         form.reset();
         btn.textContent = origText; btn.disabled = false;
@@ -290,26 +314,65 @@
 
     form.addEventListener('submit', function (e) {
       e.preventDefault();
+
+      var nameEl = document.getElementById('contactName');
+      var emailEl = document.getElementById('contactEmail');
+      var phoneEl = document.getElementById('contactPhone');
+      var msgEl = document.getElementById('contactMessage');
+      var errEl = document.getElementById('contactError');
+
+      var name = (nameEl ? nameEl.value : '').trim();
+      var email = (emailEl ? emailEl.value : '').trim();
+      var phone = (phoneEl ? phoneEl.value : '').trim();
+      var message = (msgEl ? msgEl.value : '').trim();
+
+      // Validation
+      if (errEl) errEl.style.display = 'none';
+      if (!name || !email || !message) {
+        if (errEl) {
+          errEl.textContent = lang === 'he' ? '\u05E0\u05D0 \u05DC\u05DE\u05DC\u05D0 \u05D0\u05EA \u05DB\u05DC \u05E9\u05D3\u05D5\u05EA \u05D4\u05D7\u05D5\u05D1\u05D4' : 'Please fill in all required fields';
+          errEl.style.display = 'block';
+        }
+        return;
+      }
+      if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+        if (errEl) {
+          errEl.textContent = lang === 'he' ? '\u05E0\u05D0 \u05DC\u05D4\u05D6\u05D9\u05DF \u05D0\u05D9\u05DE\u05D9\u05D9\u05DC \u05EA\u05E7\u05D9\u05DF' : 'Please enter a valid email';
+          errEl.style.display = 'block';
+        }
+        return;
+      }
+
       var btn = form.querySelector('button[type="submit"]');
       var origText = btn.textContent;
-      btn.textContent = lang === 'he' ? '...שולח' : 'Sending...';
+      btn.textContent = lang === 'he' ? '...\u05E9\u05D5\u05DC\u05D7' : 'Sending...';
       btn.disabled = true;
 
-      postWebhook(WEBHOOK_CONTACT, {
-        name: (document.getElementById('contactName') || {}).value || '',
-        email: (document.getElementById('contactEmail') || {}).value || '',
-        subject: (document.getElementById('contactSubject') || {}).value || '',
-        message: (document.getElementById('contactMessage') || {}).value || '',
-        source: 'yaldy-website-contact',
-        language: lang,
-        timestamp: new Date().toISOString()
+      var payload = {
+        name: name,
+        email: email,
+        phone: phone,
+        message: message,
+        timestamp: new Date().toISOString(),
+        form_type: 'contact'
+      };
+
+      // localStorage backup
+      try {
+        var contacts = JSON.parse(localStorage.getItem('yaldy_contacts') || '[]');
+        contacts.push(payload);
+        localStorage.setItem('yaldy_contacts', JSON.stringify(contacts));
+      } catch (err) { /* silent */ }
+
+      postWebhook(WEBHOOK_CONTACT, payload, function () {
+        form.innerHTML = '<p style="color:#c9a84c;font-size:1.2rem;text-align:center;padding:30px 0;">' +
+          (lang === 'he' ? '\u2713 \u05D4\u05D4\u05D5\u05D3\u05E2\u05D4 \u05E0\u05E9\u05DC\u05D7\u05D4! \u05E0\u05D7\u05D6\u05D5\u05E8 \u05D0\u05DC\u05D9\u05DA \u05D1\u05D4\u05E7\u05D3\u05DD.' : '\u2713 Message sent! We\u2019ll get back to you soon.') + '</p>';
       }, function () {
-        alert(lang === 'he' ? 'ההודעה נשלחה בהצלחה!' : 'Message sent successfully!');
-        form.reset();
         btn.textContent = origText; btn.disabled = false;
-      }, function () {
-        btn.textContent = origText; btn.disabled = false;
-        alert(lang === 'he' ? 'שגיאה — נסו שוב' : 'Error — please try again');
+        if (errEl) {
+          errEl.textContent = lang === 'he' ? '\u05E9\u05D2\u05D9\u05D0\u05D4 \u2014 \u05E0\u05E1\u05D5 \u05E9\u05D5\u05D1' : 'Error \u2014 please try again';
+          errEl.style.display = 'block';
+        }
       });
     });
   }
