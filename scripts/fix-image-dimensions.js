@@ -12,6 +12,7 @@ const { imageSize } = require('image-size');
 const ROOT = path.resolve(__dirname, '..');
 const htmlFiles = [
   'index.html',
+  'index-backup.html',
   'pages/about.html',
   'pages/accessibility.html',
   'pages/cast.html',
