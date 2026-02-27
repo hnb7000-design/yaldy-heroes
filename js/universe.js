@@ -226,7 +226,7 @@
   }
 
   // ======== WEBHOOK CONFIG ========
-  var WEBHOOK_SIGNUP  = 'https://hook.eu1.make.com/a8iqey4dwrn65gjxk9anyc4bhew84ofi';
+  var WEBHOOK_SIGNUP  = 'https://hook.eu1.make.com/4uk3s7fpq42nyggr189npfkdvwfcfcl9';
   var WEBHOOK_CONTACT = 'https://hook.eu1.make.com/27y36vo2mgtgfxb16ch1craj1tft072k';
 
   function postWebhook(url, data, onDone, onErr) {
