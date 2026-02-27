@@ -226,23 +226,17 @@
   }
 
   // ======== WEBHOOK CONFIG ========
-  var WEBHOOK_SIGNUP  = 'https://hook.eu1.make.com/4uk3s7fpq42nyggr189npfkdvwfcfcl9';
+  var WEBHOOK_SIGNUP  = 'https://hook.eu1.make.com/a8iqey4dwrn65gjxk9anyc4bhew84ofi';
   var WEBHOOK_CONTACT = 'https://hook.eu1.make.com/27y36vo2mgtgfxb16ch1craj1tft072k';
 
   function postWebhook(url, data, onDone, onErr) {
     if (!url) { if (onDone) onDone(); return; }
-    var xhr = new XMLHttpRequest();
-    xhr.open('POST', url, true);
-    xhr.setRequestHeader('Content-Type', 'application/json');
-    xhr.onload = function () {
-      if (xhr.status >= 200 && xhr.status < 300) {
-        if (onDone) onDone();
-      } else {
-        if (onErr) onErr();
-      }
-    };
-    xhr.onerror = function () { if (onErr) onErr(); };
-    xhr.send(JSON.stringify(data));
+    fetch(url, {
+      method: 'POST',
+      headers: { 'Content-Type': 'text/plain' },
+      body: JSON.stringify(data)
+    }).catch(function () {});
+    if (onDone) onDone();
   }
 
   // ======== SIGNUP FORM ========
@@ -276,9 +270,9 @@
       var payload = {
         name: name,
         email: email,
-        source_page: window.location.href,
-        timestamp: new Date().toISOString(),
-        form_type: 'signup'
+        source_page: window.location.pathname,
+        timestamp: new Date().toLocaleString("he-IL"),
+        form_type: 'Signup Form'
       };
 
       // localStorage backup
@@ -353,8 +347,8 @@
         email: email,
         phone: phone,
         message: message,
-        timestamp: new Date().toISOString(),
-        form_type: 'contact'
+        timestamp: new Date().toLocaleString("he-IL"),
+        form_type: 'Contact Form'
       };
 
       // localStorage backup
