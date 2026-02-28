@@ -1,0 +1,23 @@
+{
+  "permissions": {
+    "allow": [
+      "mcp__da84077b-e056-4e0b-8362-d752757ba4ba__custom_apps_fetch",
+      "mcp__da84077b-e056-4e0b-8362-d752757ba4ba__executions_get_detail",
+      "WebFetch(domain:yaldyheroes.com)",
+      "mcp__Claude_Preview__preview_start",
+      "Bash(where npx)",
+      "Bash(where python)",
+      "Bash(node -e \"console.log\\(''ok''\\)\")",
+      "mcp__da84077b-e056-4e0b-8362-d752757ba4ba__apps_recommend",
+      "mcp__da84077b-e056-4e0b-8362-d752757ba4ba__validate_module_configuration",
+      "mcp__da84077b-e056-4e0b-8362-d752757ba4ba__rpc_execute",
+      "mcp__da84077b-e056-4e0b-8362-d752757ba4ba__connections_get",
+      "mcp__da84077b-e056-4e0b-8362-d752757ba4ba__scenarios_update",
+      "Bash(curl -s -o /dev/null -w \"%{http_code}\" -X POST \"https://hook.eu1.make.com/4uk3s7fpq42nyggr189npfkdvwfcfcl9\" -H \"Content-Type: application/json\" -d '{\"\"name\"\":\"\"Diagnostic Test\"\",\"\"email\"\":\"\"diagnostic@yaldy.test\"\",\"\"source_page\"\":\"\"/diagnostic\"\",\"\"timestamp\"\":\"\"28.2.2026, 21:40:00\"\",\"\"form_type\"\":\"\"Signup Form\"\"}')",
+      "Bash(curl -s -o /dev/null -w \"%{http_code}\" -X POST \"https://hook.eu1.make.com/27y36vo2mgtgfxb16ch1craj1tft072k\" -H \"Content-Type: application/json\" -d '{\"\"name\"\":\"\"Diagnostic Contact\"\",\"\"email\"\":\"\"diagnostic@yaldy.test\"\",\"\"phone\"\":\"\"050-0000000\"\",\"\"message\"\":\"\"Test message from diagnostic\"\",\"\"timestamp\"\":\"\"28.2.2026, 21:40:00\"\",\"\"form_type\"\":\"\"Contact Form\"\"}')",
+      "Bash(curl -s -o /dev/null -w \"%{http_code}\" -X POST \"https://hook.eu1.make.com/4uk3s7fpq42nyggr189npfkdvwfcfcl9\" -H \"Content-Type: application/json\" -d '{\"\"name\"\":\"\"Final Test Signup\"\",\"\"email\"\":\"\"finaltest@yaldy.test\"\",\"\"source_page\"\":\"\"/index.html\"\",\"\"form_type\"\":\"\"Signup Form\"\"}')",
+      "Bash(curl -s -o /dev/null -w \"%{http_code}\" -X POST \"https://hook.eu1.make.com/27y36vo2mgtgfxb16ch1craj1tft072k\" -H \"Content-Type: application/json\" -d '{\"\"name\"\":\"\"Final Test Contact\"\",\"\"email\"\":\"\"finaltest@yaldy.test\"\",\"\"phone\"\":\"\"050-1234567\"\",\"\"message\"\":\"\"Final diagnostic test\"\",\"\"form_type\"\":\"\"Contact Form\"\"}')",
+      "Bash(git add .gitignore CLAUDE.md .claude/ images/logo/logowithgray.png images/products/box-back-valley1.webp images/products/flipbook-valley-en.webp images/products/flipbook-valley-he.webp images/products/openbox-valley.webp images/products/puzzle-pcs.webp)"
+    ]
+  }
+}
