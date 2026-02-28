@@ -4,7 +4,8 @@
 # ============================================
 
 # --- WWW → non-www canonical redirect ---
-https://www.yaldyheroes.com/* https://yaldyheroes.com/:splat 301
+# Note: www→non-www is handled in Cloudflare DNS/Page Rules, not here.
+# Cloudflare Pages _redirects does not support absolute URLs.
 
 # --- Old Wix product/category URLs ---
 /category/all-products                    /pages/cast.html  301
