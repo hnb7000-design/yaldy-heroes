@@ -59,7 +59,24 @@
 .box-list{max-width:500px;margin:0 auto;list-style:none;padding:0}
 .box-list li{padding:10px 0;border-bottom:1px solid rgba(255,255,255,0.05);font-size:0.9rem;color:var(--text-light);display:flex;align-items:center;gap:10px}
 .box-list li::before{content:'✦';color:var(--gold);font-size:0.7rem}
-@media(max-width:768px){.trust-bar{flex-direction:column;align-items:center;gap:12px}.prod-hero{padding:110px 0 40px}}
+.countdown-bar{display:flex;justify-content:center;align-items:center;gap:16px;margin:18px 0 0;padding:12px 20px;background:rgba(212,175,55,0.06);border:1px solid rgba(212,175,55,0.15)}
+.cd-block{text-align:center}
+.cd-num{font-family:var(--font-hero);font-size:1.5rem;color:var(--gold);display:block;line-height:1}
+.cd-label{font-family:var(--font-heading);font-size:0.6rem;letter-spacing:1.5px;text-transform:uppercase;color:var(--text-muted);margin-top:4px;display:block}
+.cd-sep{font-family:var(--font-hero);font-size:1.3rem;color:rgba(212,175,55,0.3);padding-bottom:14px}
+.cd-title{font-family:var(--font-heading);font-size:0.7rem;letter-spacing:2px;text-transform:uppercase;color:var(--text-light);padding-right:8px}
+.cross-sell{padding:70px 0;background:var(--navy-mid);position:relative;z-index:1}
+.cross-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;max-width:900px;margin:0 auto}
+.cross-card{background:rgba(255,255,255,0.02);border:1px solid rgba(212,175,55,0.08);padding:20px;text-align:center;transition:var(--ease)}
+.cross-card:hover{border-color:var(--gold);transform:translateY(-4px)}
+.cross-card img{width:100%;max-width:200px;margin:0 auto 14px;display:block}
+.cross-card h3{font-family:var(--font-hero);font-size:1rem;letter-spacing:1px;margin-bottom:4px;color:#fff}
+.cross-card .cross-sub{font-family:var(--font-heading);font-size:0.65rem;letter-spacing:1px;color:var(--text-muted);margin-bottom:8px}
+.cross-card .cross-price{font-family:var(--font-hero);font-size:1.2rem;color:var(--gold);margin-bottom:12px}
+.cross-card .cross-price .orig{font-size:0.75rem;color:var(--text-dim);text-decoration:line-through;opacity:0.6;margin-right:6px}
+.cross-card .cross-link{display:inline-block;font-family:var(--font-heading);font-size:0.65rem;letter-spacing:2px;text-transform:uppercase;color:var(--gold);border:1px solid rgba(212,175,55,0.3);padding:8px 18px;text-decoration:none;transition:var(--ease)}
+.cross-card .cross-link:hover{background:rgba(212,175,55,0.1);border-color:var(--gold)}
+@media(max-width:768px){.trust-bar{flex-direction:column;align-items:center;gap:12px}.prod-hero{padding:110px 0 40px}.cross-grid{grid-template-columns:1fr}.countdown-bar{flex-wrap:wrap;gap:10px}}
 </style>
 </head>
 <body>
@@ -85,13 +102,14 @@
 <div class="prod-price"><span class="orig">₪129</span>₪99<span class="badge" data-en="LAUNCH PRICE" data-he="מחיר השקה">LAUNCH PRICE</span></div>
 <p class="prod-scarcity" data-en="⚡ First Edition — Limited to 200 boxes per design" data-he="⚡ מהדורה ראשונה — מוגבל ל-200 קופסאות לעיצוב">⚡ First Edition — Limited to 200 boxes per design</p>
 <a href="https://wa.me/972506500750?text=Hi!%20I'd%20like%20to%20pre-order%20the%20David%20vs%20Lion%20puzzle%20(150%20pieces%2C%20₪99)" class="cta-btn-solid" target="_blank" rel="noopener" data-en="PRE-ORDER · WhatsApp" data-he="הזמנה מוקדמת · WhatsApp">PRE-ORDER · WhatsApp</a>
+<div class="countdown-bar" data-deadline="2026-04-30T23:59:59"><span class="cd-title" data-en="PRE-ORDER CLOSES IN:" data-he="ההזמנה המוקדמת נסגרת בעוד:">PRE-ORDER CLOSES IN:</span><div class="cd-block"><span class="cd-num cd-days">--</span><span class="cd-label" data-en="DAYS" data-he="ימים">DAYS</span></div><span class="cd-sep">:</span><div class="cd-block"><span class="cd-num cd-hours">--</span><span class="cd-label" data-en="HOURS" data-he="שעות">HOURS</span></div><span class="cd-sep">:</span><div class="cd-block"><span class="cd-num cd-mins">--</span><span class="cd-label" data-en="MIN" data-he="דקות">MIN</span></div></div>
 <div class="trust-bar"><span>📦 <span data-en="Free Shipping in Israel" data-he="משלוח חינם בישראל">Free Shipping in Israel</span></span><span>↩️ <span data-en="Easy Cancellation" data-he="ביטול פשוט">Easy Cancellation</span></span><span>🎁 <span data-en="Puzzle + Story + QR Bonus" data-he="פאזל + סיפור + בונוס QR">Puzzle + Story + QR Bonus</span></span></div>
 </div></section>
 
 <section class="prod-section"><div class="container">
 <h2 data-en="ABOUT THE STORY" data-he="על הסיפור">ABOUT THE <span class="gold">STORY</span></h2><div class="divider" style="margin-bottom:30px"></div>
 <div class="prod-story"><p data-en="David and the Lion captures a defining moment from David's youth — when courage appeared not in battle, but in quiet strength and unwavering trust. This scene reflects a timeless lesson: true bravery begins long before the battlefield, in the heart of a child who stands firm against fear." data-he="דוד והאריה לוכד רגע מכונן מנעוריו של דוד — כשאומץ הופיע לא בקרב, אלא בכוח שקט ואמון בלתי מעורער.">David and the Lion captures a defining moment from David's youth — when courage appeared not in battle, but in quiet strength and unwavering trust. This scene reflects a timeless lesson: true bravery begins long before the battlefield, in the heart of a child who stands firm against fear.</p></div>
-<button class="full-story-toggle" onclick="this.nextElementSibling.classList.toggle('open');this.textContent=this.nextElementSibling.classList.contains('open')?(document.documentElement.lang==='he'?'סגור ▲':'Close ▲'):(document.documentElement.lang==='he'?'קראו את הסיפור המלא ▼':'Read the Full Story ▼')" data-en="Read the Full Story ▼" data-he="קראו את הסיפור המלא ▼">Read the Full Story ▼</button>
+<button class="full-story-toggle" onclick="this.nextElementSibling.classList.toggle('open');this.textContent=this.nextElementSibling.classList.contains('open')?(document.documentElement.lang==='he'?'סגור ▲':'Close ▲'):(document.documentElement.lang==='he'?'התקציר המלא ▼':'The Story Behind the Artifact ▼')" data-en="The Story Behind the Artifact ▼" data-he="התקציר המלא ▼">The Story Behind the Artifact ▼</button>
 <div class="full-story"><div class="prod-story" style="margin-top:24px">
 <p>Long before he became a king — before he wore a crown or carried a sword — David stood alone in the open land, a young shepherd responsible for his father's flock, with no armor, no audience, and no one to rely on but himself.</p>
 <p>The silence feels ordinary, until it doesn't. The flock slows. Necks stretch. A quiet wave of fear moves through the sheep, and in an instant, David stops playing and shifts from shepherd to tracker, scanning the ground and reading the signs of an approaching threat.</p>
@@ -139,8 +157,19 @@
 <a href="https://wa.me/972506500750?text=Hi!%20I'd%20like%20to%20pre-order%20the%20David%20vs%20Lion%20puzzle%20(150%20pieces%2C%20₪99)" class="cta-btn-solid" target="_blank" rel="noopener" style="margin-top:10px" data-en="PRE-ORDER · WhatsApp" data-he="הזמנה מוקדמת · WhatsApp">PRE-ORDER · WhatsApp</a>
 </div></section>
 
+<section class="cross-sell"><div class="container">
+<h2 data-en="COMPLETE THE COLLECTION" data-he="השלימו את האוסף">COMPLETE THE <span class="gold">COLLECTION</span></h2><div class="divider" style="margin-bottom:30px"></div>
+<div class="cross-grid">
+<div class="cross-card"><a href="product-david-goliath.html"><img src="../images/products/box-front-goliath-300.webp" alt="David vs Goliath puzzle box" loading="lazy" width="800" height="645"></a><h3 data-en="David vs Goliath" data-he="דוד מול גוליית">David vs Goliath</h3><p class="cross-sub" data-en="300 pcs · Ages 8+" data-he="300 חלקים · גילאי 8+">300 pcs · Ages 8+</p><div class="cross-price"><span class="orig">₪149</span> ₪109</div><a href="product-david-goliath.html" class="cross-link" data-en="VIEW PUZZLE" data-he="לצפייה">VIEW PUZZLE</a></div>
+<div class="cross-card"><a href="product-city-of-david.html"><img src="../images/products/box-front-city-500.webp" alt="City of David puzzle box" loading="lazy" width="800" height="645"></a><h3 data-en="City of David" data-he="עיר דוד">City of David</h3><p class="cross-sub" data-en="500 pcs · Ages 12+" data-he="500 חלקים · גילאי 12+">500 pcs · Ages 12+</p><div class="cross-price"><span class="orig">₪179</span> ₪129</div><a href="product-city-of-david.html" class="cross-link" data-en="VIEW PUZZLE" data-he="לצפייה">VIEW PUZZLE</a></div>
+<div class="cross-card"><a href="product-valley-strike.html"><img src="../images/products/box-front-valley-1000.webp" alt="Valley Strike puzzle box" loading="lazy" width="800" height="650"></a><h3 data-en="Valley Strike" data-he="מכת העמק">Valley Strike</h3><p class="cross-sub" data-en="1000 pcs · Ages 12+" data-he="1000 חלקים · גילאי 12+">1000 pcs · Ages 12+</p><div class="cross-price"><span class="orig">₪199</span> ₪149</div><a href="product-valley-strike.html" class="cross-link" data-en="VIEW PUZZLE" data-he="לצפייה">VIEW PUZZLE</a></div>
+</div></div></section>
+
 <footer class="footer"><div class="footer-inner"><div class="footer-brand"><img src="../images/logo/logowithgray.png" alt="YALDY Heroes — Real Heroes. True Strength." style="height:40px" loading="lazy" width="3508" height="2480"><p data-en="Real Heroes. True Strength. Premium biblical hero puzzles and stories for children and families." data-he="גיבורים אמיתיים. כוח אמיתי. פאזלים וסיפורי גיבורים תנ״כיים פרימיום לילדים ומשפחות.">Real Heroes. True Strength. Premium biblical hero puzzles and stories for children and families.</p></div><div class="footer-col"><h4 data-en="Explore" data-he="גלו">Explore</h4><a href="../index.html" data-en="Home" data-he="ראשי">Home</a><a href="cast.html" data-en="The Cast" data-he="הדמויות">The Cast</a><a href="david-shepherd.html" data-en="David the Shepherd" data-he="דוד הרועה">David the Shepherd</a><a href="david-king.html" data-en="King David" data-he="דוד המלך">King David</a><a href="about.html" data-en="Our Story" data-he="הסיפור שלנו">Our Story</a></div><div class="footer-col"><h4 data-en="Contact" data-he="צור קשר">Contact</h4><p><a href="mailto:info@yaldyheroes.com" style="color:var(--gold)">info@yaldyheroes.com</a></p><p>+972-50-650-0750</p><p data-en="Rosh HaAyin, Israel" data-he="ראש העין, ישראל">Rosh HaAyin, Israel</p></div><div class="footer-col"><h4 data-en="Legal" data-he="מדיניות">Legal</h4><a href="shipping.html" data-en="Shipping & Delivery" data-he="משלוחים ואספקה">Shipping & Delivery</a><a href="refund.html" data-en="Refund Policy" data-he="מדיניות החזרים">Refund Policy</a><a href="privacy.html" data-en="Privacy Policy" data-he="פרטיות">Privacy Policy</a><a href="terms.html" data-en="Terms & Conditions" data-he="תנאי שימוש">Terms & Conditions</a><a href="accessibility.html" data-en="Accessibility" data-he="נגישות">Accessibility</a></div></div><div class="footer-bottom">&copy; <span class="footer-year">2026</span> YALDY&trade; All rights reserved. Real Heroes. True Strength.</div></footer>
 <script src="../js/universe.min.js"></script>
 <script src="../js/gallery.js"></script>
+<script>
+(function(){function u(){document.querySelectorAll('.countdown-bar').forEach(function(b){var dl=new Date(b.getAttribute('data-deadline')).getTime(),df=dl-Date.now();if(df<=0){b.querySelector('.cd-days').textContent='0';b.querySelector('.cd-hours').textContent='00';b.querySelector('.cd-mins').textContent='00';return}b.querySelector('.cd-days').textContent=Math.floor(df/864e5);var h=Math.floor((df%864e5)/36e5),m=Math.floor((df%36e5)/6e4);b.querySelector('.cd-hours').textContent=h<10?'0'+h:h;b.querySelector('.cd-mins').textContent=m<10?'0'+m:m})}u();setInterval(u,60000)})();
+</script>
 </body>
 </html>
