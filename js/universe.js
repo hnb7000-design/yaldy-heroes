@@ -235,8 +235,15 @@
       method: 'POST',
       headers: { 'Content-Type': 'text/plain' },
       body: JSON.stringify(data)
-    }).catch(function () {});
-    if (onDone) onDone();
+    })
+    .then(function(res) {
+      if (!res.ok) throw new Error('Status ' + res.status);
+      if (onDone) onDone();
+    })
+    .catch(function(err) {
+      console.error('Webhook error:', err);
+      if (onErr) onErr();
+    });
   }
 
   // ======== SIGNUP FORM ========
