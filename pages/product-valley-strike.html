@@ -76,6 +76,7 @@
 .cross-card .cross-price .orig{font-size:0.75rem;color:var(--text-dim);text-decoration:line-through;opacity:0.6;margin-right:6px}
 .cross-card .cross-link{display:inline-block;font-family:var(--font-heading);font-size:0.65rem;letter-spacing:2px;text-transform:uppercase;color:var(--gold);border:1px solid rgba(212,175,55,0.3);padding:8px 18px;text-decoration:none;transition:var(--ease)}
 .cross-card .cross-link:hover{background:rgba(212,175,55,0.1);border-color:var(--gold)}
+html[lang="en"] .story-he{display:none}html[lang="he"] .story-en{display:none}
 @media(max-width:768px){.trust-bar{flex-direction:column;align-items:center;gap:12px}.prod-hero{padding:110px 0 40px}.cross-grid{grid-template-columns:1fr}.countdown-bar{flex-wrap:wrap;gap:10px}}
 </style>
 </head>
@@ -109,7 +110,7 @@
 <h2 data-en="ABOUT THE STORY" data-he="על הסיפור">ABOUT THE <span class="gold">STORY</span></h2><div class="divider" style="margin-bottom:30px"></div>
 <div class="prod-story"><p data-en="Valley Strike captures a decisive moment in King David's journey — a battle not led by force alone, but by listening, patience, and timing. Set in the Valley of Rephaim, this scene reflects a different kind of courage: knowing when to wait, when to move, and when to trust a deeper call." data-he="מכת העמק לוכד רגע מכריע במסעו של דוד המלך — קרב שלא הובל בכוח בלבד, אלא בהקשבה, סבלנות ותזמון.">Valley Strike captures a decisive moment in King David's journey — a battle not led by force alone, but by listening, patience, and timing. Set in the Valley of Rephaim, this scene reflects a different kind of courage: knowing when to wait, when to move, and when to trust a deeper call.</p></div>
 <button class="full-story-toggle" onclick="this.nextElementSibling.classList.toggle('open');this.textContent=this.nextElementSibling.classList.contains('open')?(document.documentElement.lang==='he'?'סגור ▲':'Close ▲'):(document.documentElement.lang==='he'?'התקציר המלא ▼':'The Story Behind the Artifact ▼')" data-en="The Story Behind the Artifact ▼" data-he="התקציר המלא ▼">The Story Behind the Artifact ▼</button>
-<div class="full-story"><div class="prod-story" style="margin-top:24px">
+<div class="full-story"><div class="prod-story story-en" style="margin-top:24px">
 <p>The city is newly taken. The crown is still heavy.</p>
 <p>Beyond the walls, the valley fills. An enemy gathers. Voices call for action. For speed. For force.</p>
 <p>But David does not rush.</p>
@@ -123,6 +124,17 @@
 <p>The valley falls silent. The city stands.</p>
 <p>Not every victory is won by force. Some are won by those who know when to wait — and when to move.</p>
 <p>This is the story of Valley Strike. Where leadership listens, and courage moves in silence.</p>
+</div><div class="prod-story story-he" style="margin-top:24px;direction:rtl;text-align:right">
+<p>העיר זה עתה נלקחה. הכתר עדיין כבד.</p>
+<p>מעבר לחומות העמק מתמלא. אויב מתכנס. קולות קוראים לפעולה. למהירות. לכוח.</p>
+<p>אבל דוד אינו ממהר.</p>
+<p>הוא יודע את סכנת הפחד - ואת סכנת הפזיזות.</p>
+<p>באותו הלילה הוא מקשיב. לא לרעש המלחמה, אלא לשאלה שמתחתיו.</p>
+<p>האם אעלה?</p>
+<p>התשובה אינה רועמת. היא מגיעה בשקט. נתיב בלתי נראה. תנועה מאחורי הקווים. סימן נסתר בעצים.</p>
+<p>כשהעלים מתחילים לזוז - דוד יודע.</p>
+<p>הוא ממתין. הוא בוטח. וכשהאות מגיע - הוא פועל.</p>
+<p>העמק שותק. העיר עומדת.</p>
 </div></div>
 </div></section>
 
@@ -142,13 +154,9 @@
 <tr><td data-en="Pieces" data-he="חלקים">Pieces</td><td>1000</td></tr>
 <tr><td data-en="Puzzle Size" data-he="גודל פאזל">Puzzle Size</td><td>70×50 cm</td></tr>
 <tr><td data-en="Box Size" data-he="גודל קופסה">Box Size</td><td>37×27×6 cm</td></tr>
-<tr><td data-en="Weight" data-he="משקל">Weight</td><td>~1.48 kg</td></tr>
 <tr><td data-en="Ages" data-he="גילאים">Ages</td><td>12+</td></tr>
-<tr><td data-en="Material" data-he="חומר">Material</td><td data-en="Blue Board 2mm (1165gsm)" data-he="לוח כחול 2 מ״מ (1165gsm)">Blue Board 2mm (1165gsm)</td></tr>
-<tr><td data-en="Finish" data-he="גימור">Finish</td><td data-en="Matte varnish, anti-glare" data-he="ורניש מט, נוגד סינוור">Matte varnish, anti-glare</td></tr>
-<tr><td data-en="Box" data-he="קופסה">Box</td><td data-en="Lid & Bottom, matte non-scratch lamination" data-he="מכסה ותחתית, למינציה מט נון-סקראף">Lid & Bottom, matte non-scratch lamination</td></tr>
-<tr><td data-en="SKU" data-he="מק״ט">SKU</td><td>PZ-1000-MA</td></tr>
-<tr><td data-en="EAN-13" data-he="ברקוד">EAN-13</td><td>7290020602039</td></tr>
+<tr><td data-en="Material" data-he="חומר">Material</td><td data-en="Premium puzzle board" data-he="לוח פאזל פרימיום">Premium puzzle board</td></tr>
+<tr><td data-en="Quality" data-he="איכות">Quality</td><td data-en="Premium matte finish, anti-glare · Rigid lid & bottom box" data-he="גימור מט פרימיום, נוגד סינוור · קופסת מכסה ותחתית קשיחה">Premium matte finish, anti-glare · Rigid lid & bottom box</td></tr>
 <tr><td data-en="Certifications" data-he="תקנים">Certifications</td><td>CE · EN71-1/2/3</td></tr>
 </table>
 </div></section>
@@ -162,7 +170,7 @@
 <section class="cross-sell"><div class="container">
 <h2 data-en="COMPLETE THE COLLECTION" data-he="השלימו את האוסף">COMPLETE THE <span class="gold">COLLECTION</span></h2><div class="divider" style="margin-bottom:30px"></div>
 <div class="cross-grid">
-<div class="cross-card"><a href="product-david-lion.html"><img src="../images/products/box-front-lion-150.webp" alt="David vs Lion puzzle box" loading="lazy" width="800" height="645"></a><h3 data-en="David vs Lion" data-he="דוד מול האריה">David vs Lion</h3><p class="cross-sub" data-en="150 pcs · Ages 7+" data-he="150 חלקים · גילאי 7+">150 pcs · Ages 7+</p><div class="cross-price"><span class="orig">₪129</span> ₪99</div><a href="product-david-lion.html" class="cross-link" data-en="VIEW PUZZLE" data-he="לצפייה">VIEW PUZZLE</a></div>
+<div class="cross-card"><a href="product-david-lion.html"><img src="../images/products/box-front-lion-150.webp" alt="David vs Lion puzzle box" loading="lazy" width="800" height="645"></a><h3 data-en="David vs Lion" data-he="דוד מול האריה">David vs Lion</h3><p class="cross-sub" data-en="150 pcs · Ages 8+" data-he="150 חלקים · גילאי 8+">150 pcs · Ages 8+</p><div class="cross-price"><span class="orig">₪129</span> ₪99</div><a href="product-david-lion.html" class="cross-link" data-en="VIEW PUZZLE" data-he="לצפייה">VIEW PUZZLE</a></div>
 <div class="cross-card"><a href="product-david-goliath.html"><img src="../images/products/box-front-goliath-300.webp" alt="David vs Goliath puzzle box" loading="lazy" width="800" height="645"></a><h3 data-en="David vs Goliath" data-he="דוד מול גוליית">David vs Goliath</h3><p class="cross-sub" data-en="300 pcs · Ages 8+" data-he="300 חלקים · גילאי 8+">300 pcs · Ages 8+</p><div class="cross-price"><span class="orig">₪149</span> ₪109</div><a href="product-david-goliath.html" class="cross-link" data-en="VIEW PUZZLE" data-he="לצפייה">VIEW PUZZLE</a></div>
 <div class="cross-card"><a href="product-city-of-david.html"><img src="../images/products/box-front-city-500.webp" alt="City of David puzzle box" loading="lazy" width="800" height="645"></a><h3 data-en="City of David" data-he="עיר דוד">City of David</h3><p class="cross-sub" data-en="500 pcs · Ages 12+" data-he="500 חלקים · גילאי 12+">500 pcs · Ages 12+</p><div class="cross-price"><span class="orig">₪179</span> ₪129</div><a href="product-city-of-david.html" class="cross-link" data-en="VIEW PUZZLE" data-he="לצפייה">VIEW PUZZLE</a></div>
 </div></div></section>
