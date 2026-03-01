@@ -23,7 +23,12 @@
       "Bash(node -e \"const d=require\\(''fs''\\).readFileSync\\(''C:/Users/amir1/.claude/projects/C--YALDY-UNIVERSE/c2447af4-595e-43af-a005-001ae88fa46e/tool-results/toolu_01DnoV5YcagnTVHM119qJiLR.json'',''utf8''\\); const j=JSON.parse\\(d\\); require\\(''fs''\\).writeFileSync\\(''C:/Users/amir1/.claude/projects/C--YALDY-UNIVERSE/c2447af4-595e-43af-a005-001ae88fa46e/tool-results/audit-report.md'', j[0].text, ''utf8''\\); console.log\\(''Done, length:'', j[0].text.length\\)\")",
       "Bash(git add _redirects)",
       "Bash(git add pages/product-david-lion.html pages/product-david-goliath.html pages/product-city-of-david.html pages/product-valley-strike.html)",
-      "Bash(git add .claude/settings.local.json)"
+      "Bash(git add .claude/settings.local.json)",
+      "Bash(git add index.html pages/about.html pages/accessibility.html pages/cast.html pages/contact.html pages/david-king.html pages/david-shepherd.html pages/faq.html pages/policy.html pages/privacy.html pages/product-city-of-david.html pages/product-david-goliath.html pages/product-david-lion.html pages/product-valley-strike.html pages/refund.html pages/shipping.html pages/story.html pages/terms.html)",
+      "Bash(git add index.html pages/david-shepherd.html pages/david-king.html)",
+      "Bash(git add index.html)",
+      "Bash(git add pages/david-shepherd.html pages/david-king.html)",
+      "Bash(git add css/universe.css pages/david-shepherd.html)"
     ]
   }
 }
