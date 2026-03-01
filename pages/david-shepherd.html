@@ -161,6 +161,18 @@
 .bridge-cta{display:inline-block;padding:14px 36px;border:1px solid var(--gold);color:var(--gold);font-family:var(--font-heading);font-size:0.82rem;letter-spacing:2.5px;text-transform:uppercase;text-decoration:none;transition:var(--ease)}
 .bridge-cta:hover{background:var(--gold);color:var(--navy)}
 @media(max-width:768px){.bridge-quote{font-size:1.2rem}}
+/* Chapter Bar */
+.chapter-bar{display:flex;justify-content:center;gap:0;background:var(--navy-deep);border-top:1px solid rgba(212,175,55,0.1);border-bottom:1px solid rgba(212,175,55,0.1)}
+.chapter-item{flex:1;max-width:200px;padding:24px 16px;text-align:center;text-decoration:none;transition:var(--ease);position:relative}
+.chapter-item::after{content:"○";display:block;font-size:0.7rem;color:var(--text-muted);margin-top:8px}
+.chapter-item.active::after{content:"●";color:var(--gold)}
+.chapter-item:hover{background:rgba(212,175,55,0.04)}
+.ch-num{display:block;font-family:var(--font-heading);font-size:0.65rem;letter-spacing:2px;color:var(--text-muted);margin-bottom:4px}
+.chapter-item.active .ch-num{color:var(--gold)}
+.ch-title{display:block;font-family:var(--font-heading);font-size:0.78rem;letter-spacing:1px;color:var(--text-muted)}
+[dir="rtl"] .ch-title{font-family:var(--font-hebrew);letter-spacing:0}
+.chapter-item.active .ch-title{color:var(--gold);font-weight:600}
+@media(max-width:768px){.chapter-bar{flex-wrap:wrap}.chapter-item{flex:1 1 50%;max-width:none}}
 </style>
 </head>
 
@@ -404,6 +416,14 @@
     </div>
   </div>
 </section>
+
+<!-- CHAPTER BAR -->
+<nav class="chapter-bar" aria-label="Story chapters">
+  <a href="david-shepherd.html" class="chapter-item active"><span class="ch-num">CH.I</span><span class="ch-title" data-en="The Lion" data-he="האריה">The Lion</span></a>
+  <a href="product-david-goliath.html" class="chapter-item"><span class="ch-num">CH.II</span><span class="ch-title" data-en="The Giant" data-he="הענק">The Giant</span></a>
+  <a href="david-king.html" class="chapter-item"><span class="ch-num">CH.III</span><span class="ch-title" data-en="The City" data-he="העיר">The City</span></a>
+  <a href="product-valley-strike.html" class="chapter-item"><span class="ch-num">CH.IV</span><span class="ch-title" data-en="The Valley" data-he="העמק">The Valley</span></a>
+</nav>
 
 <!-- FOOTER -->
 <footer class="footer">
