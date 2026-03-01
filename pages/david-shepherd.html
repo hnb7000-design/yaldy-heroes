@@ -94,6 +94,7 @@
 .stat-bar-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 6px; }
 .stat-bar-name { font-family: var(--font-heading); font-size: 0.78rem; font-weight: 600; letter-spacing: 1.5px; text-transform: uppercase; color: var(--text-light); }
 .stat-bar-val { font-family: var(--font-heading); font-size: 0.75rem; font-weight: 500; color: var(--gold); letter-spacing: 1px; }
+.stat-bar-fill { position: relative; }
 .stat-bar-fill::after {
   content: ''; position: absolute; right: 0; top: 0; bottom: 0; width: 20px;
   background: linear-gradient(90deg, transparent, rgba(255,255,255,0.3));

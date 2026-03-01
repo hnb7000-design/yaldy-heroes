@@ -573,7 +573,7 @@ section { padding: 100px 0; position: relative; z-index: 1; }
 .stat-row { display: flex; align-items: center; gap: 12px; margin-bottom: 10px; }
 .stat-label { font-family: var(--font-heading); font-size: 0.72rem; letter-spacing: 2px; text-transform: uppercase; color: var(--text-dim); width: 80px; }
 .stat-bar-track { flex: 1; height: 6px; background: rgba(255,255,255,0.06); overflow: hidden; }
-.stat-bar-fill { height: 100%; width: 0; transition: width 1.2s cubic-bezier(0.25,0.46,0.45,0.94); }
+.stat-bar-fill { height: 100%; width: 0; transition: width 1.2s cubic-bezier(0.25,0.46,0.45,0.94); position: relative; }
 .stat-bar-fill.gold { background: linear-gradient(90deg, var(--gold-dark), var(--gold)); }
 .stat-bar-fill.crimson { background: linear-gradient(90deg, #5a1010, var(--crimson)); }
 .stat-bar-fill.blue { background: linear-gradient(90deg, #1a3a5c, #3b82f6); }
