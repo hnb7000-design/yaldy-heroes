@@ -142,16 +142,42 @@ body { background: var(--charcoal); }
 .song-quote em { color: var(--bronze); font-style: normal; }
 .song-attr { font-family: var(--font-heading); font-size: 0.7rem; font-weight: 500; color: var(--text-muted); letter-spacing: 2px; text-transform: uppercase; }
 
+/* Transformation — face each other in both LTR and RTL */
+.transform-images img:last-child { transform: scaleX(-1); }
+[dir="rtl"] .transform-images img:last-child { transform: scaleX(1); }
+
 /* Transformation — The Hero Who Brought Down the Giant */
-.transform-section { padding: 100px 0; position: relative; z-index: 1; overflow: hidden; background: linear-gradient(135deg, #1a0a0a, #2a1010); }
-.transform-section::before { content: ''; position: absolute; inset: 0; background: url('../images/site/yaldyworld.webp') center/cover; opacity: 0.1; }
+.transform-section { padding: 100px 0; position: relative; z-index: 1; overflow: hidden; background: linear-gradient(135deg, #0a0505, #1a0808, #0d0404); }
+.transform-section::before {
+  content: ''; position: absolute; inset: 0; z-index: 0;
+  background:
+    linear-gradient(to bottom, rgba(10,5,5,1) 0%, rgba(10,5,5,0.85) 15%, transparent 30%),
+    linear-gradient(to top, rgba(10,5,5,1) 0%, rgba(10,5,5,0.85) 15%, transparent 30%),
+    url('../images/goliath/goliat-box.jpg') center/cover no-repeat;
+  opacity: 0.35;
+}
+.transform-section::after {
+  content: ''; position: absolute; inset: 0; z-index: 0;
+  background:
+    radial-gradient(ellipse at 30% 50%, rgba(139,0,0,0.12) 0%, transparent 50%),
+    radial-gradient(ellipse at 70% 40%, rgba(205,127,50,0.06) 0%, transparent 45%),
+    radial-gradient(circle at 50% 100%, rgba(139,0,0,0.08) 0%, transparent 40%);
+  animation: heroGlow 6s ease-in-out infinite alternate;
+}
+@keyframes heroGlow {
+  0% { opacity: 0.6; }
+  50% { opacity: 1; }
+  100% { opacity: 0.7; }
+}
 .transform-content { position: relative; z-index: 2; display: grid; grid-template-columns: 1fr 1fr; gap: 55px; align-items: center; }
 .transform-text h2 { font-family: var(--font-hero); font-size: clamp(1.8rem, 4vw, 2.8rem); margin-bottom: 18px; text-transform: uppercase; letter-spacing: 2px; line-height: 1.15; }
 .transform-text h2 span { color: var(--bronze); }
 .transform-text p { font-size: 1.05rem; color: var(--text-light); line-height: 1.85; margin-bottom: 28px; font-weight: 300; }
-.transform-images { display: flex; gap: 20px; align-items: center; justify-content: center; }
-.transform-images img { width: 45%; max-width: 220px; border-radius: 4px; box-shadow: 0 12px 40px rgba(0,0,0,0.5); border: 1px solid rgba(205,127,50,0.1); }
-.transform-arrow { font-size: 2rem; color: var(--bronze); opacity: 0.6; animation: pulseArrow 2s ease-in-out infinite; }
+.transform-images { display: flex; gap: 20px; align-items: flex-end; justify-content: center; }
+.transform-images img { border: none; box-shadow: none; background: transparent; }
+.transform-images img:first-child { width: 55%; max-width: 280px; } /* Goliath ~4m */
+.transform-images img:last-child { width: 30%; max-width: 150px; } /* David ~1.65m */
+.transform-arrow { font-size: 2rem; color: var(--bronze); opacity: 0.6; animation: pulseArrow 2s ease-in-out infinite; align-self: center; }
 @keyframes pulseArrow { 0%, 100% { opacity: 0.4; transform: scale(1); } 50% { opacity: 0.8; transform: scale(1.15); } }
 
 /* Chapter Bar — Villain bronze accents */
@@ -216,7 +242,7 @@ body { background: var(--charcoal); }
 
 <!-- HERO ENTRANCE -->
 <section class="hero-entrance" id="main-content">
-  <div class="hero-entrance-bg" style="background: url('../images/goliath/goliat-box.jpg') center/cover;"></div>
+  <div class="hero-entrance-bg" style="background: url('../images/goliath/goliat-side.png') center/cover;"></div>
   <div class="hero-entrance-overlay"></div>
   <div class="container">
     <div class="hero-entrance-content">
@@ -396,9 +422,9 @@ body { background: var(--charcoal); }
         <a href="david-shepherd.html" class="cta-btn-solid" data-en="← Meet David the Shepherd" data-he="← הכירו את דוד הרועה">← Meet David the Shepherd</a>
       </div>
       <div class="transform-images">
-        <img src="../images/goliath/goliat-front.png" alt="Goliath of Gath" loading="lazy" width="896" height="1344">
+        <img src="../images/goliath/goliat-front-side2.png" alt="Goliath of Gath" loading="lazy">
         <span class="transform-arrow">→</span>
-        <img src="../images/david-shepherd/david-stand-sling.webp" alt="David the Shepherd" loading="lazy" width="1200" height="1011">
+        <img src="../images/david-shepherd/david14backnb.png" alt="David the Shepherd" loading="lazy">
       </div>
     </div>
   </div>
