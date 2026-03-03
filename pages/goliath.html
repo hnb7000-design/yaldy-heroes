@@ -143,8 +143,8 @@ body { background: var(--charcoal); }
 .song-attr { font-family: var(--font-heading); font-size: 0.7rem; font-weight: 500; color: var(--text-muted); letter-spacing: 2px; text-transform: uppercase; }
 
 /* Transformation — face each other in both LTR and RTL */
-.transform-images img:last-child { transform: scaleX(-1); }
-[dir="rtl"] .transform-images img:last-child { transform: scaleX(1); }
+.transform-images { flex-direction: row-reverse; }
+[dir="rtl"] .transform-images { flex-direction: row; }
 
 /* Transformation — The Hero Who Brought Down the Giant */
 .transform-section { padding: 100px 0; position: relative; z-index: 1; overflow: hidden; background: linear-gradient(135deg, #0a0505, #1a0808, #0d0404); }
