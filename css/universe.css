@@ -501,6 +501,11 @@ section { padding: 100px 0; position: relative; z-index: 1; }
   border-top: 1px solid rgba(212,175,55,0.05);
   font-size: 0.72rem; color: var(--text-dim); letter-spacing: 1px;
 }
+.footer-legal {
+  text-align: center; padding: 10px 24px 0; margin-top: 6px;
+  font-size: 0.62rem; color: rgba(138,130,112,0.5); letter-spacing: 0.5px;
+  line-height: 1.5;
+}
 
 /* ===== POLICY TABS (from FINAL_1) ===== */
 .policy-section { padding: 40px 0 80px; }

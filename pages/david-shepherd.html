@@ -1,6 +1,14 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
 <head>
+<!-- Google Analytics 4 -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-GVQ10VF5LT"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-GVQ10VF5LT');
+</script>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>David the Shepherd | YALDY Heroes — Hero Profile</title>
@@ -177,6 +185,7 @@
 .ch-title{display:block;font-family:var(--font-heading);font-size:0.78rem;letter-spacing:1px;color:var(--text-muted)}
 [dir="rtl"] .ch-title{font-family:var(--font-hebrew);letter-spacing:0}
 .chapter-item.active .ch-title{color:var(--gold);font-weight:600}
+.ch-img{display:block;width:100%;height:70px;object-fit:cover;border-radius:4px;margin-bottom:10px;opacity:0.6;transition:var(--ease)}.chapter-item:hover .ch-img,.chapter-item.active .ch-img{opacity:1}
 @media(max-width:768px){.chapter-bar{flex-wrap:wrap}.chapter-item{flex:1 1 50%;max-width:none}}
 </style>
 </head>
@@ -193,7 +202,7 @@
       <img src="../images/logo/logowithgray.png" alt="YALDY Heroes Logo" width="3508" height="2480">
     </a>
     <ul class="nav-links" id="navLinks">
-      <li><a href="../index.html#heroes" data-en="Heroes" data-he="הגיבורים">Heroes</a></li>
+      <li><a href="cast.html" data-en="Heroes" data-he="הגיבורים">Heroes</a></li>
       <li><a href="cast.html" data-en="The Cast" data-he="הדמויות">The Cast</a></li>
       <li><a href="../index.html#collection" data-en="Collection" data-he="האוסף">Collection</a></li>
       <li><a href="about.html" data-en="Our Story" data-he="הסיפור שלנו">Our Story</a></li>
@@ -207,7 +216,7 @@
 
 <!-- MOBILE MENU -->
 <div class="mob-menu" id="mobMenu">
-  <a href="../index.html#heroes" data-en="Heroes" data-he="הגיבורים">Heroes</a>
+  <a href="cast.html" data-en="Heroes" data-he="הגיבורים">Heroes</a>
   <a href="cast.html" data-en="The Cast" data-he="הדמויות">The Cast</a>
   <a href="../index.html#collection" data-en="Collection" data-he="האוסף">Collection</a>
   <a href="about.html" data-en="Our Story" data-he="הסיפור שלנו">Our Story</a>
@@ -223,7 +232,7 @@
       <div class="breadcrumb">
         <a href="../index.html" data-en="Universe" data-he="יקום">Universe</a>
         <span class="sep">›</span>
-        <a href="../index.html#heroes" data-en="Heroes" data-he="גיבורים">Heroes</a>
+        <a href="cast.html" data-en="Heroes" data-he="גיבורים">Heroes</a>
         <span class="sep">›</span>
         <span style="color:var(--gold)" data-en="The Shepherd" data-he="הרועה">The Shepherd</span>
       </div>
@@ -247,7 +256,7 @@
       <div class="rpg-profile-card fade-in">
         <div class="rpg-card-label">Character Dossier</div>
         <div class="rpg-profile-img">
-          <img src="../images/david-shepherd/david-play.webp" alt="David the Shepherd Profile" loading="lazy" width="1200" height="1789">
+          <img src="../images/david-shepherd/crouching-sling-rocks.jpg" alt="David the Shepherd with sling and stones" loading="lazy">
         </div>
         <div class="stat-info-row">
           <span class="stat-info-label" data-en="Name" data-he="שם">Name</span>
@@ -306,7 +315,7 @@
         </div>
         <div class="stat-bar-group">
           <div class="stat-bar-header"><span class="stat-bar-name" data-en="Courage" data-he="אומץ">Courage</span><span class="stat-bar-val">90 / 100</span></div>
-          <div class="stat-bar-track"><div class="stat-bar-fill crimson" data-width="90"></div></div>
+          <div class="stat-bar-track"><div class="stat-bar-fill gold" data-width="90"></div></div>
         </div>
         <div class="stat-bar-group">
           <div class="stat-bar-header"><span class="stat-bar-name" data-en="Wisdom" data-he="חוכמה">Wisdom</span><span class="stat-bar-val">70 / 100</span></div>
@@ -413,28 +422,41 @@
         <p data-en="The boy who fought a lion grew into the warrior who conquered a city. The shepherd became the greatest king Israel has ever known. Every hero has a next chapter." data-he="הנער שנלחם באריה גדל לתוך הלוחם שכבש עיר. הרועה הפך למלך הגדול ביותר שישראל ידעה. לכל גיבור יש פרק הבא.">The boy who fought a lion grew into the warrior who conquered a city. The shepherd became the greatest king Israel has ever known. Every hero has a next chapter.</p>
         <a href="david-king.html" class="cta-btn-solid" data-en="Meet King David →" data-he="הכירו את דוד המלך →">Meet King David →</a>
       </div>
-      <div class="transform-images">
-        <img src="../images/david-shepherd/david-stand-sling.webp" alt="David the Shepherd" loading="lazy" width="1200" height="1011">
-        <span class="transform-arrow">→</span>
-        <img src="../images/david-king/david-king-standing.webp" alt="King David" loading="lazy" width="2411" height="4984">
+      <!-- Images removed per design -->
+
+    </div>
+  </div>
+</section>
+
+<!-- THE VILLAIN WHO FELL -->
+<section class="transform-section">
+  <div class="container">
+    <div class="transform-content">
+      <div class="transform-text">
+        <p class="section-eyebrow" data-en="The Conqueror" data-he="המנצח">The Conqueror</p>
+        <h2 data-en="THE GIANT WHO STOOD IN HIS WAY" data-he="הענק שעמד בדרכו">THE GIANT WHO<br>STOOD IN HIS <span>WAY</span></h2>
+        <p data-en="Every hero faces a giant. Nine feet tall, bronze armor, undefeated in battle — Goliath was the terror of armies. But the shepherd who trusted in something greater had a stone and a mission." data-he="כל גיבור עומד מול ענק. תשע רגל גובה, שריון ברונזה, בלתי מנוצח בקרב — גוליית היה אימת הצבאות. אבל הרועה שבטח במשהו גדול יותר החזיק אבן ומשימה.">Every hero faces a giant. Nine feet tall, bronze armor, undefeated in battle — Goliath was the terror of armies. But the shepherd who trusted in something greater had a stone and a mission.</p>
+        <a href="goliath.html" class="cta-btn-solid" data-en="Meet Goliath →" data-he="הכירו את גוליית →">Meet Goliath →</a>
       </div>
+      <!-- Images removed per design -->
+
     </div>
   </div>
 </section>
 
 <!-- CHAPTER BAR -->
 <nav class="chapter-bar" aria-label="Story chapters">
-  <a href="david-shepherd.html" class="chapter-item active"><span class="ch-num">CH.I</span><span class="ch-title" data-en="The Lion" data-he="האריה">The Lion</span></a>
-  <a href="product-david-goliath.html" class="chapter-item"><span class="ch-num">CH.II</span><span class="ch-title" data-en="The Giant" data-he="הענק">The Giant</span></a>
-  <a href="david-king.html" class="chapter-item"><span class="ch-num">CH.III</span><span class="ch-title" data-en="The City" data-he="העיר">The City</span></a>
-  <a href="product-valley-strike.html" class="chapter-item"><span class="ch-num">CH.IV</span><span class="ch-title" data-en="The Valley" data-he="העמק">The Valley</span></a>
+  <a href="david-shepherd.html" class="chapter-item active"><img class="ch-img" src="../images/site/davidvslion.webp" alt="" loading="lazy"><span class="ch-num">CH.I</span><span class="ch-title" data-en="The Lion" data-he="האריה">The Lion</span></a>
+  <a href="product-david-goliath.html" class="chapter-item"><img class="ch-img" src="../images/goliath/goliathh-inthevally.jpg" alt="" loading="lazy"><span class="ch-num">CH.II</span><span class="ch-title" data-en="The Giant" data-he="הענק">The Giant</span></a>
+  <a href="david-king.html" class="chapter-item"><img class="ch-img" src="../images/site/david-gate.webp" alt="" loading="lazy"><span class="ch-num">CH.III</span><span class="ch-title" data-en="The City" data-he="העיר">The City</span></a>
+  <a href="product-valley-strike.html" class="chapter-item"><img class="ch-img" src="../images/site/befor-battle-valley.webp" alt="" loading="lazy"><span class="ch-num">CH.IV</span><span class="ch-title" data-en="The Valley" data-he="העמק">The Valley</span></a>
 </nav>
 
 <!-- FOOTER -->
 <footer class="footer">
   <div class="footer-inner">
-    <div class="footer-brand">
-      <img src="../images/logo/logowithgray.png" alt="YALDY" style="height:40px" loading="lazy" width="3508" height="2480">
+    <div class="footer-brand" style="flex-direction:row;align-items:center;gap:20px">
+      <img src="../images/logo/logo-png.png" alt="YALDY" style="height:120px;width:auto" loading="lazy">
       <p data-en="Real Heroes. True Strength. Premium biblical hero puzzles and stories for children and families." data-he="גיבורים אמיתיים. כוח אמיתי. פאזלים וסיפורי גיבורים תנ״כיים פרימיום לילדים ומשפחות.">Real Heroes. True Strength. Premium biblical hero puzzles and stories for children and families.</p>
     </div>
     <div class="footer-col">
@@ -462,6 +484,7 @@
     </div>
   </div>
   <div class="footer-bottom" data-en="&copy; 2026 YALDY&trade; All rights reserved. Real Heroes. True Strength." data-he="&copy; 2026 YALDY&trade; כל הזכויות שמורות. גיבורים אמיתיים. כוח אמיתי.">&copy; <span class="footer-year">2026</span> YALDY&trade; All rights reserved. Real Heroes. True Strength.</div>
+  <div class="footer-legal" data-en="Original artwork, character designs and content are protected. No reproduction without permission." data-he="העיצובים, הדמויות הויזואליות והתוכן המקורי של YALDY&trade; מוגנים. אין לשכפל ללא אישור.">Original artwork, character designs and content are protected. No reproduction without permission.</div>
 </footer>
 
 <script src="../js/universe.min.js"></script>

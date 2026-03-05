@@ -1,6 +1,14 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
 <head>
+<!-- Google Analytics 4 -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-GVQ10VF5LT"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-GVQ10VF5LT');
+</script>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>King David | YALDY Heroes — Hero Profile</title>
@@ -217,7 +225,7 @@
 @media (max-width: 768px) {
   .moments-grid { grid-template-columns: 1fr; max-width: 480px; }
   .related-grid { grid-template-columns: 1fr; max-width: 340px; }
-  .hero-entrance-img { display: none; }
+  .hero-entrance-img { display: block; width: 100%; max-width: 340px; margin: 0 auto 30px; }
   .rpg-section, .moments-section, .related-section, .transform-section { padding: 70px 0; }
 }
 /* Story Bridge CTA */
@@ -238,6 +246,7 @@
 .ch-title{display:block;font-family:var(--font-heading);font-size:0.78rem;letter-spacing:1px;color:var(--text-muted)}
 [dir="rtl"] .ch-title{font-family:var(--font-hebrew);letter-spacing:0}
 .chapter-item.active .ch-title{color:var(--gold);font-weight:600}
+.ch-img{display:block;width:100%;height:70px;object-fit:cover;border-radius:4px;margin-bottom:10px;opacity:0.6;transition:var(--ease)}.chapter-item:hover .ch-img,.chapter-item.active .ch-img{opacity:1}
 @media(max-width:768px){.chapter-bar{flex-wrap:wrap}.chapter-item{flex:1 1 50%;max-width:none}}
 </style>
 </head>
@@ -253,7 +262,7 @@
       <img src="../images/logo/logowithgray.png" alt="YALDY Heroes Logo" width="3508" height="2480">
     </a>
     <ul class="nav-links" id="navLinks">
-      <li><a href="../index.html#heroes" data-en="Heroes" data-he="הגיבורים">Heroes</a></li>
+      <li><a href="cast.html" data-en="Heroes" data-he="הגיבורים">Heroes</a></li>
       <li><a href="cast.html" data-en="The Cast" data-he="הדמויות">The Cast</a></li>
       <li><a href="../index.html#collection" data-en="Collection" data-he="האוסף">Collection</a></li>
       <li><a href="about.html" data-en="Our Story" data-he="הסיפור שלנו">Our Story</a></li>
@@ -265,7 +274,7 @@
   </div>
 </nav>
 <div class="mob-menu" id="mobMenu">
-  <a href="../index.html#heroes" data-en="Heroes" data-he="הגיבורים">Heroes</a>
+  <a href="cast.html" data-en="Heroes" data-he="הגיבורים">Heroes</a>
   <a href="cast.html" data-en="The Cast" data-he="הדמויות">The Cast</a>
   <a href="../index.html#collection" data-en="Collection" data-he="האוסף">Collection</a>
   <a href="about.html" data-en="Our Story" data-he="הסיפור שלנו">Our Story</a>
@@ -281,7 +290,7 @@
       <div class="breadcrumb">
         <a href="../index.html" data-en="Universe" data-he="יקום">Universe</a>
         <span class="sep">›</span>
-        <a href="../index.html#heroes" data-en="Heroes" data-he="גיבורים">Heroes</a>
+        <a href="cast.html" data-en="Heroes" data-he="גיבורים">Heroes</a>
         <span class="sep">›</span>
         <span style="color:var(--gold)" data-en="King David" data-he="דוד המלך">King David</span>
       </div>
@@ -409,7 +418,7 @@
     <div class="moments-grid">
       <div class="moment-card fade-in">
         <div class="moment-img">
-          <img src="../images/products/box-front-city-500.webp" alt="City of David" loading="lazy" width="800" height="645">
+          <img src="../images/david-king/david-king-battle.webp" alt="King David in battle" loading="lazy">
         </div>
         <div class="moment-body">
           <div class="moment-label">Chapter III · The City</div>
@@ -419,7 +428,7 @@
       </div>
       <div class="moment-card fade-in">
         <div class="moment-img">
-          <img src="../images/products/box-front-valley-1000.webp" alt="Valley of Elah" loading="lazy" width="800" height="650">
+          <img src="../images/david-king/kingdavid-back.webp" alt="King David walking to battle" loading="lazy">
         </div>
         <div class="moment-body">
           <div class="moment-label">Chapter IV · The Valley</div>
@@ -497,28 +506,25 @@
         <p data-en="Before the throne, before the armies, before Jerusalem — there was a boy in the hills of Bethlehem, guarding sheep under the stars. The journey begins long before the crown." data-he="לפני הכס, לפני הצבאות, לפני ירושלים — היה נער בגבעות בית לחם, שומר על צאן מתחת לכוכבים. המסע מתחיל הרבה לפני הכתר.">Before the throne, before the armies, before Jerusalem — there was a boy in the hills of Bethlehem, guarding sheep under the stars. The journey begins long before the crown.</p>
         <a href="david-shepherd.html" class="cta-btn-solid" data-en="← Meet The Shepherd" data-he="← הכירו את הרועה">← Meet The Shepherd</a>
       </div>
-      <div class="transform-images">
-        <img src="../images/david-king/david-king-standing.webp" alt="King David" loading="lazy" width="2411" height="4984">
-        <span class="transform-arrow">←</span>
-        <img src="../images/david-shepherd/david-stand-sling.webp" alt="David the Shepherd" loading="lazy" width="1200" height="1011">
-      </div>
+      <!-- Images removed per design -->
+
     </div>
   </div>
 </section>
 
 <!-- CHAPTER BAR -->
 <nav class="chapter-bar" aria-label="Story chapters">
-  <a href="david-shepherd.html" class="chapter-item"><span class="ch-num">CH.I</span><span class="ch-title" data-en="The Lion" data-he="האריה">The Lion</span></a>
-  <a href="product-david-goliath.html" class="chapter-item"><span class="ch-num">CH.II</span><span class="ch-title" data-en="The Giant" data-he="הענק">The Giant</span></a>
-  <a href="david-king.html" class="chapter-item active"><span class="ch-num">CH.III</span><span class="ch-title" data-en="The City" data-he="העיר">The City</span></a>
-  <a href="product-valley-strike.html" class="chapter-item"><span class="ch-num">CH.IV</span><span class="ch-title" data-en="The Valley" data-he="העמק">The Valley</span></a>
+  <a href="david-shepherd.html" class="chapter-item"><img class="ch-img" src="../images/site/davidvslion.webp" alt="" loading="lazy"><span class="ch-num">CH.I</span><span class="ch-title" data-en="The Lion" data-he="האריה">The Lion</span></a>
+  <a href="product-david-goliath.html" class="chapter-item"><img class="ch-img" src="../images/goliath/goliathh-inthevally.jpg" alt="" loading="lazy"><span class="ch-num">CH.II</span><span class="ch-title" data-en="The Giant" data-he="הענק">The Giant</span></a>
+  <a href="david-king.html" class="chapter-item active"><img class="ch-img" src="../images/site/david-gate.webp" alt="" loading="lazy"><span class="ch-num">CH.III</span><span class="ch-title" data-en="The City" data-he="העיר">The City</span></a>
+  <a href="product-valley-strike.html" class="chapter-item"><img class="ch-img" src="../images/site/befor-battle-valley.webp" alt="" loading="lazy"><span class="ch-num">CH.IV</span><span class="ch-title" data-en="The Valley" data-he="העמק">The Valley</span></a>
 </nav>
 
 <!-- FOOTER -->
 <footer class="footer">
   <div class="footer-inner">
-    <div class="footer-brand">
-      <img src="../images/logo/logowithgray.png" alt="YALDY" style="height:40px" loading="lazy" width="3508" height="2480">
+    <div class="footer-brand" style="flex-direction:row;align-items:center;gap:20px">
+      <img src="../images/logo/logo-png.png" alt="YALDY" style="height:120px;width:auto" loading="lazy">
       <p data-en="Real Heroes. True Strength. Premium biblical hero puzzles and stories for children and families." data-he="גיבורים אמיתיים. כוח אמיתי. פאזלים וסיפורי גיבורים תנ״כיים פרימיום לילדים ומשפחות.">Real Heroes. True Strength. Premium biblical hero puzzles and stories for children and families.</p>
     </div>
     <div class="footer-col">
@@ -546,6 +552,7 @@
     </div>
   </div>
   <div class="footer-bottom" data-en="&copy; 2026 YALDY&trade; All rights reserved. Real Heroes. True Strength." data-he="&copy; 2026 YALDY&trade; כל הזכויות שמורות. גיבורים אמיתיים. כוח אמיתי.">&copy; <span class="footer-year">2026</span> YALDY&trade; All rights reserved. Real Heroes. True Strength.</div>
+  <div class="footer-legal" data-en="Original artwork, character designs and content are protected. No reproduction without permission." data-he="העיצובים, הדמויות הויזואליות והתוכן המקורי של YALDY&trade; מוגנים. אין לשכפל ללא אישור.">Original artwork, character designs and content are protected. No reproduction without permission.</div>
 </footer>
 
 <script src="../js/universe.min.js"></script>

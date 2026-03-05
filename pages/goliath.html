@@ -1,6 +1,14 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
 <head>
+<!-- Google Analytics 4 -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-GVQ10VF5LT"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-GVQ10VF5LT');
+</script>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Goliath of Gath | YALDY Heroes Universe — Villain Profile</title>
@@ -195,6 +203,7 @@ body { background: var(--charcoal); }
 .ch-title{display:block;font-family:var(--font-heading);font-size:0.78rem;letter-spacing:1px;color:var(--text-muted)}
 [dir="rtl"] .ch-title{font-family:var(--font-hebrew);letter-spacing:0}
 .chapter-item.active .ch-title{color:var(--bronze);font-weight:600}
+.ch-img{display:block;width:100%;height:70px;object-fit:cover;border-radius:4px;margin-bottom:10px;opacity:0.6;transition:var(--ease)}.chapter-item:hover .ch-img,.chapter-item.active .ch-img{opacity:1}
 @media(max-width:768px){.chapter-bar{flex-wrap:wrap}.chapter-item{flex:1 1 50%;max-width:none}}
 
 /* Responsive overrides */
@@ -245,7 +254,7 @@ body { background: var(--charcoal); }
       <img src="../images/logo/logowithgray.png" alt="YALDY Heroes Logo" width="3508" height="2480">
     </a>
     <ul class="nav-links" id="navLinks">
-      <li><a href="../index.html#heroes" data-en="Heroes" data-he="הגיבורים">Heroes</a></li>
+      <li><a href="cast.html" data-en="Heroes" data-he="הגיבורים">Heroes</a></li>
       <li><a href="cast.html" data-en="The Cast" data-he="הדמויות">The Cast</a></li>
       <li><a href="../index.html#collection" data-en="Collection" data-he="האוסף">Collection</a></li>
       <li><a href="about.html" data-en="Our Story" data-he="הסיפור שלנו">Our Story</a></li>
@@ -259,7 +268,7 @@ body { background: var(--charcoal); }
 
 <!-- MOBILE MENU -->
 <div class="mob-menu" id="mobMenu">
-  <a href="../index.html#heroes" data-en="Heroes" data-he="הגיבורים">Heroes</a>
+  <a href="cast.html" data-en="Heroes" data-he="הגיבורים">Heroes</a>
   <a href="cast.html" data-en="The Cast" data-he="הדמויות">The Cast</a>
   <a href="../index.html#collection" data-en="Collection" data-he="האוסף">Collection</a>
   <a href="about.html" data-en="Our Story" data-he="הסיפור שלנו">Our Story</a>
@@ -458,17 +467,17 @@ body { background: var(--charcoal); }
 
 <!-- CHAPTER BAR -->
 <nav class="chapter-bar" aria-label="Story chapters">
-  <a href="#moments" class="chapter-item active"><span class="ch-num">CH.I</span><span class="ch-title" data-en="The Origin" data-he="המוצא">The Origin</span></a>
-  <a href="#moments" class="chapter-item"><span class="ch-num">CH.II</span><span class="ch-title" data-en="The Challenge" data-he="האתגר">The Challenge</span></a>
-  <a href="#moments" class="chapter-item"><span class="ch-num">CH.III</span><span class="ch-title" data-en="The Mirror" data-he="המראה">The Mirror</span></a>
-  <a href="#moments" class="chapter-item"><span class="ch-num">CH.IV</span><span class="ch-title" data-en="The Fall" data-he="הנפילה">The Fall</span></a>
+  <a href="#moments" class="chapter-item active"><img class="ch-img" src="../images/goliath/goliathh-inthevally.jpg" alt="" loading="lazy"><span class="ch-num">CH.I</span><span class="ch-title" data-en="The Origin" data-he="המוצא">The Origin</span></a>
+  <a href="#moments" class="chapter-item"><img class="ch-img" src="../images/site/davidvslion.webp" alt="" loading="lazy"><span class="ch-num">CH.II</span><span class="ch-title" data-en="The Challenge" data-he="האתגר">The Challenge</span></a>
+  <a href="#moments" class="chapter-item"><img class="ch-img" src="../images/site/david-gate.webp" alt="" loading="lazy"><span class="ch-num">CH.III</span><span class="ch-title" data-en="The Mirror" data-he="המראה">The Mirror</span></a>
+  <a href="#moments" class="chapter-item"><img class="ch-img" src="../images/site/befor-battle-valley.webp" alt="" loading="lazy"><span class="ch-num">CH.IV</span><span class="ch-title" data-en="The Fall" data-he="הנפילה">The Fall</span></a>
 </nav>
 
 <!-- FOOTER -->
 <footer class="footer">
   <div class="footer-inner">
     <div class="footer-brand" style="flex-direction:row;align-items:center;gap:20px">
-      <img src="../images/logo/logo-blackonwhite.png" alt="YALDY" style="height:120px;width:auto" loading="lazy">
+      <img src="../images/logo/logo-png.png" alt="YALDY" style="height:120px;width:auto" loading="lazy">
       <p data-en="Real Heroes. True Strength. Premium biblical hero puzzles and stories for children and families." data-he="גיבורים אמיתיים. כוח אמיתי. פאזלים וסיפורי גיבורים תנ״כיים פרימיום לילדים ומשפחות.">Real Heroes. True Strength. Premium biblical hero puzzles and stories for children and families.</p>
     </div>
     <div class="footer-col">
@@ -497,6 +506,7 @@ body { background: var(--charcoal); }
     </div>
   </div>
   <div class="footer-bottom" data-en="&copy; 2026 YALDY&trade; All rights reserved. Real Heroes. True Strength." data-he="&copy; 2026 YALDY&trade; כל הזכויות שמורות. גיבורים אמיתיים. כוח אמיתי.">&copy; <span class="footer-year">2026</span> YALDY&trade; All rights reserved. Real Heroes. True Strength.</div>
+  <div class="footer-legal" data-en="Original artwork, character designs and content are protected. No reproduction without permission." data-he="העיצובים, הדמויות הויזואליות והתוכן המקורי של YALDY&trade; מוגנים. אין לשכפל ללא אישור.">Original artwork, character designs and content are protected. No reproduction without permission.</div>
 </footer>
 
 <script src="../js/universe.min.js"></script>
