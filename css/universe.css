@@ -480,7 +480,7 @@ section { padding: 100px 0; position: relative; z-index: 1; }
 
 /* ===== FOOTER (3-column from FINAL_1) ===== */
 .footer {
-  background: var(--navy-deep); padding: 50px 0 24px;
+  background: var(--navy-deep); padding: 50px 0 70px;
   border-top: 1px solid rgba(212,175,55,0.08); position: relative; z-index: 1;
 }
 .footer-inner {
