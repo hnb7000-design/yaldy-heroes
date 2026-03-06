@@ -233,7 +233,7 @@
     if (!url) { if (onDone) onDone(); return; }
     fetch(url, {
       method: 'POST',
-      headers: { 'Content-Type': 'text/plain' },
+      headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify(data)
     })
     .then(function(res) {
