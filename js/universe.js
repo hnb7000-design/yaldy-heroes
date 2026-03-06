@@ -448,6 +448,70 @@
     });
   }
 
+  // ======== COUNTDOWN TIMER ========
+  function initCountdown() {
+    var bar = document.querySelector('.countdown-bar');
+    if (!bar) return;
+    var deadline = new Date(bar.getAttribute('data-deadline')).getTime();
+    var daysEl = bar.querySelector('.cd-days');
+    var hoursEl = bar.querySelector('.cd-hours');
+    var minsEl = bar.querySelector('.cd-mins');
+    var secsEl = bar.querySelector('.cd-secs');
+    function update() {
+      var diff = deadline - Date.now();
+      if (diff <= 0) { diff = 0; }
+      var d = Math.floor(diff / 86400000);
+      var h = Math.floor((diff % 86400000) / 3600000);
+      var m = Math.floor((diff % 3600000) / 60000);
+      var s = Math.floor((diff % 60000) / 1000);
+      if (daysEl) daysEl.textContent = d < 10 ? '0' + d : d;
+      if (hoursEl) hoursEl.textContent = h < 10 ? '0' + h : h;
+      if (minsEl) minsEl.textContent = m < 10 ? '0' + m : m;
+      if (secsEl) secsEl.textContent = s < 10 ? '0' + s : s;
+    }
+    update();
+    setInterval(update, 1000);
+  }
+
+  // ======== NOTIFY ME MODAL ========
+  function initNotifyModal() {
+    var modal = document.getElementById('notifyModal');
+    if (!modal) return;
+    document.querySelectorAll('.lock-overlay').forEach(function(ov) {
+      ov.style.cursor = 'pointer';
+      ov.addEventListener('click', function(e) {
+        e.preventDefault();
+        e.stopPropagation();
+        modal.style.display = 'flex';
+        var inp = document.getElementById('notifyEmail');
+        if (inp) inp.focus();
+      });
+    });
+    modal.addEventListener('click', function(e) {
+      if (e.target === modal) modal.style.display = 'none';
+    });
+    var form = document.getElementById('notifyForm');
+    if (form) {
+      form.addEventListener('submit', function(e) {
+        e.preventDefault();
+        var emailEl = document.getElementById('notifyEmail');
+        var email = (emailEl ? emailEl.value : '').trim();
+        if (!email || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) return;
+        var msg = document.getElementById('notifyMsg');
+        var btn = form.querySelector('button[type="submit"]');
+        if (btn) btn.disabled = true;
+        postWebhook(WEBHOOK_SIGNUP, { email: email, source: 'notify-me', lang: lang }, function() {
+          if (msg) { msg.style.display = 'block'; msg.style.color = 'var(--gold)'; msg.textContent = lang === 'he' ? '\u2713 \u05E0\u05E8\u05E9\u05DE\u05EA \u05D1\u05D4\u05E6\u05DC\u05D7\u05D4!' : '\u2713 You\u2019re on the list!'; }
+          form.style.display = 'none';
+          try { localStorage.setItem('yaldy_notify', email); } catch(x){}
+        }, function() {
+          if (msg) { msg.style.display = 'block'; msg.style.color = '#c0392b'; msg.textContent = lang === 'he' ? '\u05E9\u05D2\u05D9\u05D0\u05D4 \u2014 \u05E0\u05E1\u05D5 \u05E9\u05D5\u05D1' : 'Error \u2014 please try again'; }
+          if (btn) btn.disabled = false;
+        });
+      });
+    }
+  }
+
   // ======== STICKY CTA BAR ========
   function initStickyCta() {
     var bar = document.getElementById('stickyCta');
@@ -482,6 +546,8 @@
     initPolicyTabs();
     initSignup();
     initContactForm();
+    initCountdown();
+    initNotifyModal();
     initSmoothScroll();
     initStickyCta();
     initParticles();

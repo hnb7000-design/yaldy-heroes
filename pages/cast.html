@@ -312,5 +312,18 @@
 </footer>
 
 <script src="../js/universe.min.js"></script>
+<!-- NOTIFY ME MODAL -->
+<div id="notifyModal" style="display:none;position:fixed;inset:0;z-index:9999;background:rgba(0,0,0,0.8);align-items:center;justify-content:center">
+  <div style="background:var(--navy-mid);border:1px solid rgba(212,175,55,0.25);padding:40px;max-width:420px;width:90%;text-align:center;position:relative">
+    <button onclick="this.closest('#notifyModal').style.display='none'" style="position:absolute;top:12px;right:16px;background:none;border:none;color:var(--text-light);font-size:1.5rem;cursor:pointer">&times;</button>
+    <h3 style="font-family:var(--font-heading);font-size:1rem;letter-spacing:3px;color:var(--gold);margin-bottom:10px" data-en="GET NOTIFIED" data-he="קבלו עדכון">GET NOTIFIED</h3>
+    <p style="font-size:0.85rem;color:var(--text-light);margin-bottom:20px;line-height:1.6" data-en="New heroes are coming. Be the first to know when they launch." data-he="גיבורים חדשים בדרך. היו הראשונים לדעת כשהם יוצאים.">New heroes are coming. Be the first to know when they launch.</p>
+    <form id="notifyForm" style="display:flex;gap:10px;flex-wrap:wrap;justify-content:center">
+      <input type="email" id="notifyEmail" placeholder="your@email.com" required style="flex:1;min-width:200px;padding:10px 14px;background:rgba(255,255,255,0.05);border:1px solid rgba(212,175,55,0.3);color:var(--cream);font-size:0.85rem;outline:none">
+      <button type="submit" style="padding:10px 22px;background:var(--gold);color:var(--navy);font-family:var(--font-heading);font-size:0.72rem;letter-spacing:2px;border:none;cursor:pointer;transition:var(--ease)" data-en="NOTIFY ME" data-he="עדכנו אותי">NOTIFY ME</button>
+    </form>
+    <p id="notifyMsg" style="display:none;margin-top:12px;font-size:0.85rem"></p>
+  </div>
+</div>
 </body>
 </html>

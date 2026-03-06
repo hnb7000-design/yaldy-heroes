@@ -278,7 +278,7 @@
       <p class="section-sub fade-in" data-en="Each box contains a premium puzzle, a bilingual illustrated flipbook story, and exclusive bonus content via QR code." data-he="כל קופסה מכילה פאזל פרימיום, חוברת סיפור דו-לשונית, ותוכן בונוס בלעדי דרך קוד QR.">Each box contains a premium puzzle, a bilingual illustrated flipbook story, and exclusive bonus content via QR code.</p>
       <div class="divider"></div>
     </div>
-    <div class="countdown-bar" data-deadline="2026-05-31T23:59:59"><span class="cd-title" data-en="PRE-ORDER PRICE ENDS IN:" data-he="מחיר הפרה-אורדר מסתיים בעוד:">PRE-ORDER PRICE ENDS IN:</span><div class="cd-block"><span class="cd-num cd-days">--</span><span class="cd-label" data-en="DAYS" data-he="ימים">DAYS</span></div><span class="cd-sep">:</span><div class="cd-block"><span class="cd-num cd-hours">--</span><span class="cd-label" data-en="HOURS" data-he="שעות">HOURS</span></div><span class="cd-sep">:</span><div class="cd-block"><span class="cd-num cd-mins">--</span><span class="cd-label" data-en="MIN" data-he="דקות">MIN</span></div></div>
+    <div class="countdown-bar" data-deadline="2026-05-31T23:59:59"><span class="cd-title" data-en="PRE-ORDER PRICE ENDS IN:" data-he="מחיר הפרה-אורדר מסתיים בעוד:">PRE-ORDER PRICE ENDS IN:</span><div class="cd-block"><span class="cd-num cd-days">--</span><span class="cd-label" data-en="DAYS" data-he="ימים">DAYS</span></div><span class="cd-sep">:</span><div class="cd-block"><span class="cd-num cd-hours">--</span><span class="cd-label" data-en="HOURS" data-he="שעות">HOURS</span></div><span class="cd-sep">:</span><div class="cd-block"><span class="cd-num cd-mins">--</span><span class="cd-label" data-en="MIN" data-he="דקות">MIN</span></div><span class="cd-sep">:</span><div class="cd-block"><span class="cd-num cd-secs">--</span><span class="cd-label" data-en="SEC" data-he="שניות">SEC</span></div></div>
     <div class="products-grid">
       <!-- David vs Lion 150pcs -->
       <div class="product-card fade-in" style="cursor:pointer" onclick="window.location.href='pages/product-david-lion.html'">
@@ -343,6 +343,11 @@
       <span style="font-family:var(--font-heading);font-size:0.72rem;color:var(--text-light);letter-spacing:1px">↩️ <span data-en="Easy Cancellation" data-he="ביטול פשוט">Easy Cancellation</span></span>
       <span style="font-family:var(--font-heading);font-size:0.72rem;color:var(--text-light);letter-spacing:1px">🎁 <span data-en="Puzzle + Story + QR Bonus" data-he="פאזל + סיפור + בונוס QR">Puzzle + Story + QR Bonus</span></span>
     </div>
+    <!-- BUNDLE OFFER -->
+    <a href="https://wa.me/972506500750?text=Hi!%20I'd%20like%20to%20pre-order%20the%20Full%20Collection%20—%20All%204%20Puzzles%20(₪399)" class="bundle-banner fade-in" target="_blank" rel="noopener" style="display:block;margin:24px auto 0;max-width:540px;padding:18px 24px;background:linear-gradient(135deg,rgba(212,175,55,0.12),rgba(212,175,55,0.03));border:1px solid rgba(212,175,55,0.25);text-align:center;text-decoration:none;transition:var(--ease)">
+      <span class="bundle-text" style="font-family:var(--font-heading);font-size:0.82rem;letter-spacing:1.5px;color:var(--gold);display:block" data-en="🎁 FULL COLLECTION — ALL 4 PUZZLES FOR ₪399" data-he="🎁 האוסף המלא — כל 4 הפאזלים ב-₪399">🎁 FULL COLLECTION — ALL 4 PUZZLES FOR ₪399</span>
+      <span class="bundle-save" style="font-family:var(--font-heading);font-size:0.68rem;letter-spacing:1px;color:var(--text-light);margin-top:4px;display:block" data-en="Instead of ₪446 · Save ₪47" data-he="במקום ₪446 · חיסכון של ₪47">Instead of ₪446 · Save ₪47</span>
+    </a>
   </div>
 </section>
 
@@ -479,6 +484,18 @@
 </div>
 
 <script src="js/universe.min.js"></script>
-<script>(function(){function u(){document.querySelectorAll('.countdown-bar').forEach(function(b){var dl=new Date(b.getAttribute('data-deadline')).getTime(),df=dl-Date.now();if(df<=0){b.querySelector('.cd-days').textContent='0';b.querySelector('.cd-hours').textContent='00';b.querySelector('.cd-mins').textContent='00';return}b.querySelector('.cd-days').textContent=Math.floor(df/864e5);var h=Math.floor((df%864e5)/36e5),m=Math.floor((df%36e5)/6e4);b.querySelector('.cd-hours').textContent=h<10?'0'+h:h;b.querySelector('.cd-mins').textContent=m<10?'0'+m:m})}u();setInterval(u,60000)})();</script>
+<!-- NOTIFY ME MODAL -->
+<div id="notifyModal" style="display:none;position:fixed;inset:0;z-index:9999;background:rgba(0,0,0,0.8);align-items:center;justify-content:center">
+  <div style="background:var(--navy-mid);border:1px solid rgba(212,175,55,0.25);padding:40px;max-width:420px;width:90%;text-align:center;position:relative">
+    <button onclick="this.closest('#notifyModal').style.display='none'" style="position:absolute;top:12px;right:16px;background:none;border:none;color:var(--text-light);font-size:1.5rem;cursor:pointer">&times;</button>
+    <h3 style="font-family:var(--font-heading);font-size:1rem;letter-spacing:3px;color:var(--gold);margin-bottom:10px" data-en="GET NOTIFIED" data-he="קבלו עדכון">GET NOTIFIED</h3>
+    <p style="font-size:0.85rem;color:var(--text-light);margin-bottom:20px;line-height:1.6" data-en="New heroes are coming. Be the first to know when they launch." data-he="גיבורים חדשים בדרך. היו הראשונים לדעת כשהם יוצאים.">New heroes are coming. Be the first to know when they launch.</p>
+    <form id="notifyForm" style="display:flex;gap:10px;flex-wrap:wrap;justify-content:center">
+      <input type="email" id="notifyEmail" placeholder="your@email.com" required style="flex:1;min-width:200px;padding:10px 14px;background:rgba(255,255,255,0.05);border:1px solid rgba(212,175,55,0.3);color:var(--cream);font-size:0.85rem;outline:none">
+      <button type="submit" style="padding:10px 22px;background:var(--gold);color:var(--navy);font-family:var(--font-heading);font-size:0.72rem;letter-spacing:2px;border:none;cursor:pointer;transition:var(--ease)" data-en="NOTIFY ME" data-he="עדכנו אותי">NOTIFY ME</button>
+    </form>
+    <p id="notifyMsg" style="display:none;margin-top:12px;font-size:0.85rem"></p>
+  </div>
+</div>
 </body>
 </html>
